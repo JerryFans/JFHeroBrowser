@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/JFHeroBrowser.svg?style=flat)](https://cocoapods.org/pods/JFHeroBrowser)
 [![Platform](https://img.shields.io/cocoapods/p/JFHeroBrowser.svg?style=flat)](https://cocoapods.org/pods/JFHeroBrowser)
 
+![](https://github.com/JerryFans/JFHeroBrowser/raw/master/preview.GIF)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
