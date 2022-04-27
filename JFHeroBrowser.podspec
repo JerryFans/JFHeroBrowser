@@ -21,21 +21,22 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/fanjiaorng919/JFHeroBrowser'
+  s.homepage         = 'https://github.com/JerryFans/JFHeroBrowser'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'JerryFans' => 'fanjiarong_haohao@163.com' }
   s.source           = { :git => 'https://github.com/JerryFans/JFHeroBrowser', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'JFHeroBrowser/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'JFHeroBrowser' => ['JFHeroBrowser/Assets/*.png']
-  # }
-
+  s.swift_version = ['4.0']
+  s.resource_bundles = {
+     'JFHeroBrowser' => ['JFHeroBrowser/Assets/*.png']
+  }
+  s.dependency 'JRBaseKit', '~> 1.0.0'
+  s.dependency 'Kingfisher', '~> 6.3.1'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
