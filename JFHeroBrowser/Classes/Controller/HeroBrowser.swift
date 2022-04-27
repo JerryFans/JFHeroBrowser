@@ -81,7 +81,7 @@ public class HeroBrowser: UIViewController {
         pageC.jf.height = 8
         pageC.jf.width = 250
         pageC.jf.left = (CGSize.jf.screenWidth() - 250) / 2
-        pageC.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight()
+        pageC.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
         return pageC
     }()
     
