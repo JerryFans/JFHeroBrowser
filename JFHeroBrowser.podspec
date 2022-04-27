@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JFHeroBrowser'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A simplest & base on protocol & swifty way to browse photo or video with hero animation..'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  *JFHeroBrowser can help you browse your image or video source with hero animation*
+  *support any image data like local image, network image , data image, album image ... or use custom protocol to implements your way*
+  *support any video data like local file video, network video ,  album video ... or use custom protocol to implements your way*
                        DESC
 
   s.homepage         = 'https://github.com/JerryFans/JFHeroBrowser'
