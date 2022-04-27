@@ -1,9 +1,12 @@
 # JFHeroBrowser
 
-[![CI Status](https://img.shields.io/travis/fanjiaorng919/JFHeroBrowser.svg?style=flat)](https://travis-ci.org/fanjiaorng919/JFHeroBrowser)
 [![Version](https://img.shields.io/cocoapods/v/JFHeroBrowser.svg?style=flat)](https://cocoapods.org/pods/JFHeroBrowser)
 [![License](https://img.shields.io/cocoapods/l/JFHeroBrowser.svg?style=flat)](https://cocoapods.org/pods/JFHeroBrowser)
 [![Platform](https://img.shields.io/cocoapods/p/JFHeroBrowser.svg?style=flat)](https://cocoapods.org/pods/JFHeroBrowser)
+[![Language](https://img.shields.io/badge/language-Swift-DE5C43.svg?style=flat)](https://cocoapods.org/pods/JFHeroBrowser)
+[![Support](http://img.shields.io/badge/support-ObjC-brightgreen.svg?style=flat)](https://cocoapods.org/pods/JFHeroBrowser)
+
+![](https://github.com/JerryFans/JFHeroBrowser/raw/master/preview.GIF)
 
 ## Example
 
