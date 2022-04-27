@@ -4,6 +4,7 @@ platform :ios, '10.0'
 
 target 'JFHeroBrowser_Example' do
   pod 'JFHeroBrowser', :path => '../'
+  pod 'Kingfisher', '6.3.1'
 
   target 'JFHeroBrowser_Tests' do
     inherit! :search_paths

@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		76EB6E41E10C0EBCADB37A31 /* Pods_JFHeroBrowser_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B289266CC5BF7F39037F74 /* Pods_JFHeroBrowser_Example.framework */; };
+		B42A690B28194DF9001C433C /* HeroNetworkImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A690A28194DF9001C433C /* HeroNetworkImageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6AB87ACB30FBF01205D462A8 /* Pods-JFHeroBrowser_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFHeroBrowser_Example.release.xcconfig"; path = "Target Support Files/Pods-JFHeroBrowser_Example/Pods-JFHeroBrowser_Example.release.xcconfig"; sourceTree = "<group>"; };
 		908B1CA4BAA449B2EC1ACC41 /* JFHeroBrowser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JFHeroBrowser.podspec; path = ../JFHeroBrowser.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B42A690A28194DF9001C433C /* HeroNetworkImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroNetworkImageProvider.swift; sourceTree = "<group>"; };
 		BA70AE08F60D130319EAF230 /* Pods-JFHeroBrowser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFHeroBrowser_Example.debug.xcconfig"; path = "Target Support Files/Pods-JFHeroBrowser_Example/Pods-JFHeroBrowser_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CDFBBE9425C6DD6BD241BAF0 /* Pods-JFHeroBrowser_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFHeroBrowser_Tests.release.xcconfig"; path = "Target Support Files/Pods-JFHeroBrowser_Tests/Pods-JFHeroBrowser_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D09A065C81B65CC16E10D1E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				B42A690A28194DF9001C433C /* HeroNetworkImageProvider.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -337,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42A690B28194DF9001C433C /* HeroNetworkImageProvider.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

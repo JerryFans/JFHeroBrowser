@@ -1,12 +1,12 @@
 PODS:
-  - JFHeroBrowser (0.1.0):
+  - JFHeroBrowser (1.0.0):
     - JRBaseKit (~> 1.0.0)
-    - Kingfisher (~> 6.3.1)
   - JRBaseKit (1.0.0)
   - Kingfisher (6.3.1)
 
 DEPENDENCIES:
   - JFHeroBrowser (from `../`)
+  - Kingfisher (= 6.3.1)
 
 SPEC REPOS:
   trunk:
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JFHeroBrowser: 71737b24147483791572ac8815057a132b5af4cf
+  JFHeroBrowser: 599b60516e7b9289e48ea811729321df4ea7a906
   JRBaseKit: ed75cfce9e340a3316bee0eaac0fa1c400714287
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
 
-PODFILE CHECKSUM: d494b308c5ff705f24b453551ec6963d8c389f69
+PODFILE CHECKSUM: 80da925dcae31e1c5023f4cbe29463426b40c69e
 
 COCOAPODS: 1.11.3

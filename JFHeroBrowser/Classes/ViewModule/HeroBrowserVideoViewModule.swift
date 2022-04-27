@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import Kingfisher
 
 /// Video VM, support network video or local file path video
-public class HeroBrowserVideoViewModule: HeroBrowserViewModuleProtocol, NetworkImageProvider {
+public class HeroBrowserVideoViewModule: HeroBrowserViewModuleProtocol {
     
     public typealias ThumbailData = UIImage
     public typealias RawData = URL
@@ -51,42 +50,17 @@ public class HeroBrowserVideoViewModule: HeroBrowserViewModuleProtocol, NetworkI
     var thumbailImgUrl: String?
     var videoURL: URL?
     
-    public init(thumbailImgUrl: String?, fileUrlPath: String, provider: NetworkImageProvider? = nil) {
+    public init(thumbailImgUrl: String?, fileUrlPath: String, provider: NetworkImageProvider?) {
         self.thumbailImgUrl = thumbailImgUrl
         self.videoURL = URL(fileURLWithPath: fileUrlPath)
         self.imageProvider = provider
         self.type = .localVideo
-        if provider == nil {
-            self.imageProvider = self
-        }
     }
     
-    public init(thumbailImgUrl: String?, videoUrl: String, provider: NetworkImageProvider? = nil) {
+    public init(thumbailImgUrl: String?, videoUrl: String, provider: NetworkImageProvider?) {
         self.thumbailImgUrl = thumbailImgUrl
         self.videoURL = URL(string: videoUrl)
         self.imageProvider = provider
         self.type = .networkVideo
-        if provider == nil {
-            self.imageProvider = self
-        }
-    }
-    
-    public func downloadImage(with imgUrl: String, complete: Complete<UIImage>?) {
-        KingfisherManager.shared.retrieveImage(with: URL(string: imgUrl)!, options: nil) { receiveSize, totalSize in
-            guard totalSize > 0 else { return }
-            let progress:CGFloat = CGFloat(CGFloat(receiveSize) / CGFloat(totalSize))
-            complete?(.progress(progress))
-        } downloadTaskUpdated: { task in
-
-        } completionHandler: { result in
-            switch result {
-            case .success(let loadingImageResult):
-                complete?(.success(loadingImageResult.image))
-                break
-            case .failure(let error):
-                complete?(.failed(error))
-                break
-            }
-        }
     }
 }

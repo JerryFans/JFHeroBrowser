@@ -1,9 +1,9 @@
 {
   "name": "JFHeroBrowser",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "summary": "A simplest & base on protocol & swifty way to browse photo or video with hero animation..",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/fanjiaorng919/JFHeroBrowser",
+  "description": "*JFHeroBrowser can help you browse your image or video source with hero animation*\n*support any image data like local image, network image , data image, album image ... or use custom protocol to implements your way*\n*support any video data like local file video, network video ,  album video ... or use custom protocol to implements your way*",
+  "homepage": "https://github.com/JerryFans/JFHeroBrowser",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/JerryFans/JFHeroBrowser",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "10.0"
@@ -30,9 +30,6 @@
   "dependencies": {
     "JRBaseKit": [
       "~> 1.0.0"
-    ],
-    "Kingfisher": [
-      "~> 6.3.1"
     ]
   },
   "swift_version": "4.0"

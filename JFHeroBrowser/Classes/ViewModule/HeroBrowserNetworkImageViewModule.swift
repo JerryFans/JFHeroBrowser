@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import Kingfisher
 
-public class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule, NetworkImageProvider {
+public class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule {
     
     deinit {
         print("HeroBrowserNetworkImageViewModule deinit")
@@ -58,32 +57,10 @@ public class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule, NetworkIm
     var thumbailImgUrl: String?
     var originImgUrl: String
     
-    public init(thumbailImgUrl: String?, originImgUrl: String, provider: NetworkImageProvider? = nil) {
+    public init(thumbailImgUrl: String?, originImgUrl: String, provider: NetworkImageProvider?) {
         self.thumbailImgUrl = thumbailImgUrl
         self.originImgUrl = originImgUrl
         self.imageProvider = provider
         super.init(type: .networkImage)
-        if provider == nil {
-            self.imageProvider = self
-        }
-    }
-    
-    public func downloadImage(with imgUrl: String, complete: Complete<UIImage>?) {
-        KingfisherManager.shared.retrieveImage(with: URL(string: imgUrl)!, options: nil) { receiveSize, totalSize in
-            guard totalSize > 0 else { return }
-            let progress:CGFloat = CGFloat(CGFloat(receiveSize) / CGFloat(totalSize))
-            complete?(.progress(progress))
-        } downloadTaskUpdated: { task in
-            
-        } completionHandler: { result in
-            switch result {
-            case .success(let loadingImageResult):
-                complete?(.success(loadingImageResult.image))
-                break
-            case .failure(let error):
-                complete?(.failed(error))
-                break
-            }
-        }
     }
 }

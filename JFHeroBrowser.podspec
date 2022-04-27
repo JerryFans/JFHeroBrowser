@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
   *JFHeroBrowser can help you browse your image or video source with hero animation*
   *support any image data like local image, network image , data image, album image ... or use custom protocol to implements your way*
   *support any video data like local file video, network video ,  album video ... or use custom protocol to implements your way*
+  *Not include image network cache you should implements the NetworkImageProvider protocol use Kingfisher or SDImageCache*
                        DESC
 
   s.homepage         = 'https://github.com/JerryFans/JFHeroBrowser'
@@ -38,7 +39,7 @@ Pod::Spec.new do |s|
      'JFHeroBrowser' => ['JFHeroBrowser/Assets/*.png']
   }
   s.dependency 'JRBaseKit', '~> 1.0.0'
-  s.dependency 'Kingfisher', '~> 6.3.1'
+  # s.dependency 'Kingfisher', '~> 6.3.0'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
