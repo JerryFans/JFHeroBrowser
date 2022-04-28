@@ -17,7 +17,7 @@ import Photos
 let thumbs: [String] = {
     var temp: [String] = []
     for i in 1...20 {
-        temp.append("http://image.jerryfans.com/template-\(i).jpg")
+        temp.append("http://image.jerryfans.com/template-\(i).jpg?imageView2/0/w/300")
     }
     return temp
 }()
