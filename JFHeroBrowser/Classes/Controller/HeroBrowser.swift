@@ -68,10 +68,13 @@ public class HeroBrowser: UIViewController {
             return Int(self.collectionView.contentOffset.x / self.collectionView.frame.size.width)
         }
     }
-    public var originImageView: UIImageView?
-    public var originFrame: CGRect = .zero
-    public var originImage: UIImage?
-    public var contentMode: UIView.ContentMode = .scaleAspectFill
+    
+    public typealias ImagePageDidChangeHandle = (_ imageIndex: Int) -> UIImageView?
+    public var imagePageDidChangeHandle: ImagePageDidChangeHandle?
+    var heroImageView: UIImageView?
+    var heroFrame: CGRect = .zero
+    var heroImage: UIImage?
+    var heroContentMode: UIView.ContentMode = .scaleAspectFill
     
     private lazy var pageControl: UIPageControl = {
         var pageC = UIPageControl()
@@ -116,9 +119,11 @@ public class HeroBrowser: UIViewController {
         }
     }
     
-    public convenience init(viewModules: [HeroBrowserViewModuleBaseProtocol], index: Int) {
+    public convenience init(viewModules: [HeroBrowserViewModuleBaseProtocol], index: Int, heroImageView: UIImageView? = nil, imagePageDidChangeHandle: ImagePageDidChangeHandle? = nil) {
         self.init()
-        self._viewModules = viewModules
+        self.heroImageView = heroImageView
+        self.imagePageDidChangeHandle = imagePageDidChangeHandle
+        _viewModules = viewModules
         _index = index
         self.transitionContext = self
         self.setupView()
@@ -151,7 +156,15 @@ public class HeroBrowser: UIViewController {
         self.pageControl.currentPage = index
     }
     
+    func updateHeroView(index: Int) {
+        guard index < _viewModules?.count ?? 0  else { return }
+        if let heroV = self.imagePageDidChangeHandle?(index) {
+            self.heroImageView = heroV
+        }
+    }
+    
     @objc func changePage(pageControl: UIPageControl) {
+        self.updateHeroView(index: pageControl.currentPage)
         self.switchToPage(index: pageControl.currentPage)
     }
     
@@ -236,7 +249,7 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
             return UICollectionViewCell()
         }
         let cell = vm.createCell(collectionView, indexPath)
-        cell.getContainer().contentMode = self.contentMode
+        cell.getContainer().contentMode = self.heroContentMode
         cell.closeBlock = { [weak self] in
             guard let self = self else { return }
             self.animationType = .hero
@@ -262,6 +275,7 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentOffsetX: CGFloat = scrollView.contentOffset.x
         let currentIndex: Int = Int((contentOffsetX + 0.5 * self.view.frame.size.width) / self.view.frame.size.width)
+        self.updateHeroView(index: currentIndex)
         self.updatePageControl(index: currentIndex)
     }
     
@@ -299,26 +313,5 @@ extension HeroBrowser:UIViewControllerTransitioningDelegate,UIViewControllerAnim
     
     func dismiss(transitonContext: UIViewControllerContextTransitioning) {
         HeroTransitionAnimation.dismiss(transitonContext: transitonContext, animationType: animationType, heroBrowser: self)
-    }
-    
-    private func confirmOriginImageViewInfo(convertTo toView: UIView, _ cornerRadius: inout CGFloat) -> Bool {
-        guard let originImageView = self.originImageView, case .some = originImageView.image,
-              let oSuperview = originImageView.superview else {
-            return false
-        }
-        let originFrame = oSuperview.convert(originImageView.frame, to: toView)
-        if originFrame.size == .zero {
-            return false
-        }
-        self.originFrame = originFrame
-        self.originImage = originImageView.image
-        self.contentMode = originImageView.contentMode
-        cornerRadius = originImageView.layer.cornerRadius
-        return true
-    }
-    
-    /// 一半的差值
-    func HalfDiffValue(_ superValue: CGFloat, _ subValue: CGFloat) -> CGFloat {
-        (superValue - subValue) * 0.5
     }
 }

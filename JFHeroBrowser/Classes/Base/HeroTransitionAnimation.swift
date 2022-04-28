@@ -25,7 +25,7 @@ public class HeroTransitionAnimation: NSObject {
         containerView.addSubview(toVC.view)
         
         var cornerRadius: CGFloat = 0
-        guard confirmOriginImageViewInfo(convertTo: fromVC.view, &cornerRadius, heroBrowser: heroBrowser), let originImage = heroBrowser.originImage else {
+        guard confirmOriginImageViewInfo(convertTo: fromVC.view, &cornerRadius, heroBrowser: heroBrowser), let originImage = heroBrowser.heroImage else {
             toVC.view.alpha = 0
             UIView.animate(withDuration: 0.2) {
                 toVC.view.alpha = 1
@@ -50,8 +50,8 @@ public class HeroTransitionAnimation: NSObject {
                 subView.alpha = 0
             }
             
-            let moveImageView = UIImageView(frame: heroBrowser.originFrame)
-            moveImageView.contentMode = heroBrowser.contentMode
+            let moveImageView = UIImageView(frame: heroBrowser.heroFrame)
+            moveImageView.contentMode = heroBrowser.heroContentMode
             moveImageView.image = originImage
             moveImageView.layer.masksToBounds = true
             moveImageView.layer.cornerRadius = cornerRadius
@@ -96,7 +96,7 @@ public class HeroTransitionAnimation: NSObject {
         
         UIView.animate(withDuration: 0.2) {
             photoImageView.layer.cornerRadius = cornerRadius
-            photoImageView.frame = heroBrowser.originFrame
+            photoImageView.frame = heroBrowser.heroFrame
             for subView in heroBrowser.view.subviews {
                 subView.alpha = 0
             }
@@ -106,18 +106,18 @@ public class HeroTransitionAnimation: NSObject {
     }
     
     private static func confirmOriginImageViewInfo(convertTo toView: UIView, _ cornerRadius: inout CGFloat, heroBrowser: HeroBrowser) -> Bool {
-        guard let originImageView = heroBrowser.originImageView, case .some = originImageView.image,
-              let oSuperview = originImageView.superview else {
+        guard let heroImageView = heroBrowser.heroImageView, case .some = heroImageView.image,
+              let oSuperview = heroImageView.superview else {
                   return false
               }
-        let originFrame = oSuperview.convert(originImageView.frame, to: toView)
-        if originFrame.size == .zero {
+        let heroFrame = oSuperview.convert(heroImageView.frame, to: toView)
+        if heroFrame.size == .zero {
             return false
         }
-        heroBrowser.originFrame = originFrame
-        heroBrowser.originImage = originImageView.image
-        heroBrowser.contentMode = originImageView.contentMode
-        cornerRadius = originImageView.layer.cornerRadius
+        heroBrowser.heroFrame = heroFrame
+        heroBrowser.heroImage = heroImageView.image
+        heroBrowser.heroContentMode = heroImageView.contentMode
+        cornerRadius = heroImageView.layer.cornerRadius
         return true
     }
     

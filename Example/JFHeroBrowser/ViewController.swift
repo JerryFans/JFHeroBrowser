@@ -80,19 +80,21 @@ class ViewController: UIViewController {
     
     @objc func videoBtnClick(button: UIButton) {
         
-        let brower = HeroBrowser(viewModules: [HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared)], index: button.tag)
-        brower.originImageView = button.imageView
+        let brower = HeroBrowser(viewModules: [HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared)], index: button.tag, heroImageView: button.imageView)
         brower.show(with: self, animationType: .hero)
     }
     
     @objc func btnClick(button: UIButton) {
         var list: [HeroBrowserViewModule] = []
-        for i in 0...15 {
+        for i in 0...4 {
             list.append(HeroBrowserNetworkImageViewModule(thumbailImgUrl: thumbs[i], originImgUrl: origins[i], provider: HeroNetworkImageProvider.shared))
         }
         
-        let brower = HeroBrowser(viewModules: list, index: button.tag)
-        brower.originImageView = button.imageView
+        let brower = HeroBrowser(viewModules: list, index: button.tag, heroImageView: button.imageView) { [weak self] imageIndex in
+            guard let self = self else { return nil }
+            guard let btn = self.view.viewWithTag(imageIndex) as? UIButton else { return nil }
+            return btn.imageView
+        }
         brower.show(with: self, animationType: .hero)
     }
 }
