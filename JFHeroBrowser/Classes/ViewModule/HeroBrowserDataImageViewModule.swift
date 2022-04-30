@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroBrowserDataImageViewModule: HeroBrowserViewModule {
+public class HeroBrowserDataImageViewModule: HeroBrowserViewModule {
     public override func createCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> HeroBrowserCollectionCellProtocol {
         return collectionView.dequeueReusableCell(withReuseIdentifier: HeroBrowserBaseImageCell.identify(), for: indexPath) as! HeroBrowserBaseImageCell
     }
@@ -41,7 +41,7 @@ class HeroBrowserDataImageViewModule: HeroBrowserViewModule {
     }
     
     var imageData: Data
-    init(data: Data) {
+    public init(data: Data) {
         self.imageData = data
         super.init(type: .dataImage)
     }

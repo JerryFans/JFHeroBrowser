@@ -20,8 +20,9 @@ public class HeroBrowserLocalImageViewModule: HeroBrowserViewModule {
     public override func asyncLoadRawSource(with complete: HeroBrowserViewModule.Complete<UIImage>?) {
         complete?(.success(self.image))
     }
+    
     var image: UIImage
-    init(image: UIImage) {
+    public init(image: UIImage) {
         self.image = image
         super.init(type: .localImage)
     }

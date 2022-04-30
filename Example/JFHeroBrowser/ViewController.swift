@@ -7,95 +7,71 @@
 //
 
 import UIKit
-import JFHeroBrowser
 import Kingfisher
 import UIKit
 import Foundation
 import MobileCoreServices
 import Photos
 
-let thumbs: [String] = {
-    var temp: [String] = []
-    for i in 1...20 {
-        temp.append("http://image.jerryfans.com/template-\(i).jpg?imageView2/0/w/300")
-    }
-    return temp
-}()
+enum HeroBrowserDemoType: String {
+    case localImage = "本地图片"
+    case dataImage = "data图片"
+    case networkImage = "网络图片"
+}
 
-let origins: [String] = {
-    var temp: [String] = []
-    for i in 1...20 {
-        temp.append("http://image.jerryfans.com/template-\(i).jpg")
-    }
-    return temp
-}()
+let demoTypes: [HeroBrowserDemoType] = [
+    .localImage,
+    .dataImage,
+    .networkImage,
+]
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let button = UIButton(frame: CGRect(x: 50, y: 100, width: 150, height: 150))
-        
-        button.kf.setImage(with: URL(string: thumbs[0])!, for: .normal)
-        self.view.addSubview(button)
-        button.addTarget(self, action: #selector(btnClick(button:)), for: .touchUpInside)
-        button.tag = 0
-        button.imageView?.contentMode = .scaleAspectFill
-        
-        let button1 = UIButton(frame: CGRect(x: 50, y: 260, width: 150, height: 150))
-        button1.kf.setImage(with: URL(string: thumbs[1])!, for: .normal)
-        self.view.addSubview(button1)
-        button1.tag = 1
-        button1.imageView?.contentMode = .scaleAspectFill
-        button1.addTarget(self, action: #selector(btnClick(button:)), for: .touchUpInside)
-        
-        let button2 = UIButton(frame: CGRect(x: 50, y: 420, width: 150, height: 150))
-        button2.kf.setImage(with: URL(string: thumbs[2])!, for: .normal)
-        button2.imageView?.contentMode = .scaleAspectFill
-        self.view.addSubview(button2)
-        button2.tag = 2
-        button2.addTarget(self, action: #selector(btnClick(button:)), for: .touchUpInside)
-        
-        let button3 = UIButton(frame: CGRect(x: 50, y: 580, width: 150, height: 150))
-        button3.kf.setImage(with: URL(string: thumbs[3])!, for: .normal)
-        self.view.addSubview(button3)
-        button3.tag = 3
-        button3.imageView?.contentMode = .scaleAspectFill
-        button3.addTarget(self, action: #selector(btnClick(button:)), for: .touchUpInside)
-        
-        let button4 = UIButton(frame: CGRect(x: 210, y: 580, width: 150, height: 150))
-        button4.kf.setImage(with: URL(string: thumbs[4])!, for: .normal)
-        self.view.addSubview(button4)
-        button4.tag = 4
-        button4.imageView?.contentMode = .scaleAspectFill
-        button4.addTarget(self, action: #selector(btnClick(button:)), for: .touchUpInside)
-        
-        let button5 = UIButton(frame: CGRect(x: 210, y: 420, width: 150, height: 150))
-        button5.kf.setImage(with: URL(string: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg")!, for: .normal)
-        button5.imageView?.contentMode = .scaleAspectFill
-        self.view.addSubview(button5)
-        button5.tag = 5
-        button5.addTarget(self, action: #selector(videoBtnClick(button:)), for: .touchUpInside)
+        self.title = "JFHeroBrowser Demo"
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     }
     
-    @objc func videoBtnClick(button: UIButton) {
-        
-        let brower = HeroBrowser(viewModules: [HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared)], index: button.tag, heroImageView: button.imageView)
-        brower.show(with: self, animationType: .hero)
+}
+
+extension ViewController: UITableViewDataSource,UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
-    @objc func btnClick(button: UIButton) {
-        var list: [HeroBrowserViewModule] = []
-        for i in 0...4 {
-            list.append(HeroBrowserNetworkImageViewModule(thumbailImgUrl: thumbs[i], originImgUrl: origins[i], provider: HeroNetworkImageProvider.shared))
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return demoTypes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let type = demoTypes[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        cell.textLabel?.text = type.rawValue
+        cell.accessoryType = .disclosureIndicator
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let type = demoTypes[indexPath.row]
+        switch type {
+        case .dataImage:
+            let vc = DataImageViewController()
+            navigationController?.pushViewController(vc, animated: true)
+            break
+        case .localImage:
+            let vc = LocalImageViewController()
+            navigationController?.pushViewController(vc, animated: true)
+            break
+        case .networkImage:
+            let vc = NetworkImageViewController()
+            navigationController?.pushViewController(vc, animated: true)
+            break
         }
-        
-        let brower = HeroBrowser(viewModules: list, index: button.tag, heroImageView: button.imageView) { [weak self] imageIndex in
-            guard let self = self else { return nil }
-            guard let btn = self.view.viewWithTag(imageIndex) as? UIButton else { return nil }
-            return btn.imageView
-        }
-        brower.show(with: self, animationType: .hero)
     }
 }
 
