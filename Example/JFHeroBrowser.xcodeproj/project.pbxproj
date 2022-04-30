@@ -19,6 +19,7 @@
 		B4CD9E5D281CEA2500CB3382 /* LocalImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD9E5C281CEA2500CB3382 /* LocalImageViewController.swift */; };
 		B4CD9E5F281D791400CB3382 /* DataImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD9E5E281D791400CB3382 /* DataImageViewController.swift */; };
 		B4CD9E61281D7BD000CB3382 /* NetworkImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD9E60281D7BD000CB3382 /* NetworkImageViewController.swift */; };
+		B4CD9E63281D912800CB3382 /* NetworkVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD9E62281D912800CB3382 /* NetworkVideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		B4CD9E5C281CEA2500CB3382 /* LocalImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageViewController.swift; sourceTree = "<group>"; };
 		B4CD9E5E281D791400CB3382 /* DataImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataImageViewController.swift; sourceTree = "<group>"; };
 		B4CD9E60281D7BD000CB3382 /* NetworkImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageViewController.swift; sourceTree = "<group>"; };
+		B4CD9E62281D912800CB3382 /* NetworkVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkVideoViewController.swift; sourceTree = "<group>"; };
 		BA70AE08F60D130319EAF230 /* Pods-JFHeroBrowser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFHeroBrowser_Example.debug.xcconfig"; path = "Target Support Files/Pods-JFHeroBrowser_Example/Pods-JFHeroBrowser_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CDFBBE9425C6DD6BD241BAF0 /* Pods-JFHeroBrowser_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFHeroBrowser_Tests.release.xcconfig"; path = "Target Support Files/Pods-JFHeroBrowser_Tests/Pods-JFHeroBrowser_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D09A065C81B65CC16E10D1E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				B4CD9E62281D912800CB3382 /* NetworkVideoViewController.swift */,
 				B42A690A28194DF9001C433C /* HeroNetworkImageProvider.swift */,
 				B4CD9E5C281CEA2500CB3382 /* LocalImageViewController.swift */,
 				B4CD9E5E281D791400CB3382 /* DataImageViewController.swift */,
@@ -350,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CD9E5F281D791400CB3382 /* DataImageViewController.swift in Sources */,
+				B4CD9E63281D912800CB3382 /* NetworkVideoViewController.swift in Sources */,
 				B42A690B28194DF9001C433C /* HeroNetworkImageProvider.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				B4CD9E5D281CEA2500CB3382 /* LocalImageViewController.swift in Sources */,

@@ -17,12 +17,14 @@ enum HeroBrowserDemoType: String {
     case localImage = "本地图片"
     case dataImage = "data图片"
     case networkImage = "网络图片"
+    case netwrokVideo = "网络视频"
 }
 
 let demoTypes: [HeroBrowserDemoType] = [
     .localImage,
     .dataImage,
     .networkImage,
+    .netwrokVideo,
 ]
 
 class ViewController: UIViewController {
@@ -71,6 +73,9 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
             let vc = NetworkImageViewController()
             navigationController?.pushViewController(vc, animated: true)
             break
+        case .netwrokVideo:
+            let vc = NetworkVideoViewController()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
