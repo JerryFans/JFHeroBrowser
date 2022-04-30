@@ -69,7 +69,7 @@ class NetworkImageViewController: UIViewController {
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let width = (CGSize.jf.screenWidth() - 15 * 4) / 3
-        layout.itemSize = CGSize(width: width, height: width)
+        layout.itemSize = CGSize(width: floor(width), height: floor(width))
         layout.minimumLineSpacing = 15
         layout.minimumInteritemSpacing = 15
         layout.scrollDirection = .vertical
