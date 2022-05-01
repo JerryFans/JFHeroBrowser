@@ -57,7 +57,7 @@ public class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule {
     var thumbailImgUrl: String?
     var originImgUrl: String
     
-    public init(thumbailImgUrl: String?, originImgUrl: String, provider: NetworkImageProvider?) {
+    public init(thumbailImgUrl: String?, originImgUrl: String, provider: NetworkImageProvider? = JFHeroBrowserGlobalConfig.default.networkImageProvider) {
         self.thumbailImgUrl = thumbailImgUrl
         self.originImgUrl = originImgUrl
         self.imageProvider = provider

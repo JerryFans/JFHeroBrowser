@@ -9,9 +9,22 @@ import Foundation
 import UIKit
 import JRBaseKit
 
+public struct JFHeroBrowserGlobalConfig {
+    public var enableBlurEffect: Bool
+    public var networkImageProvider: NetworkImageProvider?
+    public init(_ enableBlurEffect: Bool,
+         networkImageProvider: NetworkImageProvider? = nil) {
+        self.enableBlurEffect = enableBlurEffect
+        self.networkImageProvider = networkImageProvider
+    }
+    
+    public static var `default` = JFHeroBrowserGlobalConfig(true, networkImageProvider: nil)
+}
+
 public enum JFHeroBrowserOption {
     case enableBlurEffect(Bool)
     case heroView(UIImageView)
+    case heroBrowserDidLongPressHandle(HeroBrowser.HeroBrowserDidLongPressHandle)
     case imageDidChangeHandle(HeroBrowser.ImagePageDidChangeHandle)
 }
 

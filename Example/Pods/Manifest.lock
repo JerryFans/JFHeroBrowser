@@ -1,17 +1,26 @@
 PODS:
   - JFHeroBrowser (1.0.0):
     - JRBaseKit (~> 1.0.0)
+  - JFPopup (1.4.2):
+    - JRBaseKit (~> 1.0.0)
   - JRBaseKit (1.0.0)
   - Kingfisher (6.3.1)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
 
 DEPENDENCIES:
   - JFHeroBrowser (from `../`)
+  - JFPopup (= 1.4.2)
   - Kingfisher (= 6.3.1)
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
+    - JFPopup
     - JRBaseKit
     - Kingfisher
+    - SDWebImage
 
 EXTERNAL SOURCES:
   JFHeroBrowser:
@@ -19,9 +28,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   JFHeroBrowser: 7c0eb8fe8a7dda0fdd3d7feb6b01592bc2e331bf
+  JFPopup: 8b92cd5fb8c9629e70490700fa7437da553fc14e
   JRBaseKit: ed75cfce9e340a3316bee0eaac0fa1c400714287
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
 
-PODFILE CHECKSUM: 80da925dcae31e1c5023f4cbe29463426b40c69e
+PODFILE CHECKSUM: 113970cd1ee649a06296e63686bcec9133bf491f
 
 COCOAPODS: 1.11.3

@@ -12,11 +12,23 @@ import UIKit
     @objc func viewForFooter() -> UIView?
 }
 
+public protocol HeroBrowserDelegate: AnyObject {
+    func heroBrowser(_ heroBrowser: HeroBrowser, didLongPressHandle viewModule: HeroBrowserViewModuleBaseProtocol)
+}
+
+extension HeroBrowserDelegate {
+    func heroBrowser(_ heroBrowser: HeroBrowser, didLongPressHandle viewModule: HeroBrowserViewModuleBaseProtocol) {}
+}
+
 public class HeroBrowser: UIViewController {
+    
+    public typealias HeroBrowserDidLongPressHandle = (_ heroBrowser: HeroBrowser, _ viewModule: HeroBrowserViewModuleBaseProtocol) -> ()
+    var heroBrowserDidLongPressHandle: HeroBrowserDidLongPressHandle?
     
     lazy var effect = { UIBlurEffect(style: .dark) }()
     var blurEffectView: UIVisualEffectView?
-    private var isEnabledBlurEffect = false
+    
+    var config: JFHeroBrowserGlobalConfig = .default
     
     lazy var blurView: UIView = {
         let view = UIView.init()
@@ -48,6 +60,7 @@ public class HeroBrowser: UIViewController {
     
     var animationType: HeroTransitionAnimationType = .hero
     public weak var dataSource: HeroBrowserDataSource?
+    public weak var delegate: HeroBrowserDelegate?
     public weak var headerView: UIView?
     public weak var footerView: UIView?
     private var _isHideOther: Bool = false
@@ -122,10 +135,14 @@ public class HeroBrowser: UIViewController {
         if let vm = _viewModules {
             self.pageControl.numberOfPages = vm.count
         }
+        if self.config.enableBlurEffect {
+            enableBlurEffet()
+        }
     }
     
-    public convenience init(viewModules: [HeroBrowserViewModuleBaseProtocol], index: Int, heroImageView: UIImageView? = nil, imagePageDidChangeHandle: ImagePageDidChangeHandle? = nil) {
+    public convenience init(viewModules: [HeroBrowserViewModuleBaseProtocol], index: Int, heroImageView: UIImageView? = nil, imagePageDidChangeHandle: ImagePageDidChangeHandle? = nil, config: JFHeroBrowserGlobalConfig = .default) {
         self.init()
+        self.config = config
         self.heroImageView = heroImageView
         self.imagePageDidChangeHandle = imagePageDidChangeHandle
         _viewModules = viewModules
@@ -195,16 +212,11 @@ public class HeroBrowser: UIViewController {
     }
     
     func enableBlurEffet() {
-        guard !self.isEnabledBlurEffect else { return }
-        self.isEnabledBlurEffect = true
-        
         self.blurView.backgroundColor = .clear
-        
         let blurEffectView = UIVisualEffectView(effect: self.effect)
         blurEffectView.frame = self.view.bounds
         self.blurView.addSubview(blurEffectView)
         self.blurEffectView = blurEffectView
-        
     }
 
 }
@@ -213,9 +225,12 @@ extension HeroBrowser: UIGestureRecognizerDelegate {
     func setupGestureRecognizer() {
         let singleFingerOne = UITapGestureRecognizer(target: self, action: #selector(handleSingleFingerEvent(gesture:)))
         singleFingerOne.numberOfTouchesRequired = 1;
-        singleFingerOne.numberOfTapsRequired = 1;
+        singleFingerOne.numberOfTapsRequired = 1
         singleFingerOne.delegate = self
         self.view.addGestureRecognizer(singleFingerOne)
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressEvent(gesture:)))
+        self.view.addGestureRecognizer(longPress)
         
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(handleDoubleFingerEvent(gesture:)))
         doubleTap.numberOfTouchesRequired = 1;
@@ -223,6 +238,16 @@ extension HeroBrowser: UIGestureRecognizerDelegate {
         doubleTap.delegate = self
         self.view.addGestureRecognizer(doubleTap)
         singleFingerOne.require(toFail: doubleTap)
+    }
+    
+    @objc func handleLongPressEvent(gesture: UIGestureRecognizer) {
+        guard gesture.state == .began else { return }
+        guard let vm = _viewModules?[self.currentIndex] else { return }
+        if let del = self.delegate {
+            del.heroBrowser(self, didLongPressHandle: vm)
+            return
+        }
+        self.heroBrowserDidLongPressHandle?(self, vm)
     }
     
     @objc func handleSingleFingerEvent(gesture: UIGestureRecognizer) {
