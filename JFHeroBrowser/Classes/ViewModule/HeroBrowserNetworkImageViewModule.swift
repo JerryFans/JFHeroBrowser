@@ -22,33 +22,37 @@ public class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule {
             complete?(.failed(nil))
             return
         }
-        self.imageProvider?.downloadImage(with: thumbailImgUrl, complete: {
-            switch $0 {
-            case let .success(image):
-                complete?(.success(image))
-                break
-            case let .failed(error):
-                complete?(.failed(error))
-                break
-            case let .progress(progress):
-                complete?(.progress(progress))
-                break
+        self.imageProvider?.downloadImage(with: thumbailImgUrl, complete: { result in
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(image):
+                    complete?(.success(image))
+                    break
+                case let .failed(error):
+                    complete?(.failed(error))
+                    break
+                case let .progress(progress):
+                    complete?(.progress(progress))
+                    break
+                }
             }
         })
     }
     
     public override func asyncLoadRawSource(with complete: HeroBrowserViewModule.Complete<UIImage>?) {
-        self.imageProvider?.downloadImage(with: self.originImgUrl, complete: {
-            switch $0 {
-            case let .success(image):
-                complete?(.success(image))
-                break
-            case let .failed(error):
-                complete?(.failed(error))
-                break
-            case let .progress(progress):
-                complete?(.progress(progress))
-                break
+        self.imageProvider?.downloadImage(with: self.originImgUrl, complete: { result in
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(image):
+                    complete?(.success(image))
+                    break
+                case let .failed(error):
+                    complete?(.failed(error))
+                    break
+                case let .progress(progress):
+                    complete?(.progress(progress))
+                    break
+                }
             }
         })
     }

@@ -129,11 +129,10 @@
 		607FACD21AFB9204008FA782 /* Example for JFHeroBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				B4CD9E6C281EE7F400CB3382 /* NetworkImageProvider */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				B4CD9E62281D912800CB3382 /* NetworkVideoViewController.swift */,
-				B42A690A28194DF9001C433C /* HeroNetworkImageProvider.swift */,
-				B4CD9E66281EDCAF00CB3382 /* SDWebImageNetworkImageProvider.swift */,
 				B4CD9E5C281CEA2500CB3382 /* LocalImageViewController.swift */,
 				B4CD9E5E281D791400CB3382 /* DataImageViewController.swift */,
 				B4CD9E60281D7BD000CB3382 /* NetworkImageViewController.swift */,
@@ -182,6 +181,15 @@
 				000BEC13235A9C1D53BE7E95 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B4CD9E6C281EE7F400CB3382 /* NetworkImageProvider */ = {
+			isa = PBXGroup;
+			children = (
+				B42A690A28194DF9001C433C /* HeroNetworkImageProvider.swift */,
+				B4CD9E66281EDCAF00CB3382 /* SDWebImageNetworkImageProvider.swift */,
+			);
+			name = NetworkImageProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -95,7 +95,7 @@ extension NetworkImageViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NetworkImageCollectionViewCell.identify(), for: indexPath) as! NetworkImageCollectionViewCell
         print("cellForItemAt index \(indexPath.item)")
-        let imageUrl = origins[indexPath.item]
+        let imageUrl = thumbs[indexPath.item]
         if isUseSDWebImage {
             cell.imageView.sd_setImage(with: URL(string: imageUrl))
         } else {
@@ -131,6 +131,7 @@ extension NetworkImageViewController: UICollectionViewDelegate, UICollectionView
                                     imgVM.asyncLoadRawSource { result in
                                         switch result {
                                         case let .success(image):
+                                            print(image)
                                             //还需请求权限，这里就不演示了
 //                                            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
                                             JFPopupView.popup.toast(hit: "保存图片成功（只做演示无功能）")
