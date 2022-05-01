@@ -13,153 +13,154 @@
 		026D2A43CE05B83568AD0C0A27BE7016 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7339CD30C6323CB8F20C1EDE1F07C9 /* ImageProcessor.swift */; };
 		02D728C97AA23F2F5E00FCF14E27ADCB /* ImageDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A485BDD48362EBC76B5CF38F3460C9F5 /* ImageDownloaderDelegate.swift */; };
 		031DD15E574848C237118347C989261B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
+		0D7F2A11501C9391131AE9DE5DF49704 /* icon_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38DDC77C116D53610FB668B0E0DB93B2 /* icon_play@2x.png */; };
+		1170C06E270E4A9B7835513D1D0A9571 /* UIView+JFRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B097EB266D1AD040728B1A962ECAEF74 /* UIView+JFRect.swift */; };
 		17478E54C6BBAF4457E68255F8AF9438 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEF9C017875BE062EC024EDC9181A39 /* Storage.swift */; };
+		177013418CB152F70DCD682528B62E10 /* HeroVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F7F80F898D9AA5C1E754F3B212C0A /* HeroVideoView.swift */; };
 		18540C7423267A7B483B5EAC9F2FBB5F /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656D8C9124B9366F10B41795E80860E /* Box.swift */; };
-		1FBF8C7E5659B4BDEA68A91B5CC23956 /* HeroBrowserViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40092D9A208721B88C73604D8F57745D /* HeroBrowserViewModule.swift */; };
-		21FBE5DB6AC6DD09752D326398D1C735 /* HeroCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50057D2E7C009E5D59F2A50CCB157D99 /* HeroCircularProgressView.swift */; };
 		22B6F0C1A05920D99B711B48B92C124A /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA5DB4528F75F42CDD0D968257DABF /* KingfisherManager.swift */; };
-		23B908FC06391D98A5DB18FB32372507 /* HeroBrowserBaseImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C056511AC49FE62BE8692891C5EFFE /* HeroBrowserBaseImageCell.swift */; };
-		251F51FCDCFB32E1F4577949919AD8A5 /* icon_video_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFDA5FE210ED4B6F542D6DD8037A43A /* icon_video_loading@2x.png */; };
 		26462C4BC9EE339C39FB1587BB80AB90 /* ImageProgressive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2559A08FCAFE4780F78CE82159E1926A /* ImageProgressive.swift */; };
 		27439EC248E4B251AD954321490C7FAE /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829A013806B090452D63E5F72D37A8C /* AnimatedImageView.swift */; };
-		2A33CEEBE03DF2C7BC4C06F7FEE0658D /* Size+Extenison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF31E0AB9EA3949AF768E574A1324C /* Size+Extenison.swift */; };
 		2C73603918E898CEA2BF2FDFF18D2647 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB2E7C9EE45AA78E970C77351074B9 /* Result.swift */; };
 		2F07689706119A5D6B3CC81E5016828B /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757BC0423C0E39778F37AD4D47770BF /* Kingfisher.swift */; };
 		2F576B42FE853AEF2C4676FAF09A833E /* ImageDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC11A5BA90A4CEB4F109CC482762A84 /* ImageDataProcessor.swift */; };
+		30FDD9CDDEC811E7A28C928C654FD8BA /* HeroBundleTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54BD0D3FDA5C0184679246A31743AD2 /* HeroBundleTool.swift */; };
 		3315E95E92C3EC0D0D28A68819FFCC38 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872D7EFA572ECEE8EF993C27196E16DD /* CFNetwork.framework */; };
 		363FBBAD311FC8F84AF4559B3EC7E675 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE624A42F4A8FF7EA85139A8A7828360 /* FormatIndicatedCacheSerializer.swift */; };
 		3779F674B0AEC1D521014BCE5F6F3848 /* NSTextAttachment+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3ABD301F5285D6FD41169B4B9604CC /* NSTextAttachment+Kingfisher.swift */; };
-		37D1599AC0FCCDADC2D11A1EE012C55C /* UIView+JFRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B097EB266D1AD040728B1A962ECAEF74 /* UIView+JFRect.swift */; };
-		3B451CDD765B648E5FA47A4B17ABD965 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399B3A55418F921F4FFB7A020DE9EF67 /* Hero.swift */; };
+		4191449EDA75CD30E372C2A8F5734645 /* HeroBrowserViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C33C27357EAFD730628ADB23B9930 /* HeroBrowserViewContainer.swift */; };
+		43A3C15089B07D56323160DD520F1281 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2C99836FFAFF6AFF560FB26F2A70B /* Hero.swift */; };
 		440A52575362065AC7D7277BC268D6E6 /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D071EC0610CAFB67A673F8F6C9CB4 /* ImageFormat.swift */; };
-		47D55FA9651D74BF184C6CAEF11032A9 /* JRBaseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1834029832A4656AAA9D1A8D308FF27 /* JRBaseKit-dummy.m */; };
+		46CDFCFBD718C829E7CD48BF40525764 /* icon_video_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EBE6A473C98FC1B4385D765F16A5DE /* icon_video_loading@2x.png */; };
 		488B94782314042614F1FB7620407FCC /* AuthenticationChallengeResponsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3F511850AA58080AE965229B6954F /* AuthenticationChallengeResponsable.swift */; };
 		4BEFD05346081CE7797BBA2F6C9DC363 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52554E1C9731D5352FDE9E63F8C5466B /* Accelerate.framework */; };
 		4DA118246E671CAB8B8FB2328BB13935 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ABBD8056F4A85E582EA08CC2682A9C /* ImageTransition.swift */; };
+		5374ED96694A55B638BCFDC2CCBBC044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
 		5555A48DF687EEBE895890FD5FA283C9 /* RetryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903A931883FB8958F324CEBF12F9B3A /* RetryStrategy.swift */; };
+		56258BE5E9A4FCB5F93C2A8B0B4CE010 /* JRBaseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1834029832A4656AAA9D1A8D308FF27 /* JRBaseKit-dummy.m */; };
 		5649197507A7DAB892FD0A7B5A9D6D4F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E45FAEDFF631CDCC400073BB489068 /* ImageCache.swift */; };
 		566E1BD667CCAEF237B605D80A10C5E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
 		567036FB455293CCC0BFC215CA915B4A /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B629ACA730E8203989726B6ADF37DB /* CacheSerializer.swift */; };
+		5CC71E123E48CF14E9030A35F14D978A /* Size+Extenison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF31E0AB9EA3949AF768E574A1324C /* Size+Extenison.swift */; };
 		5D7B4063F1AC165B647C2ACFA8781BAF /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31B642C227405822686AA8442E30757 /* CallbackQueue.swift */; };
+		5F03CD56D9609B617576B44C2CB07394 /* HeroBrowserDataImageViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE8251788905A7DFE63373BCFD1197 /* HeroBrowserDataImageViewModule.swift */; };
 		5F4B289996241A41EDFCA1A3C849045A /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1E23D0E3B02F040B99F3834A6B4926 /* String+MD5.swift */; };
+		5F6468B3152194CA6225FE02B0A01158 /* HeroBrowserVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629BE3F2D877993EA74FC97AFAB6BCC /* HeroBrowserVideoCell.swift */; };
 		614CA46720B2B8D58EBBD2CF26E2FEAB /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2F077B2D9182BCA1AAA4E87EDE802 /* ImagePrefetcher.swift */; };
 		67302797A1DCF1062DD228DD59D58CAB /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36AA9B77B4C6ECDE45B74F155D57188 /* ImageDataProvider.swift */; };
-		6E1D290FD1EEDD4B6BB00E5930989623 /* HeroBrowserVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A2CBE6B02CF9A531963CFEECD17FB /* HeroBrowserVideoCell.swift */; };
-		6E2AF624157B86C41D24F61856024A18 /* HeroBrowserNetworkImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FCB48FC3B45C3789245510F5DFC297 /* HeroBrowserNetworkImageCell.swift */; };
+		68DBB22E4D9852DC8F6A0F46894C042C /* HeroBrowserBaseImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E3204B7705635F214AE2BEEF5D2550 /* HeroBrowserBaseImageCell.swift */; };
 		6FA433B7C87F256B163EF3D148C91836 /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D4DCA2C2A0821048505BC40F26794 /* NSButton+Kingfisher.swift */; };
 		70361160B4186667C8C699919E509B4D /* Pods-JFHeroBrowser_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2581D405BB656F89C627DC2E55C6777 /* Pods-JFHeroBrowser_Tests-dummy.m */; };
 		7081BAD4BC8B8755EBECEF3D62807B17 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA604C9A66739DDC475A2EA0C8D8E9 /* Placeholder.swift */; };
 		7154F93C879B0E4CB11874AC95F6FF3E /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE4FB37E1CD28FAA537A50B088B9C /* Source.swift */; };
+		73461504D0A9CF281AC5E3DAECAAE0D5 /* Hero+UIViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41B3B801DC76C8C367D23AB5417D222 /* Hero+UIViewContoller.swift */; };
 		740659793E5D906F5A508155ED8895DF /* ImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F57BDED076A7125DFEED6423968D7 /* ImageDrawing.swift */; };
-		750D3AAD24CFB3EBEBEDF28BFC2C52AC /* HeroBundleTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1477A72E84FD76FCABF6126F8310DB /* HeroBundleTool.swift */; };
-		75AA2151C8A0DAB27FC45FB602E01957 /* JFHeroBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1278A5FD2F668956296F7124B36457 /* JFHeroBrowser-dummy.m */; };
 		76DBB416ED9F7C7E50A8D77BCF6A9E39 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949AB8A4605F54B650FB17FA0165350B /* Image.swift */; };
 		76F9B7217220321AF3343F7F2C5781D4 /* KFImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC06C30EC09E62B46CAA462754B0445 /* KFImageOptions.swift */; };
+		77EE8C48D0BE5C49333F81543BE03EC8 /* HeroBrowserVideoViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4C2AC19EEF8C4009D8CF85C713EB0 /* HeroBrowserVideoViewModule.swift */; };
 		78DE8DE64F023B0ACE1099C30C79CE59 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CDA21F41C506E9D5804065F75F739 /* MemoryStorage.swift */; };
-		7AFE17E14279782E6F3D9CC826D1C689 /* HeroTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4B8092D26F64084E554BE41F259F3 /* HeroTransitionAnimation.swift */; };
 		7D78CC7C13932386B33017B3D8F30953 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
-		84A589CDC98D77AC375BA900DB64F47D /* HeroVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0415874765C5E3F16D2E98F3924E5B8 /* HeroVideoView.swift */; };
-		89D8B577055B76E95CF70DF50A3C8BBC /* HeroBrowserDataImageViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E29BA946C5910BCBD033D215C55AA /* HeroBrowserDataImageViewModule.swift */; };
-		90212A7A49188C3DDCBE26274D16B221 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
+		7D8D30A61721115FA3E96F0D643508A8 /* JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F576219ED07CA5EF277FDFD30B9AC /* JF.swift */; };
+		853940F090DC329DB498C6B4F92D0A83 /* UIImage+JFColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFA31F23EED0AE133BF45E21DF86C45 /* UIImage+JFColor.swift */; };
+		87B1A199A4965A2CF3F7BD8C10D6AC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
+		8EE0AAEF468A904374FCAC0B14FCB35E /* HeroTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626AA944B0D551167D8498F290130711 /* HeroTransitionAnimation.swift */; };
 		93209671B01B76711F6E2022CADBAC9A /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D59C7E3F00EE2A0B97DCDBBA3FAB806 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		966647F1B729064EF85C2B4F9E5802DC /* JFHeroBrowser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6077DFE421E549E3632B4E3098104D2 /* JFHeroBrowser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971CE56718BB8172DB2971C46C43D4A8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955773FAB6D408A26169842BA786B299 /* SessionDelegate.swift */; };
-		9AF9AEB16AAAB75E023A78B5CC086BCF /* HeroBrowserLocalImageViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9269682040BB57A975242E3FF1D9D17 /* HeroBrowserLocalImageViewModule.swift */; };
 		9EF3C38E559D7D0EECBDDEE478AAACAF /* Pods-JFHeroBrowser_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00BDA65DC72B4AB139040F7C50679BBC /* Pods-JFHeroBrowser_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FC98D1BF3A981BB349E26D712298FA1 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C33569D351F020590D95A698D035B /* UIButton+Kingfisher.swift */; };
 		9FE18707EB6166A53076FE3CC036593C /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7555CBC3487642061B04F2A1C818B12 /* ExtensionHelpers.swift */; };
+		A3C5C4697784425BC39C39EF1D681644 /* HeroBrowserViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112CED5DDF8BA4709179F1CAFBDCF3F /* HeroBrowserViewModule.swift */; };
 		A6A82B7640E18944A6FFC4BE7348E7F3 /* SizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32329573E322D85A4DEB27DEA2B6257 /* SizeExtensions.swift */; };
+		A6C24EE016B013EF05CA0D68B6988303 /* HeroBrowserNetworkImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE9BB7C46EFEE0BE7C5F14D404E7E /* HeroBrowserNetworkImageCell.swift */; };
 		A71A6D16F682FE7F5B81B16462F6C016 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A012FA3BA54F2519C473F0594063952C /* ImageModifier.swift */; };
-		A815BC52A31EB24F08C31ECECD6C0313 /* icon_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7225BF2F857F9D7000DB56359D7D4A8D /* icon_play@2x.png */; };
 		A9AD1FE8379356D400C79DCCFE944E03 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC729AFFA2983BDD5BDCEE052D0D3C /* KingfisherOptionsInfo.swift */; };
 		AAACC4639E0E182F756173EBEA4494F0 /* GIFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D5CDAEC7F21A4509B5D2AF03E554DE /* GIFAnimatedImage.swift */; };
 		AAE9191316FB42B81F0D4A976E9ECB34 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55CE905BCD7289CCCD6CBBAD435C87C /* Delegate.swift */; };
 		AE648D70750F3898C36E88976E189CF5 /* Pods-JFHeroBrowser_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D3DFD8FDDF1CA258E89567173C18C87 /* Pods-JFHeroBrowser_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B10B0F2C497768D439FA527C7C83B2E2 /* JFHeroBrowser-JFHeroBrowser in Resources */ = {isa = PBXBuildFile; fileRef = A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser-JFHeroBrowser */; };
+		B04804E468F6562605896B5384F228B9 /* HeroBrowserLocalImageViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38129F9C0E3B81A8ADB96DBF81A209A /* HeroBrowserLocalImageViewModule.swift */; };
 		B322C801FA13AE9AA91938FB19632FE5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54554B02DFE31653118928174841B04C /* ImageDownloader.swift */; };
 		B389BAA9DDADE0C535CD9EB2EE2406E7 /* KF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A09D34F2C69762C785D098031BDEF /* KF.swift */; };
+		B6B137946AFF115347AC58B8FB3715A6 /* JFHeroBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1AEA22C5DD5D7DCED96DCD5BAA1EE6 /* JFHeroBrowser-dummy.m */; };
 		B7DAC534D4F0A31CD95FF6613317D4E8 /* AVAssetImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430C4895DA48008E596CFAAFB6404F4E /* AVAssetImageDataProvider.swift */; };
 		BA6758186158F65AE8730D5E20374A6A /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E271D8058EA86FF2F1C13145354E1 /* RequestModifier.swift */; };
-		BAD83A0914DCFACE50EC5F16F9D1CAB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
 		BBEB88D4196A5F8621F2D16DF91C251A /* GraphicsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C074B95BEACFF79934B7F493599D9F /* GraphicsContext.swift */; };
 		C33927F838E5C40F86F8A1AF4E09908B /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714AADDC61D0606603FA474FDA66CB1 /* ImageView+Kingfisher.swift */; };
 		C38A6B82ECB3F38D79C0CD50A8F5314F /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95028D648207250999CFC7445FFCBE94 /* RedirectHandler.swift */; };
-		C465251DBC8C21E6FC9E70ED4CB8947F /* HeroBrowserVideoViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51803AE60804770556BD6662DF619C2A /* HeroBrowserVideoViewModule.swift */; };
 		C5E1B5169CC182B5A750F78C3499F55B /* Pods-JFHeroBrowser_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB089DA7BBF5E6078765A4AFBD8A5C0C /* Pods-JFHeroBrowser_Example-dummy.m */; };
+		CB0900CF93558769EBFA947D9BF72271 /* HeroBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66861C1BD14231C4D36BE0627B5D5670 /* HeroBrowser.swift */; };
 		CBEC736105CA647913890C03225F8A02 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D739E987398B261FA5D70ED108B961A /* Indicator.swift */; };
-		CFF270974BE926C2ED1DFF4440D71C36 /* JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F576219ED07CA5EF277FDFD30B9AC /* JF.swift */; };
+		D21CB5011CBA7F63F6B6E04867069B71 /* JFHeroBrowser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFF258D5A2C1783CE3C3DDC790976A93 /* JFHeroBrowser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D25D7C8E973E45E6C0FBFE4DB9C8766C /* ImageBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ABB9DC14B55E440C2431CB510E0469 /* ImageBinder.swift */; };
-		D56F72BCEFA287AC4F55FE8068F766E3 /* HeroBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA58E60E79AC31A250EF3C295048016 /* HeroBrowser.swift */; };
-		DE8C06450160207E9D4A15109DCD3EA2 /* HeroBrowserViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD6261CD89FA14DCFEA42D88DF82E6 /* HeroBrowserViewContainer.swift */; };
+		E08603B148F45A2C0269A33D8A783007 /* HeroCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EA9BFD1093B3891A7CC555ADB1B02B /* HeroCircularProgressView.swift */; };
 		E1A94B0C5B6CA70F75CDE21D3B5AC03B /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C0C186029C54A81FFBB9D1282501FF /* Kingfisher-dummy.m */; };
 		E461634A31671B2A3C2C987D3980899E /* KFOptionsSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6022D518A809F1D36D931CEAEEB2475E /* KFOptionsSetter.swift */; };
 		E4A1B4245A2BA9C2F2F5F5CE2DF9D42B /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4857A148BC6BFF3625EEA47607F514B /* Runtime.swift */; };
 		E8B4B88BF0241821B81503E1BBE639F3 /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C389FAA23248B9357A3BAD7B83D9016D /* SessionDataTask.swift */; };
-		E9A91B25350C338044A62936536580D6 /* HeroBrowserNetworkImageViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE9F5E5E0E3A524C4FDA84C8D2DABD /* HeroBrowserNetworkImageViewModule.swift */; };
 		E9EE1BCFE7318EFF181D763503311830 /* TVMonogramView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FFB775B3753D68AFFE043C90CC19E9 /* TVMonogramView+Kingfisher.swift */; };
+		EC3253728D7E3BB19EE377F0E792810C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C9DB73D3E410A294B99F533D985DF9 /* UIColor+Extension.swift */; };
+		EE1B35BDD9FF7CD62B8BDCDE0F59ACFF /* HeroBrowserNetworkImageViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6955930AF601C758769FC746955D5D2 /* HeroBrowserNetworkImageViewModule.swift */; };
 		EE97D2B2E79237770CE018342B9F86E7 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AD63B1548B3649385EBA5DB04463D /* Resource.swift */; };
-		FA4B01DCC00831CBFC3CDA78ADFA595F /* JRBaseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFCB41C5ADF723006FA8B5BC4C7065F /* JRBaseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FBE433A5E8896FFCC3443930C0C39055 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C9DB73D3E410A294B99F533D985DF9 /* UIColor+Extension.swift */; };
+		EFEA1EC988BC6DA884D2572816E08D1E /* JRBaseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFCB41C5ADF723006FA8B5BC4C7065F /* JRBaseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBFF2B26897762DC8255CFC49038B8B5 /* JFHeroBrowser-JFHeroBrowser in Resources */ = {isa = PBXBuildFile; fileRef = A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser-JFHeroBrowser */; };
 		FC07184FF229E4890E76F265656AAC27 /* WKInterfaceImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8553F8FCC7FD209DFCCF0EA2A172BB55 /* WKInterfaceImage+Kingfisher.swift */; };
-		FD997CD50B90855E5CEE52BD07D2CA64 /* UIImage+JFColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFA31F23EED0AE133BF45E21DF86C45 /* UIImage+JFColor.swift */; };
 		FFE42C0183B7DB7FB6A69CD174BB9A8B /* KFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBD66945F0D97BF9B18A36E5E7CFB6 /* KFImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		59B56074F2AE6E4918447525811EFC72 /* PBXContainerItemProxy */ = {
+		2593102763809A19F7D24BFDDA9B02B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0B1F32125DF013863A0D1368212EAA6B;
 			remoteInfo = JFHeroBrowser;
 		};
-		B11EC1E76A1C76D64670E905CE031985 /* PBXContainerItemProxy */ = {
+		8895470D223F35A4F99741CE71486180 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D56538E6467ED03E10BFE3D7E918159;
+			remoteInfo = JRBaseKit;
+		};
+		9976142F7A2FEBD262ACAA7F4370E943 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8D7D9F01E1687A74058CDBA76158597E;
 			remoteInfo = "JFHeroBrowser-JFHeroBrowser";
 		};
-		C68026D81CD3A83E496454A2B61BCB45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C913C72E66D480ABDD0358C140C3A78F;
-			remoteInfo = "Pods-JFHeroBrowser_Example";
-		};
-		E7994EE612C8AE8909BB5E5756EE780D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D56538E6467ED03E10BFE3D7E918159;
-			remoteInfo = JRBaseKit;
-		};
-		E8C7780A73C9590EA3E3FAFE621B77D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D56538E6467ED03E10BFE3D7E918159;
-			remoteInfo = JRBaseKit;
-		};
-		F9C706CF2DBA7B87BB3E6249152D289F /* PBXContainerItemProxy */ = {
+		DC92A197B97C3327173580A32671F856 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
 			remoteInfo = Kingfisher;
 		};
+		EB35A3BF6D0ECD74288C52077743A55F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D56538E6467ED03E10BFE3D7E918159;
+			remoteInfo = JRBaseKit;
+		};
+		F2C040FCA9A97DD81A89DF4A238C9E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C913C72E66D480ABDD0358C140C3A78F;
+			remoteInfo = "Pods-JFHeroBrowser_Example";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00BDA65DC72B4AB139040F7C50679BBC /* Pods-JFHeroBrowser_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JFHeroBrowser_Tests-umbrella.h"; sourceTree = "<group>"; };
+		02EBE6A473C98FC1B4385D765F16A5DE /* icon_video_loading@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_video_loading@2x.png"; path = "JFHeroBrowser/Assets/icon_video_loading@2x.png"; sourceTree = "<group>"; };
 		0829A013806B090452D63E5F72D37A8C /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/Views/AnimatedImageView.swift; sourceTree = "<group>"; };
 		095E044FA6EF79C596E0221AB49F7349 /* Pods-JFHeroBrowser_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JFHeroBrowser_Tests.modulemap"; sourceTree = "<group>"; };
-		0C1477A72E84FD76FCABF6126F8310DB /* HeroBundleTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBundleTool.swift; sourceTree = "<group>"; };
 		0C41FB87ABF0F4E0C43C34D04676CE24 /* Pods-JFHeroBrowser_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFHeroBrowser_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		0CA0A7CC4A083D910518FC24B4B13494 /* ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist"; sourceTree = "<group>"; };
+		13DF6584A355E45FF976CEE199A07E78 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		17C9DB73D3E410A294B99F533D985DF9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Classes/UIColor+Extension.swift"; sourceTree = "<group>"; };
-		17DF80A9B8C16614F37D6FAEA4B67558 /* JFHeroBrowser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JFHeroBrowser-Info.plist"; sourceTree = "<group>"; };
 		198CFF38A3F2C402046335A58045547D /* Pods-JFHeroBrowser_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFHeroBrowser_Example-Info.plist"; sourceTree = "<group>"; };
-		19C056511AC49FE62BE8692891C5EFFE /* HeroBrowserBaseImageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserBaseImageCell.swift; sourceTree = "<group>"; };
 		1B7C33569D351F020590D95A698D035B /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/Extensions/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		1F8F606E4C763C52DC421B54001B4ED9 /* Pods-JFHeroBrowser_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JFHeroBrowser_Example.modulemap"; sourceTree = "<group>"; };
 		2559A08FCAFE4780F78CE82159E1926A /* ImageProgressive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProgressive.swift; path = Sources/Image/ImageProgressive.swift; sourceTree = "<group>"; };
@@ -168,60 +169,56 @@
 		2C0D4DCA2C2A0821048505BC40F26794 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		2D59C7E3F00EE2A0B97DCDBBA3FAB806 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
 		2D5E271D8058EA86FF2F1C13145354E1 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
+		2F0F7F80F898D9AA5C1E754F3B212C0A /* HeroVideoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroVideoView.swift; sourceTree = "<group>"; };
 		31FFB775B3753D68AFFE043C90CC19E9 /* TVMonogramView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TVMonogramView+Kingfisher.swift"; path = "Sources/Extensions/TVMonogramView+Kingfisher.swift"; sourceTree = "<group>"; };
 		355A09D34F2C69762C785D098031BDEF /* KF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KF.swift; path = Sources/General/KF.swift; sourceTree = "<group>"; };
 		35DF31E0AB9EA3949AF768E574A1324C /* Size+Extenison.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Size+Extenison.swift"; path = "Classes/Size+Extenison.swift"; sourceTree = "<group>"; };
 		36C0C186029C54A81FFBB9D1282501FF /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
-		396FC640B78D45310E2D7D15CD966E68 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		399B3A55418F921F4FFB7A020DE9EF67 /* Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		38DDC77C116D53610FB668B0E0DB93B2 /* icon_play@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_play@2x.png"; path = "JFHeroBrowser/Assets/icon_play@2x.png"; sourceTree = "<group>"; };
+		3A4E5A8D2DDF4963847C33485582F58C /* JFHeroBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFHeroBrowser.debug.xcconfig; sourceTree = "<group>"; };
 		3CF401DC6B81F1EAC70ACCEA977384C2 /* JRBaseKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JRBaseKit-Info.plist"; sourceTree = "<group>"; };
 		3D0AD63B1548B3649385EBA5DB04463D /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/General/ImageSource/Resource.swift; sourceTree = "<group>"; };
 		3D739E987398B261FA5D70ED108B961A /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Views/Indicator.swift; sourceTree = "<group>"; };
 		3EC11A5BA90A4CEB4F109CC482762A84 /* ImageDataProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProcessor.swift; path = Sources/Networking/ImageDataProcessor.swift; sourceTree = "<group>"; };
-		40092D9A208721B88C73604D8F57745D /* HeroBrowserViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserViewModule.swift; sourceTree = "<group>"; };
 		40360436D46F4F0548634FFC969F86B8 /* JRBaseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JRBaseKit.release.xcconfig; sourceTree = "<group>"; };
 		41DECBFD495F1F7A9BFC030FF46AB36A /* JRBaseKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JRBaseKit; path = JRBaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		42FD6261CD89FA14DCFEA42D88DF82E6 /* HeroBrowserViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserViewContainer.swift; sourceTree = "<group>"; };
 		430C4895DA48008E596CFAAFB6404F4E /* AVAssetImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVAssetImageDataProvider.swift; path = Sources/General/ImageSource/AVAssetImageDataProvider.swift; sourceTree = "<group>"; };
-		454A2CBE6B02CF9A531963CFEECD17FB /* HeroBrowserVideoCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserVideoCell.swift; sourceTree = "<group>"; };
 		484CFDAB303891B4EF5E57640BEBBE12 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Image/Filter.swift; sourceTree = "<group>"; };
 		4A72A6A4AE46E753E4E1761DD868E8FA /* Kingfisher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.release.xcconfig; sourceTree = "<group>"; };
-		4CFDA5FE210ED4B6F542D6DD8037A43A /* icon_video_loading@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_video_loading@2x.png"; path = "JFHeroBrowser/Assets/icon_video_loading@2x.png"; sourceTree = "<group>"; };
 		4F07609D2C97336E2549D9897EC47EC2 /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
-		50057D2E7C009E5D59F2A50CCB157D99 /* HeroCircularProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroCircularProgressView.swift; sourceTree = "<group>"; };
-		5155156492DE903EBF988D8A90D6A514 /* JFHeroBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFHeroBrowser.debug.xcconfig; sourceTree = "<group>"; };
-		51803AE60804770556BD6662DF619C2A /* HeroBrowserVideoViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserVideoViewModule.swift; sourceTree = "<group>"; };
+		51E4C2AC19EEF8C4009D8CF85C713EB0 /* HeroBrowserVideoViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserVideoViewModule.swift; sourceTree = "<group>"; };
 		52554E1C9731D5352FDE9E63F8C5466B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		54554B02DFE31653118928174841B04C /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/Networking/ImageDownloader.swift; sourceTree = "<group>"; };
+		54589FE344EF7D5F832E00437CA8785C /* JFHeroBrowser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JFHeroBrowser-Info.plist"; sourceTree = "<group>"; };
 		55BBD66945F0D97BF9B18A36E5E7CFB6 /* KFImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImage.swift; path = Sources/SwiftUI/KFImage.swift; sourceTree = "<group>"; };
 		56C074B95BEACFF79934B7F493599D9F /* GraphicsContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphicsContext.swift; path = Sources/Image/GraphicsContext.swift; sourceTree = "<group>"; };
 		56F8CEABF63E8FAD6B8B0B73F16EFF77 /* Pods-JFHeroBrowser_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JFHeroBrowser_Example"; path = Pods_JFHeroBrowser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E3204B7705635F214AE2BEEF5D2550 /* HeroBrowserBaseImageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserBaseImageCell.swift; sourceTree = "<group>"; };
 		5D3DFD8FDDF1CA258E89567173C18C87 /* Pods-JFHeroBrowser_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JFHeroBrowser_Example-umbrella.h"; sourceTree = "<group>"; };
-		5E47EDE58F4FCA9CB7308EE89EFC234C /* ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist"; sourceTree = "<group>"; };
 		5EEC729AFFA2983BDD5BDCEE052D0D3C /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
 		6022D518A809F1D36D931CEAEEB2475E /* KFOptionsSetter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFOptionsSetter.swift; path = Sources/General/KFOptionsSetter.swift; sourceTree = "<group>"; };
 		61B0A4BA8C1963616DFAF9B48FA6E77F /* Pods-JFHeroBrowser_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFHeroBrowser_Example-frameworks.sh"; sourceTree = "<group>"; };
+		626AA944B0D551167D8498F290130711 /* HeroTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroTransitionAnimation.swift; sourceTree = "<group>"; };
 		62BFBF0526C9196571957D6A45E3C035 /* JFHeroBrowser */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JFHeroBrowser; path = JFHeroBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		646A5E24D0A6426CDDA9B0091F00CB79 /* Pods-JFHeroBrowser_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFHeroBrowser_Tests-Info.plist"; sourceTree = "<group>"; };
+		66861C1BD14231C4D36BE0627B5D5670 /* HeroBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowser.swift; sourceTree = "<group>"; };
 		67ABBD8056F4A85E582EA08CC2682A9C /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/Image/ImageTransition.swift; sourceTree = "<group>"; };
+		67EA9BFD1093B3891A7CC555ADB1B02B /* HeroCircularProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroCircularProgressView.swift; sourceTree = "<group>"; };
 		68D5CDAEC7F21A4509B5D2AF03E554DE /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
-		7225BF2F857F9D7000DB56359D7D4A8D /* icon_play@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_play@2x.png"; path = "JFHeroBrowser/Assets/icon_play@2x.png"; sourceTree = "<group>"; };
+		6BBE8251788905A7DFE63373BCFD1197 /* HeroBrowserDataImageViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserDataImageViewModule.swift; sourceTree = "<group>"; };
+		748883D245B31A54B53919A2B10366A5 /* JFHeroBrowser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JFHeroBrowser.modulemap; sourceTree = "<group>"; };
 		75426C9AA86C6E5B4452F766BD12BB44 /* JRBaseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JRBaseKit.debug.xcconfig; sourceTree = "<group>"; };
 		7656D8C9124B9366F10B41795E80860E /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Utility/Box.swift; sourceTree = "<group>"; };
 		787D071EC0610CAFB67A673F8F6C9CB4 /* ImageFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Sources/Image/ImageFormat.swift; sourceTree = "<group>"; };
-		7A9E29BA946C5910BCBD033D215C55AA /* HeroBrowserDataImageViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserDataImageViewModule.swift; sourceTree = "<group>"; };
+		789E570FFFDAB3E205E313C2BCFF05C3 /* JFHeroBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFHeroBrowser.release.xcconfig; sourceTree = "<group>"; };
 		7BF3817AA104F9C822E4DEC87051990F /* JRBaseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-prefix.pch"; sourceTree = "<group>"; };
 		7FEF9C017875BE062EC024EDC9181A39 /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
-		80DE9F5E5E0E3A524C4FDA84C8D2DABD /* HeroBrowserNetworkImageViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserNetworkImageViewModule.swift; sourceTree = "<group>"; };
-		80FCB48FC3B45C3789245510F5DFC297 /* HeroBrowserNetworkImageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserNetworkImageCell.swift; sourceTree = "<group>"; };
-		81C0DF8676B1F774E9634AE7BAA5CCA4 /* JFHeroBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFHeroBrowser.release.xcconfig; sourceTree = "<group>"; };
+		8112CED5DDF8BA4709179F1CAFBDCF3F /* HeroBrowserViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserViewModule.swift; sourceTree = "<group>"; };
 		8304D4735554C2CC25229D97BDAA78FF /* Pods-JFHeroBrowser_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFHeroBrowser_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		83100528484BC4A75454F85F2CA27780 /* Pods-JFHeroBrowser_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFHeroBrowser_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8553F8FCC7FD209DFCCF0EA2A172BB55 /* WKInterfaceImage+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKInterfaceImage+Kingfisher.swift"; path = "Sources/Extensions/WKInterfaceImage+Kingfisher.swift"; sourceTree = "<group>"; };
-		85736C5354C25621CC043B956C0DB350 /* JFHeroBrowser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFHeroBrowser-prefix.pch"; sourceTree = "<group>"; };
 		872D7EFA572ECEE8EF993C27196E16DD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		87C4B8092D26F64084E554BE41F259F3 /* HeroTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroTransitionAnimation.swift; sourceTree = "<group>"; };
 		8903A931883FB8958F324CEBF12F9B3A /* RetryStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryStrategy.swift; path = Sources/Networking/RetryStrategy.swift; sourceTree = "<group>"; };
 		9253698C6DB79D2ACA60BCFB7C7A0D33 /* Pods-JFHeroBrowser_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFHeroBrowser_Example.release.xcconfig"; sourceTree = "<group>"; };
 		92DEE4FB37E1CD28FAA537A50B088B9C /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Sources/General/ImageSource/Source.swift; sourceTree = "<group>"; };
@@ -235,6 +232,7 @@
 		9E3CDA21F41C506E9D5804065F75F739 /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Sources/Cache/MemoryStorage.swift; sourceTree = "<group>"; };
 		9E44BC8569BE29A7AD7A8C72CA3F696A /* Pods-JFHeroBrowser_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFHeroBrowser_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9EC06C30EC09E62B46CAA462754B0445 /* KFImageOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImageOptions.swift; path = Sources/SwiftUI/KFImageOptions.swift; sourceTree = "<group>"; };
+		9F4C33C27357EAFD730628ADB23B9930 /* HeroBrowserViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserViewContainer.swift; sourceTree = "<group>"; };
 		A012FA3BA54F2519C473F0594063952C /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/Networking/ImageModifier.swift; sourceTree = "<group>"; };
 		A1BB2E71A9E431E9879BC0B39F926D7D /* Pods-JFHeroBrowser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFHeroBrowser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A485BDD48362EBC76B5CF38F3460C9F5 /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloaderDelegate.swift; path = Sources/Networking/ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 		A757BC0423C0E39778F37AD4D47770BF /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/General/Kingfisher.swift; sourceTree = "<group>"; };
 		A8369FF8DB2CA5C40AAA6517B082CC03 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		ABAA2F083ACFC54ABA00CF6799E11753 /* Pods-JFHeroBrowser_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JFHeroBrowser_Tests"; path = Pods_JFHeroBrowser_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFA58E60E79AC31A250EF3C295048016 /* HeroBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowser.swift; sourceTree = "<group>"; };
 		B097EB266D1AD040728B1A962ECAEF74 /* UIView+JFRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JFRect.swift"; path = "Classes/UIView+JFRect.swift"; sourceTree = "<group>"; };
 		B5E45FAEDFF631CDCC400073BB489068 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/Cache/ImageCache.swift; sourceTree = "<group>"; };
 		B714AADDC61D0606603FA474FDA66CB1 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/Extensions/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
@@ -252,45 +249,43 @@
 		BC1F57BDED076A7125DFEED6423968D7 /* ImageDrawing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDrawing.swift; path = Sources/Image/ImageDrawing.swift; sourceTree = "<group>"; };
 		BE624A42F4A8FF7EA85139A8A7828360 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/Cache/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		BFFA31F23EED0AE133BF45E21DF86C45 /* UIImage+JFColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+JFColor.swift"; path = "Classes/UIImage+JFColor.swift"; sourceTree = "<group>"; };
+		C27D727E8542B816B4D921B6981719D3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		C36AA9B77B4C6ECDE45B74F155D57188 /* ImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProvider.swift; path = Sources/General/ImageSource/ImageDataProvider.swift; sourceTree = "<group>"; };
+		C38129F9C0E3B81A8ADB96DBF81A209A /* HeroBrowserLocalImageViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserLocalImageViewModule.swift; sourceTree = "<group>"; };
 		C389FAA23248B9357A3BAD7B83D9016D /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = Sources/Networking/SessionDataTask.swift; sourceTree = "<group>"; };
 		C3CAE92D248D2E100C53900E057B8F31 /* Pods-JFHeroBrowser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFHeroBrowser_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6955930AF601C758769FC746955D5D2 /* HeroBrowserNetworkImageViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserNetworkImageViewModule.swift; sourceTree = "<group>"; };
 		CA3ABD301F5285D6FD41169B4B9604CC /* NSTextAttachment+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextAttachment+Kingfisher.swift"; path = "Sources/Extensions/NSTextAttachment+Kingfisher.swift"; sourceTree = "<group>"; };
 		CB1E23D0E3B02F040B99F3834A6B4926 /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/Utility/String+MD5.swift"; sourceTree = "<group>"; };
 		CC7339CD30C6323CB8F20C1EDE1F07C9 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
 		CCBB2E7C9EE45AA78E970C77351074B9 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
-		CD1278A5FD2F668956296F7124B36457 /* JFHeroBrowser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFHeroBrowser-dummy.m"; sourceTree = "<group>"; };
 		CDAA604C9A66739DDC475A2EA0C8D8E9 /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Image/Placeholder.swift; sourceTree = "<group>"; };
-		D1A0B0A61A54048DDE2A9E746BB18A5C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CFF258D5A2C1783CE3C3DDC790976A93 /* JFHeroBrowser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFHeroBrowser-umbrella.h"; sourceTree = "<group>"; };
 		D32329573E322D85A4DEB27DEA2B6257 /* SizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeExtensions.swift; path = Sources/Utility/SizeExtensions.swift; sourceTree = "<group>"; };
 		D4996CD5CD389C902CF5425B969B25C5 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
-		D6077DFE421E549E3632B4E3098104D2 /* JFHeroBrowser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFHeroBrowser-umbrella.h"; sourceTree = "<group>"; };
+		D54BD0D3FDA5C0184679246A31743AD2 /* HeroBundleTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBundleTool.swift; sourceTree = "<group>"; };
+		D629BE3F2D877993EA74FC97AFAB6BCC /* HeroBrowserVideoCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserVideoCell.swift; sourceTree = "<group>"; };
 		D9E2F077B2D9182BCA1AAA4E87EDE802 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/Networking/ImagePrefetcher.swift; sourceTree = "<group>"; };
+		DE1AEA22C5DD5D7DCED96DCD5BAA1EE6 /* JFHeroBrowser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFHeroBrowser-dummy.m"; sourceTree = "<group>"; };
 		DF96A600A1E36C5D2919926FFCDFDB51 /* Kingfisher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.debug.xcconfig; sourceTree = "<group>"; };
-		E0415874765C5E3F16D2E98F3924E5B8 /* HeroVideoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroVideoView.swift; sourceTree = "<group>"; };
 		E1834029832A4656AAA9D1A8D308FF27 /* JRBaseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JRBaseKit-dummy.m"; sourceTree = "<group>"; };
 		E31B642C227405822686AA8442E30757 /* CallbackQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackQueue.swift; path = Sources/Utility/CallbackQueue.swift; sourceTree = "<group>"; };
+		E41B3B801DC76C8C367D23AB5417D222 /* Hero+UIViewContoller.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Hero+UIViewContoller.swift"; sourceTree = "<group>"; };
 		E4857A148BC6BFF3625EEA47607F514B /* Runtime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Runtime.swift; path = Sources/Utility/Runtime.swift; sourceTree = "<group>"; };
-		E9269682040BB57A975242E3FF1D9D17 /* HeroBrowserLocalImageViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserLocalImageViewModule.swift; sourceTree = "<group>"; };
 		EAFCB41C5ADF723006FA8B5BC4C7065F /* JRBaseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-umbrella.h"; sourceTree = "<group>"; };
 		EDCDA93619E66AC2194BD8BF0E720EA9 /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Sources/Cache/DiskStorage.swift; sourceTree = "<group>"; };
 		F2581D405BB656F89C627DC2E55C6777 /* Pods-JFHeroBrowser_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFHeroBrowser_Tests-dummy.m"; sourceTree = "<group>"; };
-		F4B7EC87EC1D98864272539189D7D4F3 /* JFHeroBrowser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JFHeroBrowser.modulemap; sourceTree = "<group>"; };
+		F2A2C99836FFAFF6AFF560FB26F2A70B /* Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		F55CE905BCD7289CCCD6CBBAD435C87C /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = Sources/Utility/Delegate.swift; sourceTree = "<group>"; };
+		F8E095BAE5EDB71B829945D3E1CE75FF /* JFHeroBrowser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFHeroBrowser-prefix.pch"; sourceTree = "<group>"; };
+		F970E07E103F1AAFDF6EA52665F5D5A5 /* JFHeroBrowser.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JFHeroBrowser.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FB089DA7BBF5E6078765A4AFBD8A5C0C /* Pods-JFHeroBrowser_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFHeroBrowser_Example-dummy.m"; sourceTree = "<group>"; };
 		FD98080B60D712F2B9EBFFC9B032E0AB /* JRBaseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JRBaseKit.modulemap; sourceTree = "<group>"; };
-		FE52E4ACF6C1610B34A02DC2699FAD6D /* JFHeroBrowser.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JFHeroBrowser.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FE7BE9BB7C46EFEE0BE7C5F14D404E7E /* HeroBrowserNetworkImageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserNetworkImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		13DEC03298B4F2A09063EAE87A2A5283 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2A9040932C75C8BA266660A19334DB74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,19 +302,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58AF82B90265FC7CD7951015FC1EA86D /* Frameworks */ = {
+		7D754B080B72D93D09CAF9B097260DBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90212A7A49188C3DDCBE26274D16B221 /* Foundation.framework in Frameworks */,
+				5374ED96694A55B638BCFDC2CCBBC044 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B929201B49D09A124F752AAA51FE140B /* Frameworks */ = {
+		D2B5E426BF3B1B30F31663CA4E089E3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAD83A0914DCFACE50EC5F16F9D1CAB0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,9 +327,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5781AC1342919B5150EB3626B0F8A61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87B1A199A4965A2CF3F7BD8C10D6AC6D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		009429623F62C22B3544BD2DD30EF273 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F970E07E103F1AAFDF6EA52665F5D5A5 /* JFHeroBrowser.podspec */,
+				13DF6584A355E45FF976CEE199A07E78 /* LICENSE */,
+				C27D727E8542B816B4D921B6981719D3 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,14 +356,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1023D12E9B8C231BFDE557167E4C57F2 /* Pod */ = {
+		051556C506B683652F8374AB6C2D8348 /* ViewModule */ = {
 			isa = PBXGroup;
 			children = (
-				FE52E4ACF6C1610B34A02DC2699FAD6D /* JFHeroBrowser.podspec */,
-				D1A0B0A61A54048DDE2A9E746BB18A5C /* LICENSE */,
-				396FC640B78D45310E2D7D15CD966E68 /* README.md */,
+				6BBE8251788905A7DFE63373BCFD1197 /* HeroBrowserDataImageViewModule.swift */,
+				C38129F9C0E3B81A8ADB96DBF81A209A /* HeroBrowserLocalImageViewModule.swift */,
+				C6955930AF601C758769FC746955D5D2 /* HeroBrowserNetworkImageViewModule.swift */,
+				51E4C2AC19EEF8C4009D8CF85C713EB0 /* HeroBrowserVideoViewModule.swift */,
+				9F4C33C27357EAFD730628ADB23B9930 /* HeroBrowserViewContainer.swift */,
+				8112CED5DDF8BA4709179F1CAFBDCF3F /* HeroBrowserViewModule.swift */,
 			);
-			name = Pod;
+			name = ViewModule;
+			path = JFHeroBrowser/Classes/ViewModule;
 			sourceTree = "<group>";
 		};
 		1D6849BC514B021886E77E1BB99F3625 /* JRBaseKit */ = {
@@ -368,36 +384,16 @@
 			path = JRBaseKit;
 			sourceTree = "<group>";
 		};
-		1ED4008778A9DC9E5394F90C9FBA1443 /* Support Files */ = {
+		29FF8E6E45043E9CB8621820D8D955B3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F4B7EC87EC1D98864272539189D7D4F3 /* JFHeroBrowser.modulemap */,
-				CD1278A5FD2F668956296F7124B36457 /* JFHeroBrowser-dummy.m */,
-				17DF80A9B8C16614F37D6FAEA4B67558 /* JFHeroBrowser-Info.plist */,
-				85736C5354C25621CC043B956C0DB350 /* JFHeroBrowser-prefix.pch */,
-				D6077DFE421E549E3632B4E3098104D2 /* JFHeroBrowser-umbrella.h */,
-				5155156492DE903EBF988D8A90D6A514 /* JFHeroBrowser.debug.xcconfig */,
-				81C0DF8676B1F774E9634AE7BAA5CCA4 /* JFHeroBrowser.release.xcconfig */,
-				5E47EDE58F4FCA9CB7308EE89EFC234C /* ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist */,
+				F2A2C99836FFAFF6AFF560FB26F2A70B /* Hero.swift */,
+				E41B3B801DC76C8C367D23AB5417D222 /* Hero+UIViewContoller.swift */,
+				D54BD0D3FDA5C0184679246A31743AD2 /* HeroBundleTool.swift */,
+				626AA944B0D551167D8498F290130711 /* HeroTransitionAnimation.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/JFHeroBrowser";
-			sourceTree = "<group>";
-		};
-		2E8A5AE2F511DB80BE8B85E37C3E5E74 /* JFHeroBrowser */ = {
-			isa = PBXGroup;
-			children = (
-				7225BF2F857F9D7000DB56359D7D4A8D /* icon_play@2x.png */,
-				4CFDA5FE210ED4B6F542D6DD8037A43A /* icon_video_loading@2x.png */,
-				F35ADAE410F1895E97853D58974FB7E7 /* Base */,
-				7BCFB9D59C25301147B8D050360A0AC8 /* Controller */,
-				1023D12E9B8C231BFDE557167E4C57F2 /* Pod */,
-				1ED4008778A9DC9E5394F90C9FBA1443 /* Support Files */,
-				B860B34E9714FE4B09A7F813A51C0F0D /* View */,
-				90AD3B1A2F1EF16CAD60DDB59D1D812F /* ViewModule */,
-			);
-			name = JFHeroBrowser;
-			path = ../..;
+			name = Base;
+			path = JFHeroBrowser/Classes/Base;
 			sourceTree = "<group>";
 		};
 		4901D89892D6DEC44A107B6CAB50B4A9 /* Pods-JFHeroBrowser_Tests */ = {
@@ -416,10 +412,26 @@
 			path = "Target Support Files/Pods-JFHeroBrowser_Tests";
 			sourceTree = "<group>";
 		};
+		4D73137910FEA350A77BA04E147324E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				748883D245B31A54B53919A2B10366A5 /* JFHeroBrowser.modulemap */,
+				DE1AEA22C5DD5D7DCED96DCD5BAA1EE6 /* JFHeroBrowser-dummy.m */,
+				54589FE344EF7D5F832E00437CA8785C /* JFHeroBrowser-Info.plist */,
+				F8E095BAE5EDB71B829945D3E1CE75FF /* JFHeroBrowser-prefix.pch */,
+				CFF258D5A2C1783CE3C3DDC790976A93 /* JFHeroBrowser-umbrella.h */,
+				3A4E5A8D2DDF4963847C33485582F58C /* JFHeroBrowser.debug.xcconfig */,
+				789E570FFFDAB3E205E313C2BCFF05C3 /* JFHeroBrowser.release.xcconfig */,
+				0CA0A7CC4A083D910518FC24B4B13494 /* ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JFHeroBrowser";
+			sourceTree = "<group>";
+		};
 		5729382D0A2243A11E305DEA12E67C9B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2E8A5AE2F511DB80BE8B85E37C3E5E74 /* JFHeroBrowser */,
+				D229E9DB173EF195456C60911B626472 /* JFHeroBrowser */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -462,15 +474,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7BCFB9D59C25301147B8D050360A0AC8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				AFA58E60E79AC31A250EF3C295048016 /* HeroBrowser.swift */,
-			);
-			name = Controller;
-			path = JFHeroBrowser/Classes/Controller;
-			sourceTree = "<group>";
-		};
 		81F3140AB4EF88E081EE0FF10B698652 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,18 +483,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		90AD3B1A2F1EF16CAD60DDB59D1D812F /* ViewModule */ = {
+		A1B10483DECA7496F54B6746E80BBE7B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7A9E29BA946C5910BCBD033D215C55AA /* HeroBrowserDataImageViewModule.swift */,
-				E9269682040BB57A975242E3FF1D9D17 /* HeroBrowserLocalImageViewModule.swift */,
-				80DE9F5E5E0E3A524C4FDA84C8D2DABD /* HeroBrowserNetworkImageViewModule.swift */,
-				51803AE60804770556BD6662DF619C2A /* HeroBrowserVideoViewModule.swift */,
-				42FD6261CD89FA14DCFEA42D88DF82E6 /* HeroBrowserViewContainer.swift */,
-				40092D9A208721B88C73604D8F57745D /* HeroBrowserViewModule.swift */,
+				66861C1BD14231C4D36BE0627B5D5670 /* HeroBrowser.swift */,
 			);
-			name = ViewModule;
-			path = JFHeroBrowser/Classes/ViewModule;
+			name = Controller;
+			path = JFHeroBrowser/Classes/Controller;
 			sourceTree = "<group>";
 		};
 		B085EE448883297B046BF40BE886F4C1 /* Targets Support Files */ = {
@@ -501,19 +499,6 @@
 				4901D89892D6DEC44A107B6CAB50B4A9 /* Pods-JFHeroBrowser_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B860B34E9714FE4B09A7F813A51C0F0D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				19C056511AC49FE62BE8692891C5EFFE /* HeroBrowserBaseImageCell.swift */,
-				80FCB48FC3B45C3789245510F5DFC297 /* HeroBrowserNetworkImageCell.swift */,
-				454A2CBE6B02CF9A531963CFEECD17FB /* HeroBrowserVideoCell.swift */,
-				50057D2E7C009E5D59F2A50CCB157D99 /* HeroCircularProgressView.swift */,
-				E0415874765C5E3F16D2E98F3924E5B8 /* HeroVideoView.swift */,
-			);
-			name = View;
-			path = JFHeroBrowser/Classes/View;
 			sourceTree = "<group>";
 		};
 		C3543E851FA9B1287A0855B900EFFAD7 /* Support Files */ = {
@@ -543,6 +528,35 @@
 			);
 			sourceTree = "<group>";
 		};
+		D229E9DB173EF195456C60911B626472 /* JFHeroBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				38DDC77C116D53610FB668B0E0DB93B2 /* icon_play@2x.png */,
+				02EBE6A473C98FC1B4385D765F16A5DE /* icon_video_loading@2x.png */,
+				29FF8E6E45043E9CB8621820D8D955B3 /* Base */,
+				A1B10483DECA7496F54B6746E80BBE7B /* Controller */,
+				009429623F62C22B3544BD2DD30EF273 /* Pod */,
+				4D73137910FEA350A77BA04E147324E0 /* Support Files */,
+				E40895436AF45A3C603E7EB663AC16AB /* View */,
+				051556C506B683652F8374AB6C2D8348 /* ViewModule */,
+			);
+			name = JFHeroBrowser;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E40895436AF45A3C603E7EB663AC16AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58E3204B7705635F214AE2BEEF5D2550 /* HeroBrowserBaseImageCell.swift */,
+				FE7BE9BB7C46EFEE0BE7C5F14D404E7E /* HeroBrowserNetworkImageCell.swift */,
+				D629BE3F2D877993EA74FC97AFAB6BCC /* HeroBrowserVideoCell.swift */,
+				67EA9BFD1093B3891A7CC555ADB1B02B /* HeroCircularProgressView.swift */,
+				2F0F7F80F898D9AA5C1E754F3B212C0A /* HeroVideoView.swift */,
+			);
+			name = View;
+			path = JFHeroBrowser/Classes/View;
+			sourceTree = "<group>";
+		};
 		F1AB8A23F6E72687D66DA681FB3A4F34 /* Pods-JFHeroBrowser_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,17 +572,6 @@
 			);
 			name = "Pods-JFHeroBrowser_Example";
 			path = "Target Support Files/Pods-JFHeroBrowser_Example";
-			sourceTree = "<group>";
-		};
-		F35ADAE410F1895E97853D58974FB7E7 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				399B3A55418F921F4FFB7A020DE9EF67 /* Hero.swift */,
-				0C1477A72E84FD76FCABF6126F8310DB /* HeroBundleTool.swift */,
-				87C4B8092D26F64084E554BE41F259F3 /* HeroTransitionAnimation.swift */,
-			);
-			name = Base;
-			path = JFHeroBrowser/Classes/Base;
 			sourceTree = "<group>";
 		};
 		FDA7D9889325A6569F86E1EF15D2AB64 /* Kingfisher */ = {
@@ -639,11 +642,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4BEA082A267C91128094E4A59F78FA57 /* Headers */ = {
+		400B1D95EB7D4649C3C1FF54EDAE050C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966647F1B729064EF85C2B4F9E5802DC /* JFHeroBrowser-umbrella.h in Headers */,
+				D21CB5011CBA7F63F6B6E04867069B71 /* JFHeroBrowser-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,14 +666,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACA3D2898D2960A67687E68A2CCA5362 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA4B01DCC00831CBFC3CDA78ADFA595F /* JRBaseKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BC482071C83767B68D04E95A98B7715B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -679,23 +674,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EEEC737ACD4C17EB7D2C67C37DBC3454 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFEA1EC988BC6DA884D2572816E08D1E /* JRBaseKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0B1F32125DF013863A0D1368212EAA6B /* JFHeroBrowser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB39480A34A22CC059DA4CD8D5033A1B /* Build configuration list for PBXNativeTarget "JFHeroBrowser" */;
+			buildConfigurationList = 48DDD94BE31A5CA9102CFF6939C1E82D /* Build configuration list for PBXNativeTarget "JFHeroBrowser" */;
 			buildPhases = (
-				4BEA082A267C91128094E4A59F78FA57 /* Headers */,
-				BD68AB9A8E9E2E0ED8A6303B76DAB5B2 /* Sources */,
-				B929201B49D09A124F752AAA51FE140B /* Frameworks */,
-				61C5D1810109CBD709E43ACD15A67B43 /* Resources */,
+				400B1D95EB7D4649C3C1FF54EDAE050C /* Headers */,
+				1E11F7107278D2FC4B37B26B976B3F6C /* Sources */,
+				7D754B080B72D93D09CAF9B097260DBE /* Frameworks */,
+				8939AE1C077B52606B7CF0629D9B1EE2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BE5B32B99C157525A8A915CAECC5BCBA /* PBXTargetDependency */,
-				9BF7440604F7FADFBAC615C90046C216 /* PBXTargetDependency */,
+				2E2A6EF11682A7103BCCCD0221711AB7 /* PBXTargetDependency */,
+				97FC5B97BDD95D1B68CA95CB2439EBC5 /* PBXTargetDependency */,
 			);
 			name = JFHeroBrowser;
 			productName = JFHeroBrowser;
@@ -704,12 +707,12 @@
 		};
 		1D56538E6467ED03E10BFE3D7E918159 /* JRBaseKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1187122F0C5B527B718A9F22E1E30DF6 /* Build configuration list for PBXNativeTarget "JRBaseKit" */;
+			buildConfigurationList = 44A22FFB2D7D4AE0F76845C5F1096558 /* Build configuration list for PBXNativeTarget "JRBaseKit" */;
 			buildPhases = (
-				ACA3D2898D2960A67687E68A2CCA5362 /* Headers */,
-				3C7A42F4BDEFAF0B1E1B0C83F898F465 /* Sources */,
-				58AF82B90265FC7CD7951015FC1EA86D /* Frameworks */,
-				9EEDD7E25E7EF8C666C19851CF79CFED /* Resources */,
+				EEEC737ACD4C17EB7D2C67C37DBC3454 /* Headers */,
+				1C4DB8423D0734AFB54287BFFBC8A4BF /* Sources */,
+				D5781AC1342919B5150EB3626B0F8A61 /* Frameworks */,
+				B3B59A13A8819FE481B45DAB5B3BE1F2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -722,11 +725,11 @@
 		};
 		8D7D9F01E1687A74058CDBA76158597E /* JFHeroBrowser-JFHeroBrowser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 394AE7C6D2037880EE86462C739C165F /* Build configuration list for PBXNativeTarget "JFHeroBrowser-JFHeroBrowser" */;
+			buildConfigurationList = 1C8564E99C2045B801206B7D2F75E0F1 /* Build configuration list for PBXNativeTarget "JFHeroBrowser-JFHeroBrowser" */;
 			buildPhases = (
-				3D05A50B3CBA244CC76CB0FB2B129D90 /* Sources */,
-				13DEC03298B4F2A09063EAE87A2A5283 /* Frameworks */,
-				5B6E1AD7B57940051FD5D272A36DAD95 /* Resources */,
+				BD5C5923E12DA0E5C35CA0DBC15C1631 /* Sources */,
+				D2B5E426BF3B1B30F31663CA4E089E3E /* Frameworks */,
+				FBB7BABD562475B86F3719BB7DC5A727 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -749,7 +752,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A5F5EC8FE4ADA25DE1B63FAE37B685AF /* PBXTargetDependency */,
+				45690D67B0D50E9D943673B96E95BB34 /* PBXTargetDependency */,
 			);
 			name = "Pods-JFHeroBrowser_Tests";
 			productName = Pods_JFHeroBrowser_Tests;
@@ -768,9 +771,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				C4FD260668EA690163FADDC3737CEEF1 /* PBXTargetDependency */,
-				5531F10E4B219E4581F397208846F285 /* PBXTargetDependency */,
-				CBA3DD8FBEDFF41EAFAB56D7219E5410 /* PBXTargetDependency */,
+				06FF7DD3A67C6088786D9D41124AF876 /* PBXTargetDependency */,
+				7CA2EDC16543B9D60788F798E1954E30 /* PBXTargetDependency */,
+				37438CEB402D06CFA332949BF3E237BF /* PBXTargetDependency */,
 			);
 			name = "Pods-JFHeroBrowser_Example";
 			productName = Pods_JFHeroBrowser_Example;
@@ -828,24 +831,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5B6E1AD7B57940051FD5D272A36DAD95 /* Resources */ = {
+		8939AE1C077B52606B7CF0629D9B1EE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A815BC52A31EB24F08C31ECECD6C0313 /* icon_play@2x.png in Resources */,
-				251F51FCDCFB32E1F4577949919AD8A5 /* icon_video_loading@2x.png in Resources */,
+				FBFF2B26897762DC8255CFC49038B8B5 /* JFHeroBrowser-JFHeroBrowser in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61C5D1810109CBD709E43ACD15A67B43 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B10B0F2C497768D439FA527C7C83B2E2 /* JFHeroBrowser-JFHeroBrowser in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9EEDD7E25E7EF8C666C19851CF79CFED /* Resources */ = {
+		B3B59A13A8819FE481B45DAB5B3BE1F2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -870,6 +864,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB7BABD562475B86F3719BB7DC5A727 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D7F2A11501C9391131AE9DE5DF49704 /* icon_play@2x.png in Resources */,
+				46CDFCFBD718C829E7CD48BF40525764 /* icon_video_loading@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,31 +943,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1C4DB8423D0734AFB54287BFFBC8A4BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D8D30A61721115FA3E96F0D643508A8 /* JF.swift in Sources */,
+				56258BE5E9A4FCB5F93C2A8B0B4CE010 /* JRBaseKit-dummy.m in Sources */,
+				5CC71E123E48CF14E9030A35F14D978A /* Size+Extenison.swift in Sources */,
+				EC3253728D7E3BB19EE377F0E792810C /* UIColor+Extension.swift in Sources */,
+				853940F090DC329DB498C6B4F92D0A83 /* UIImage+JFColor.swift in Sources */,
+				1170C06E270E4A9B7835513D1D0A9571 /* UIView+JFRect.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E11F7107278D2FC4B37B26B976B3F6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A3C15089B07D56323160DD520F1281 /* Hero.swift in Sources */,
+				73461504D0A9CF281AC5E3DAECAAE0D5 /* Hero+UIViewContoller.swift in Sources */,
+				CB0900CF93558769EBFA947D9BF72271 /* HeroBrowser.swift in Sources */,
+				68DBB22E4D9852DC8F6A0F46894C042C /* HeroBrowserBaseImageCell.swift in Sources */,
+				5F03CD56D9609B617576B44C2CB07394 /* HeroBrowserDataImageViewModule.swift in Sources */,
+				B04804E468F6562605896B5384F228B9 /* HeroBrowserLocalImageViewModule.swift in Sources */,
+				A6C24EE016B013EF05CA0D68B6988303 /* HeroBrowserNetworkImageCell.swift in Sources */,
+				EE1B35BDD9FF7CD62B8BDCDE0F59ACFF /* HeroBrowserNetworkImageViewModule.swift in Sources */,
+				5F6468B3152194CA6225FE02B0A01158 /* HeroBrowserVideoCell.swift in Sources */,
+				77EE8C48D0BE5C49333F81543BE03EC8 /* HeroBrowserVideoViewModule.swift in Sources */,
+				4191449EDA75CD30E372C2A8F5734645 /* HeroBrowserViewContainer.swift in Sources */,
+				A3C5C4697784425BC39C39EF1D681644 /* HeroBrowserViewModule.swift in Sources */,
+				30FDD9CDDEC811E7A28C928C654FD8BA /* HeroBundleTool.swift in Sources */,
+				E08603B148F45A2C0269A33D8A783007 /* HeroCircularProgressView.swift in Sources */,
+				8EE0AAEF468A904374FCAC0B14FCB35E /* HeroTransitionAnimation.swift in Sources */,
+				177013418CB152F70DCD682528B62E10 /* HeroVideoView.swift in Sources */,
+				B6B137946AFF115347AC58B8FB3715A6 /* JFHeroBrowser-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29732154A03901AC1B11F49E509C86CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C5E1B5169CC182B5A750F78C3499F55B /* Pods-JFHeroBrowser_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C7A42F4BDEFAF0B1E1B0C83F898F465 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFF270974BE926C2ED1DFF4440D71C36 /* JF.swift in Sources */,
-				47D55FA9651D74BF184C6CAEF11032A9 /* JRBaseKit-dummy.m in Sources */,
-				2A33CEEBE03DF2C7BC4C06F7FEE0658D /* Size+Extenison.swift in Sources */,
-				FBE433A5E8896FFCC3443930C0C39055 /* UIColor+Extension.swift in Sources */,
-				FD997CD50B90855E5CEE52BD07D2CA64 /* UIImage+JFColor.swift in Sources */,
-				37D1599AC0FCCDADC2D11A1EE012C55C /* UIView+JFRect.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D05A50B3CBA244CC76CB0FB2B129D90 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,74 +996,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD68AB9A8E9E2E0ED8A6303B76DAB5B2 /* Sources */ = {
+		BD5C5923E12DA0E5C35CA0DBC15C1631 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B451CDD765B648E5FA47A4B17ABD965 /* Hero.swift in Sources */,
-				D56F72BCEFA287AC4F55FE8068F766E3 /* HeroBrowser.swift in Sources */,
-				23B908FC06391D98A5DB18FB32372507 /* HeroBrowserBaseImageCell.swift in Sources */,
-				89D8B577055B76E95CF70DF50A3C8BBC /* HeroBrowserDataImageViewModule.swift in Sources */,
-				9AF9AEB16AAAB75E023A78B5CC086BCF /* HeroBrowserLocalImageViewModule.swift in Sources */,
-				6E2AF624157B86C41D24F61856024A18 /* HeroBrowserNetworkImageCell.swift in Sources */,
-				E9A91B25350C338044A62936536580D6 /* HeroBrowserNetworkImageViewModule.swift in Sources */,
-				6E1D290FD1EEDD4B6BB00E5930989623 /* HeroBrowserVideoCell.swift in Sources */,
-				C465251DBC8C21E6FC9E70ED4CB8947F /* HeroBrowserVideoViewModule.swift in Sources */,
-				DE8C06450160207E9D4A15109DCD3EA2 /* HeroBrowserViewContainer.swift in Sources */,
-				1FBF8C7E5659B4BDEA68A91B5CC23956 /* HeroBrowserViewModule.swift in Sources */,
-				750D3AAD24CFB3EBEBEDF28BFC2C52AC /* HeroBundleTool.swift in Sources */,
-				21FBE5DB6AC6DD09752D326398D1C735 /* HeroCircularProgressView.swift in Sources */,
-				7AFE17E14279782E6F3D9CC826D1C689 /* HeroTransitionAnimation.swift in Sources */,
-				84A589CDC98D77AC375BA900DB64F47D /* HeroVideoView.swift in Sources */,
-				75AA2151C8A0DAB27FC45FB602E01957 /* JFHeroBrowser-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5531F10E4B219E4581F397208846F285 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JRBaseKit;
-			target = 1D56538E6467ED03E10BFE3D7E918159 /* JRBaseKit */;
-			targetProxy = E7994EE612C8AE8909BB5E5756EE780D /* PBXContainerItemProxy */;
-		};
-		9BF7440604F7FADFBAC615C90046C216 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JRBaseKit;
-			target = 1D56538E6467ED03E10BFE3D7E918159 /* JRBaseKit */;
-			targetProxy = E8C7780A73C9590EA3E3FAFE621B77D5 /* PBXContainerItemProxy */;
-		};
-		A5F5EC8FE4ADA25DE1B63FAE37B685AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-JFHeroBrowser_Example";
-			target = C913C72E66D480ABDD0358C140C3A78F /* Pods-JFHeroBrowser_Example */;
-			targetProxy = C68026D81CD3A83E496454A2B61BCB45 /* PBXContainerItemProxy */;
-		};
-		BE5B32B99C157525A8A915CAECC5BCBA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "JFHeroBrowser-JFHeroBrowser";
-			target = 8D7D9F01E1687A74058CDBA76158597E /* JFHeroBrowser-JFHeroBrowser */;
-			targetProxy = B11EC1E76A1C76D64670E905CE031985 /* PBXContainerItemProxy */;
-		};
-		C4FD260668EA690163FADDC3737CEEF1 /* PBXTargetDependency */ = {
+		06FF7DD3A67C6088786D9D41124AF876 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JFHeroBrowser;
 			target = 0B1F32125DF013863A0D1368212EAA6B /* JFHeroBrowser */;
-			targetProxy = 59B56074F2AE6E4918447525811EFC72 /* PBXContainerItemProxy */;
+			targetProxy = 2593102763809A19F7D24BFDDA9B02B2 /* PBXContainerItemProxy */;
 		};
-		CBA3DD8FBEDFF41EAFAB56D7219E5410 /* PBXTargetDependency */ = {
+		2E2A6EF11682A7103BCCCD0221711AB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JFHeroBrowser-JFHeroBrowser";
+			target = 8D7D9F01E1687A74058CDBA76158597E /* JFHeroBrowser-JFHeroBrowser */;
+			targetProxy = 9976142F7A2FEBD262ACAA7F4370E943 /* PBXContainerItemProxy */;
+		};
+		37438CEB402D06CFA332949BF3E237BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kingfisher;
 			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
-			targetProxy = F9C706CF2DBA7B87BB3E6249152D289F /* PBXContainerItemProxy */;
+			targetProxy = DC92A197B97C3327173580A32671F856 /* PBXContainerItemProxy */;
+		};
+		45690D67B0D50E9D943673B96E95BB34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-JFHeroBrowser_Example";
+			target = C913C72E66D480ABDD0358C140C3A78F /* Pods-JFHeroBrowser_Example */;
+			targetProxy = F2C040FCA9A97DD81A89DF4A238C9E07 /* PBXContainerItemProxy */;
+		};
+		7CA2EDC16543B9D60788F798E1954E30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JRBaseKit;
+			target = 1D56538E6467ED03E10BFE3D7E918159 /* JRBaseKit */;
+			targetProxy = EB35A3BF6D0ECD74288C52077743A55F /* PBXContainerItemProxy */;
+		};
+		97FC5B97BDD95D1B68CA95CB2439EBC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JRBaseKit;
+			target = 1D56538E6467ED03E10BFE3D7E918159 /* JRBaseKit */;
+			targetProxy = 8895470D223F35A4F99741CE71486180 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1FE08BF827489EB92414D642288B4768 /* Release */ = {
+		359B1E2B7F0E21993BD0B5097C869B4B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40360436D46F4F0548634FFC969F86B8 /* JRBaseKit.release.xcconfig */;
+			baseConfigurationReference = 75426C9AA86C6E5B4452F766BD12BB44 /* JRBaseKit.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1066,15 +1070,14 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		4BD6FDBEA197B950669AA0E9AC592FD2 /* Release */ = {
+		5CE4FA98A00890030D047BE1614142E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81C0DF8676B1F774E9634AE7BAA5CCA4 /* JFHeroBrowser.release.xcconfig */;
+			baseConfigurationReference = 789E570FFFDAB3E205E313C2BCFF05C3 /* JFHeroBrowser.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1103,22 +1106,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		6C2676C2BDA0DFEF7BE33331C6B69DF8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5155156492DE903EBF988D8A90D6A514 /* JFHeroBrowser.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFHeroBrowser";
-				IBSC_MODULE = JFHeroBrowser;
-				INFOPLIST_FILE = "Target Support Files/JFHeroBrowser/ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_NAME = JFHeroBrowser;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
 		};
 		6F546948DF723B7697523AF6A022B11B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1154,9 +1141,9 @@
 			};
 			name = Release;
 		};
-		795A6CBD991EA23CC228E84643C6D7DD /* Release */ = {
+		733070BDFF1A4716448B987B458C2FE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81C0DF8676B1F774E9634AE7BAA5CCA4 /* JFHeroBrowser.release.xcconfig */;
+			baseConfigurationReference = 3A4E5A8D2DDF4963847C33485582F58C /* JFHeroBrowser.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFHeroBrowser";
 				IBSC_MODULE = JFHeroBrowser;
@@ -1168,7 +1155,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 		79C89FC3C5AEC8E976AB1D9785F38372 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1364,10 +1351,11 @@
 			};
 			name = Release;
 		};
-		D0A7E46C7762745FFC6E346F14E8BC67 /* Debug */ = {
+		C0208443226B09B9142EE5354F97CAF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75426C9AA86C6E5B4452F766BD12BB44 /* JRBaseKit.debug.xcconfig */;
+			baseConfigurationReference = 3A4E5A8D2DDF4963847C33485582F58C /* JFHeroBrowser.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1376,14 +1364,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JRBaseKit/JRBaseKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JRBaseKit/JRBaseKit-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/JFHeroBrowser/JFHeroBrowser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JFHeroBrowser/JFHeroBrowser-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JRBaseKit/JRBaseKit.modulemap";
-				PRODUCT_MODULE_NAME = JRBaseKit;
-				PRODUCT_NAME = JRBaseKit;
+				MODULEMAP_FILE = "Target Support Files/JFHeroBrowser/JFHeroBrowser.modulemap";
+				PRODUCT_MODULE_NAME = JFHeroBrowser;
+				PRODUCT_NAME = JFHeroBrowser;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1460,6 +1448,37 @@
 			};
 			name = Debug;
 		};
+		E61E88DC59694133FA7AE5CB996A38A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40360436D46F4F0548634FFC969F86B8 /* JRBaseKit.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JRBaseKit/JRBaseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JRBaseKit/JRBaseKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JRBaseKit/JRBaseKit.modulemap";
+				PRODUCT_MODULE_NAME = JRBaseKit;
+				PRODUCT_NAME = JRBaseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E92C9F6CB6CB254B819BE03ABA462867 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF96A600A1E36C5D2919926FFCDFDB51 /* Kingfisher.debug.xcconfig */;
@@ -1491,36 +1510,21 @@
 			};
 			name = Debug;
 		};
-		F583AD64D6566AE26C9257B1E630C0F1 /* Debug */ = {
+		E9CB2BAE649BC83CCE2B21D74CC08D10 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5155156492DE903EBF988D8A90D6A514 /* JFHeroBrowser.debug.xcconfig */;
+			baseConfigurationReference = 789E570FFFDAB3E205E313C2BCFF05C3 /* JFHeroBrowser.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JFHeroBrowser/JFHeroBrowser-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JFHeroBrowser/JFHeroBrowser-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFHeroBrowser";
+				IBSC_MODULE = JFHeroBrowser;
+				INFOPLIST_FILE = "Target Support Files/JFHeroBrowser/ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JFHeroBrowser/JFHeroBrowser.modulemap";
-				PRODUCT_MODULE_NAME = JFHeroBrowser;
 				PRODUCT_NAME = JFHeroBrowser;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1534,20 +1538,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1187122F0C5B527B718A9F22E1E30DF6 /* Build configuration list for PBXNativeTarget "JRBaseKit" */ = {
+		1C8564E99C2045B801206B7D2F75E0F1 /* Build configuration list for PBXNativeTarget "JFHeroBrowser-JFHeroBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D0A7E46C7762745FFC6E346F14E8BC67 /* Debug */,
-				1FE08BF827489EB92414D642288B4768 /* Release */,
+				733070BDFF1A4716448B987B458C2FE7 /* Debug */,
+				E9CB2BAE649BC83CCE2B21D74CC08D10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		394AE7C6D2037880EE86462C739C165F /* Build configuration list for PBXNativeTarget "JFHeroBrowser-JFHeroBrowser" */ = {
+		44A22FFB2D7D4AE0F76845C5F1096558 /* Build configuration list for PBXNativeTarget "JRBaseKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C2676C2BDA0DFEF7BE33331C6B69DF8 /* Debug */,
-				795A6CBD991EA23CC228E84643C6D7DD /* Release */,
+				359B1E2B7F0E21993BD0B5097C869B4B /* Debug */,
+				E61E88DC59694133FA7AE5CB996A38A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1561,20 +1565,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		48DDD94BE31A5CA9102CFF6939C1E82D /* Build configuration list for PBXNativeTarget "JFHeroBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0208443226B09B9142EE5354F97CAF5 /* Debug */,
+				5CE4FA98A00890030D047BE1614142E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		54C4FCC4FD912A11231F09292F7C93A1 /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E92C9F6CB6CB254B819BE03ABA462867 /* Debug */,
 				98A2FED692332B059F72A0554AB30342 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DB39480A34A22CC059DA4CD8D5033A1B /* Build configuration list for PBXNativeTarget "JFHeroBrowser" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F583AD64D6566AE26C9257B1E630C0F1 /* Debug */,
-				4BD6FDBEA197B950669AA0E9AC592FD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

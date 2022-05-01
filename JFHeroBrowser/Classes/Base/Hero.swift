@@ -9,7 +9,13 @@ import Foundation
 import UIKit
 import JRBaseKit
 
-struct Hero<Base> {
+public enum JFHeroBrowserOption {
+    case enableBlurEffect(Bool)
+    case heroView(UIImageView)
+    case imageDidChangeHandle(HeroBrowser.ImagePageDidChangeHandle)
+}
+
+public struct Hero<Base> {
     let base: Base
     init(_ base: Base) {
         self.base = base
@@ -20,8 +26,8 @@ struct HeroError: Error {
     let errorMsg: String
 }
 
-protocol HeroCompatible {}
-extension HeroCompatible {
+public protocol HeroCompatible {}
+public extension HeroCompatible {
     static var hero: Hero<Self>.Type {
         set {}
         get { Hero<Self>.self }

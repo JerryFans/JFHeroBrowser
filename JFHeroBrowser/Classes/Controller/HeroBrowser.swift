@@ -14,6 +14,10 @@ import UIKit
 
 public class HeroBrowser: UIViewController {
     
+    lazy var effect = { UIBlurEffect(style: .dark) }()
+    var blurEffectView: UIVisualEffectView?
+    private var isEnabledBlurEffect = false
+    
     lazy var blurView: UIView = {
         let view = UIView.init()
         view.frame = self.view.bounds
@@ -32,6 +36,7 @@ public class HeroBrowser: UIViewController {
         view.dataSource = self
         view.backgroundColor = .clear
         view.isPagingEnabled = true
+        view.showsHorizontalScrollIndicator = false
         view.register(HeroBrowserNetworkImageCell.self, forCellWithReuseIdentifier: HeroBrowserNetworkImageCell.identify())
         view.register(HeroBrowserVideoCell.self, forCellWithReuseIdentifier: HeroBrowserVideoCell.identify())
         view.register(HeroBrowserBaseImageCell.self, forCellWithReuseIdentifier: HeroBrowserBaseImageCell.identify())
@@ -187,6 +192,19 @@ public class HeroBrowser: UIViewController {
         guard let vms = _viewModules, index < vms.count, let networkVM = vms[index] as? HeroBrowserNetworkImageViewModule else { return }
         networkVM.asyncLoadRawSource(with: nil)
         networkVM.asyncLoadThumbailSource(with: nil)
+    }
+    
+    func enableBlurEffet() {
+        guard !self.isEnabledBlurEffect else { return }
+        self.isEnabledBlurEffect = true
+        
+        self.blurView.backgroundColor = .clear
+        
+        let blurEffectView = UIVisualEffectView(effect: self.effect)
+        blurEffectView.frame = self.view.bounds
+        self.blurView.addSubview(blurEffectView)
+        self.blurEffectView = blurEffectView
+        
     }
 
 }

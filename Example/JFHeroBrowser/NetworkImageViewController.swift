@@ -111,13 +111,25 @@ extension NetworkImageViewController: UICollectionViewDelegate, UICollectionView
         for i in 0..<thumbs.count {
             list.append(HeroBrowserNetworkImageViewModule(thumbailImgUrl: thumbs[i], originImgUrl: origins[i], provider: HeroNetworkImageProvider.shared))
         }
-        
-        let brower = HeroBrowser(viewModules: list, index: indexPath.item, heroImageView: cell.imageView) { [weak self] imageIndex in
-            guard let self = self else { return nil }
-            guard let cell = self.collectionView.cellForItem(at: IndexPath(item: imageIndex, section: 0)) as? NetworkImageCollectionViewCell else { return nil }
-            return cell.imageView
+        // quickly hero mode in swift
+        self.hero.browser(viewModules: list, initIndex: indexPath.item) {
+            [
+                .enableBlurEffect(true),
+                .heroView(cell.imageView),
+                .imageDidChangeHandle({ [weak self] imageIndex in
+                    guard let self = self else { return nil }
+                    guard let cell = self.collectionView.cellForItem(at: IndexPath(item: imageIndex, section: 0)) as? NetworkImageCollectionViewCell else { return nil }
+                    return cell.imageView
+                })
+            ]
         }
-        brower.show(with: self, animationType: .hero)
+        //init vc mode
+//        let brower = HeroBrowser(viewModules: list, index: indexPath.item, heroImageView: cell.imageView) { [weak self] imageIndex in
+//            guard let self = self else { return nil }
+//            guard let cell = self.collectionView.cellForItem(at: IndexPath(item: imageIndex, section: 0)) as? NetworkImageCollectionViewCell else { return nil }
+//            return cell.imageView
+//        }
+//        brower.show(with: self, animationType: .hero)
     }
     
 }
