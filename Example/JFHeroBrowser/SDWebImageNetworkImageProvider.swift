@@ -12,7 +12,6 @@ import JFHeroBrowser
 extension SDWebImageNetworkImageProvider: NetworkImageProvider {
     func downloadImage(with imgUrl: String, complete: Complete<UIImage>?) {
         SDWebImageDownloader.shared.downloadImage(with: URL(string: imgUrl), options: .lowPriority) { receiveSize, totalSize, url in
-            print("received: \(receiveSize) + \(totalSize)")
             guard totalSize > 0 else { return }
             let progress:CGFloat = CGFloat(CGFloat(receiveSize) / CGFloat(totalSize))
             complete?(.progress(progress))
