@@ -10,7 +10,39 @@ import Foundation
 extension UIViewController: HeroCompatible {}
 
 public extension Hero where Base: UIViewController {
-    func browser(viewModules: [HeroBrowserViewModule], initIndex: Int, options: (() -> [JFHeroBrowserOption])? = nil) {
+    
+    func browserVideo(viewModule: HeroBrowserVideoViewModule, options: (() -> [JFHeroBrowserOption])? = nil) {
+        var heroImageView: UIImageView?
+        var imageDidChangeHandle: HeroBrowser.ImagePageDidChangeHandle?
+        var heroBrowserDidLongPressHandle: HeroBrowser.HeroBrowserDidLongPressHandle?
+        var enableBlurEffect = JFHeroBrowserGlobalConfig.default.enableBlurEffect
+        if let allOptions = options?() {
+            for option in allOptions {
+                switch option {
+                case .heroBrowserDidLongPressHandle(let handle):
+                    heroBrowserDidLongPressHandle = handle
+                    break
+                case .enableBlurEffect(let enable):
+                    enableBlurEffect = enable
+                    break
+                case .heroView(let uIImageView):
+                    heroImageView = uIImageView
+                    break
+                case .imageDidChangeHandle(let heroBrowserImageDidChange):
+                    imageDidChangeHandle = heroBrowserImageDidChange
+                    break
+                }
+            }
+        }
+        var config = JFHeroBrowserGlobalConfig.default
+        config.enableBlurEffect = enableBlurEffect
+        
+        let vc = HeroBrowser(viewModules: [viewModule], index: 0, heroImageView: heroImageView, imagePageDidChangeHandle: imageDidChangeHandle, config: config)
+        vc.heroBrowserDidLongPressHandle = heroBrowserDidLongPressHandle
+        vc.show(with: base)
+    }
+    
+    func browserPhoto(viewModules: [HeroBrowserViewModule], initIndex: Int, options: (() -> [JFHeroBrowserOption])? = nil) {
         var heroImageView: UIImageView?
         var imageDidChangeHandle: HeroBrowser.ImagePageDidChangeHandle?
         var heroBrowserDidLongPressHandle: HeroBrowser.HeroBrowserDidLongPressHandle?

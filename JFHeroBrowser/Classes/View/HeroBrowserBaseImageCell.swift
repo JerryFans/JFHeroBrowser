@@ -39,28 +39,36 @@ class HeroBrowserBaseImageCell: UICollectionViewCell {
         return tempView
     }()
     
-    var videoViewModule: HeroBrowserVideoViewModule?
+    var videoViewModule: HeroBrowserVideoViewModule? {
+        didSet {
+            self.beginLoadSource()
+        }
+    }
     
     var viewModule: HeroBrowserViewModule? {
         didSet {
-            guard let vm = viewModule else { return }
-            vm.asyncLoadThumbailSource { result in
-                switch result {
-                case let .success(image):
-                    self.updateView(image: image)
-                    break
-                case _ :
-                    break
-                }
+            self.beginLoadSource()
+        }
+    }
+        
+    func beginLoadSource() {
+        guard let vm = viewModule else { return }
+        vm.asyncLoadThumbailSource { result in
+            switch result {
+            case let .success(image):
+                self.updateView(image: image)
+                break
+            case _ :
+                break
             }
-            vm.asyncLoadRawSource { result in
-                switch result {
-                case let .success(image):
-                    self.updateView(image: image)
-                    break
-                case _ :
-                    break
-                }
+        }
+        vm.asyncLoadRawSource { result in
+            switch result {
+            case let .success(image):
+                self.updateView(image: image)
+                break
+            case _ :
+                break
             }
         }
     }

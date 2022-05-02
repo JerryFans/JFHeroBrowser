@@ -94,7 +94,6 @@ extension NetworkImageViewController: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NetworkImageCollectionViewCell.identify(), for: indexPath) as! NetworkImageCollectionViewCell
-        print("cellForItemAt index \(indexPath.item)")
         let imageUrl = thumbs[indexPath.item]
         if isUseSDWebImage {
             cell.imageView.sd_setImage(with: URL(string: imageUrl))
@@ -119,7 +118,7 @@ extension NetworkImageViewController: UICollectionViewDelegate, UICollectionView
             }
         }
         // quickly hero mode in swift
-        self.hero.browser(viewModules: list, initIndex: indexPath.item) {
+        self.hero.browserPhoto(viewModules: list, initIndex: indexPath.item) {
             [
                 .heroView(cell.imageView),
                 .heroBrowserDidLongPressHandle({ heroBrowser,vm  in

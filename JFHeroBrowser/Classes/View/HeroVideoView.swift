@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 
-enum HeroVideoPlayerState {
+public enum HeroVideoPlayerState {
     case unkonw
     case playing
     case pause
@@ -17,14 +17,14 @@ enum HeroVideoPlayerState {
     case failed
 }
 
-protocol HeroVideoViewDelegate: NSObjectProtocol {
+public protocol HeroVideoViewDelegate: NSObjectProtocol {
     func videoViewReadyToPlay(playerItem: AVPlayerItem, view: HeroVideoView)
     func videoViewPlayerPlayingProgress(currentTime: Double, totalTime: Double, view: HeroVideoView)
     func videoViewPlayerStatusDidChange(state: HeroVideoPlayerState, view: HeroVideoView)
     func videoViewPlayerDidPlayToEnd(noti: Notification, view: HeroVideoView)
 }
 
-extension HeroVideoViewDelegate {
+public extension HeroVideoViewDelegate {
     func videoViewReadyToPlay(playerItem: AVPlayerItem, view: HeroVideoView) {
         
     }
@@ -42,13 +42,13 @@ extension HeroVideoViewDelegate {
     }
 }
 
-class HeroPlayerView: UIView {
+public class HeroPlayerView: UIView {
     // MARK: - 重写的父类函数
-    override class var layerClass: AnyClass { AVPlayerLayer.self }
+    public override class var layerClass: AnyClass { AVPlayerLayer.self }
     public var playerLayer: AVPlayerLayer { layer as! AVPlayerLayer }
 }
 
-class HeroVideoView: HeroPlayerView {
+public class HeroVideoView: HeroPlayerView {
     
     var seekTime: CMTime? = nil
     var isFadeToDisplay: Bool = false
@@ -79,15 +79,15 @@ class HeroVideoView: HeroPlayerView {
     }
     
     var playbackTimeObserver: NSObject?
-    var videoURL: URL?
+    public var videoURL: URL?
     //兼容直接从相册拉取PlayerItem播放视频
-    var originPlayerItem: AVPlayerItem?
-    var state: HeroVideoPlayerState = .unkonw {
+    public var originPlayerItem: AVPlayerItem?
+    public var state: HeroVideoPlayerState = .unkonw {
         didSet {
             self.deletgate?.videoViewPlayerStatusDidChange(state: state, view: self)
         }
     }
-    weak var deletgate: HeroVideoViewDelegate?
+    public weak var deletgate: HeroVideoViewDelegate?
     var isPauseByUser: Bool = true
     var totalTime: Double = 0
     var currentTime: Double = 0
@@ -95,7 +95,7 @@ class HeroVideoView: HeroPlayerView {
     
     var didEnterBackground = false
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .black
         
@@ -175,7 +175,7 @@ class HeroVideoView: HeroPlayerView {
         }
     }
     
-    func resetPlayer() {
+    public func resetPlayer() {
         self.didEnterBackground = false
         if self.playbackTimeObserver != nil {
             self.player?.removeTimeObserver(self.playbackTimeObserver!)
@@ -190,7 +190,7 @@ class HeroVideoView: HeroPlayerView {
         self.state = .stop
     }
     
-    func playVideo() {
+    public func playVideo() {
         self.state = .playing
         if self.player == nil {
             self.setUpPlayer()
@@ -200,12 +200,12 @@ class HeroVideoView: HeroPlayerView {
         print("play url : \(self.videoURL?.absoluteString ?? "url is null")")
     }
     
-    func pauseVideo() {
+    public func pauseVideo() {
         self.player?.pause()
         self.state = .pause
     }
     
-    func seekToTime(dragSeconds: Float) {
+    public func seekToTime(dragSeconds: Float) {
         let seconds: Int = Int(Double(dragSeconds) * self.totalTime)
         self.player?.seek(to: CMTime(value: CMTimeValue(seconds), timescale: 1), toleranceBefore: CMTime(value: 1, timescale: 1), toleranceAfter: CMTime(value: 1, timescale: 1), completionHandler: { (finished) in
             
@@ -241,7 +241,7 @@ class HeroVideoView: HeroPlayerView {
 }
 
 // MARK: 播放状态监听 observer
-extension HeroVideoView {
+public extension HeroVideoView {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         guard let key = keyPath else { return }
         guard let player = self.player else { return }

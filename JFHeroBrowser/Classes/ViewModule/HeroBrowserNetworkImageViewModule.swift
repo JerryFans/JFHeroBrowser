@@ -9,10 +9,6 @@ import Foundation
 
 public class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule {
     
-    deinit {
-        print("HeroBrowserNetworkImageViewModule deinit")
-    }
-    
     public override func createCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> HeroBrowserCollectionCellProtocol {
         return collectionView.dequeueReusableCell(withReuseIdentifier: HeroBrowserNetworkImageCell.identify(), for: indexPath) as! HeroBrowserNetworkImageCell
     }

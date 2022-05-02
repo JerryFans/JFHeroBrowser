@@ -10,6 +10,12 @@ import UIKit
 import JFHeroBrowser
 
 class NetworkVideoViewController: UIViewController {
+    
+    lazy var videoView: HeroVideoView = {
+        let videoView = HeroVideoView(frame: .zero)
+        videoView.videoURL = URL(string: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4")
+        return videoView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +31,14 @@ class NetworkVideoViewController: UIViewController {
     }
     
     @objc func videoBtnClick(button: UIButton) {
-        let brower = HeroBrowser(viewModules: [HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared)], index: button.tag, heroImageView: button.imageView)
-        brower.show(with: self, animationType: .hero)
+        let vm = HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared)
+        self.hero.browserVideo(viewModule: vm) {
+            [
+                .enableBlurEffect(false),
+                .heroView(button.imageView)
+            ]
+        }
+//        let brower = HeroBrowser(viewModules: [HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared)], index: button.tag, heroImageView: button.imageView)
+//        brower.show(with: self, animationType: .hero)
     }
 }

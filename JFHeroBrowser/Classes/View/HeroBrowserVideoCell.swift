@@ -79,26 +79,24 @@ class HeroBrowserVideoCell: HeroBrowserBaseImageCell {
         return imageView
     }()
     
-    override var videoViewModule: HeroBrowserVideoViewModule? {
-        didSet {
-            guard let vm = videoViewModule else { return }
-            vm.asyncLoadThumbailSource { result in
-                switch result {
-                case let .success(image):
-                    self.updateView(image: image)
-                    break
-                case _ :
-                    break
-                }
+    override func beginLoadSource() {
+        guard let vm = videoViewModule else { return }
+        vm.asyncLoadThumbailSource { result in
+            switch result {
+            case let .success(image):
+                self.updateView(image: image)
+                break
+            case _ :
+                break
             }
-            vm.asyncLoadRawSource { result in
-                switch result {
-                case let .success(url):
-                    self.updateVideoView(with: url)
-                    break
-                case _ :
-                    break
-                }
+        }
+        vm.asyncLoadRawSource { result in
+            switch result {
+            case let .success(url):
+                self.updateVideoView(with: url)
+                break
+            case _ :
+                break
             }
         }
     }

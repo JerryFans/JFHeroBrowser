@@ -152,7 +152,7 @@ public class HeroBrowser: UIViewController {
         self.setupGestureRecognizer()
         self.switchToPage(index: index)
         self.updatePageControl(index: index)
-        self.prefetchImages(withoutCurrent: false)
+        self.prefetchImages()
     }
     
     public func show(with vc: UIViewController, animationType: HeroTransitionAnimationType = .hero) {
@@ -191,12 +191,8 @@ public class HeroBrowser: UIViewController {
     }
     
     // 预加载左右各一张
-    func prefetchImages(withoutCurrent isWithoutCurrent: Bool) {
+    func prefetchImages() {
         guard let vms = _viewModules else { return }
-        let currentIndex = self.currentIndex
-        if isWithoutCurrent == false {
-            self.loadImage(index: currentIndex)
-        }
         if (currentIndex > 0) {
             self.loadImage(index: currentIndex - 1)
         }
@@ -324,7 +320,7 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         _scrolling = false
-        self.prefetchImages(withoutCurrent: true)
+        self.prefetchImages()
     }
 }
 

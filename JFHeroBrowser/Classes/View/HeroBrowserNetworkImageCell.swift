@@ -21,38 +21,36 @@ class HeroBrowserNetworkImageCell: HeroBrowserBaseImageCell {
         return view
     }()
     
-    override var viewModule: HeroBrowserViewModule? {
-        didSet {
-            guard let vm = viewModule else { return }
-            vm.asyncLoadThumbailSource { [weak self] in
-                guard let self = self else { return }
-                switch $0 {
-                case let .success(image):
-                    self.updateView(image: image)
-                    break
-                case _ :
-                    break
-                }
-            }
-            vm.asyncLoadRawSource { [weak self] in
-                guard let self = self else { return }
-                switch $0 {
-                case let .success(image):
-                    self.updateView(image: image)
-                    break
-                case let .progress(progress):
-                    self.progressView.progress = Double(progress)
-                    self.progressContainer.isHidden = progress >= 1 ? true : false
-                    break
-                case _ :
-                    break
-                }
-            }
-        }
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    
+    override func beginLoadSource() {
+        guard let vm = viewModule else { return }
+        vm.asyncLoadThumbailSource { [weak self] in
+            guard let self = self else { return }
+            switch $0 {
+            case let .success(image):
+                self.updateView(image: image)
+                break
+            case _ :
+                break
+            }
+        }
+        vm.asyncLoadRawSource { [weak self] in
+            guard let self = self else { return }
+            switch $0 {
+            case let .success(image):
+                self.updateView(image: image)
+                break
+            case let .progress(progress):
+                self.progressView.progress = Double(progress)
+                self.progressContainer.isHidden = progress >= 1 ? true : false
+                break
+            case _ :
+                break
+            }
+        }
     }
     
     override func setupView() {
@@ -67,7 +65,4 @@ class HeroBrowserNetworkImageCell: HeroBrowserBaseImageCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {
-        print("HeroBrowserNetworkImageCell deinit")
-    }
 }

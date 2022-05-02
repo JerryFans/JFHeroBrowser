@@ -11,11 +11,11 @@ import JFHeroBrowser
 
 extension SDWebImageNetworkImageProvider: NetworkImageProvider {
     func downloadImage(with imgUrl: String, complete: Complete<UIImage>?) {
-        SDWebImageDownloader.shared.downloadImage(with: URL(string: imgUrl), options: .lowPriority) { receiveSize, totalSize, url in
+        SDWebImageManager.shared.loadImage(with: URL(string: imgUrl)) { receiveSize, totalSize, url in
             guard totalSize > 0 else { return }
             let progress:CGFloat = CGFloat(CGFloat(receiveSize) / CGFloat(totalSize))
             complete?(.progress(progress))
-        } completed: { image, data, error, _ in
+        } completed: { image, data, error, _, isfinished, url in
             if let error = error {
                 complete?(.failed(error))
             } else if let image = image {

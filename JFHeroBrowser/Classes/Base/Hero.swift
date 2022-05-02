@@ -23,7 +23,7 @@ public struct JFHeroBrowserGlobalConfig {
 
 public enum JFHeroBrowserOption {
     case enableBlurEffect(Bool)
-    case heroView(UIImageView)
+    case heroView(UIImageView?)
     case heroBrowserDidLongPressHandle(HeroBrowser.HeroBrowserDidLongPressHandle)
     case imageDidChangeHandle(HeroBrowser.ImagePageDidChangeHandle)
 }
