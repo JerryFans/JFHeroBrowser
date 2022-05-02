@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/JFHeroBrowser.svg?style=flat)](https://cocoapods.org/pods/JFHeroBrowser)
 ![Language](https://img.shields.io/badge/language-Swift-DE5C43.svg?style=flat)
 
-![](https://github.com/JerryFans/JFHeroBrowser/raw/master/preview.GIF)
+![](https://github.com/JerryFans/JFHeroBrowser/raw/master/preview1.gif)
 
 ## Usage
 
