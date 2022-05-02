@@ -71,13 +71,23 @@ class DataImageViewController: UIViewController {
         for i in 0...4 {
             list.append(HeroBrowserDataImageViewModule(data: imageSource[i]))
         }
-        
-        let brower = HeroBrowser(viewModules: list, index: button.tag - 1, heroImageView: button.imageView) { [weak self] imageIndex in
-            guard let self = self else { return nil }
-            guard let btn = self.view.viewWithTag(imageIndex + 1) as? UIButton else { return nil }
-            return btn.imageView
+        self.hero.browserPhoto(viewModules: list, initIndex: button.tag - 1) {
+            [
+                .enableBlurEffect(false),
+                .heroView(button.imageView),
+                .imageDidChangeHandle({ [weak self] imageIndex in
+                    guard let self = self else { return nil }
+                    guard let btn = self.view.viewWithTag(imageIndex + 1) as? UIButton else { return nil }
+                    return btn.imageView
+                })
+            ]
         }
-        brower.show(with: self, animationType: .hero)
+//        let brower = HeroBrowser(viewModules: list, index: button.tag - 1, heroImageView: button.imageView) { [weak self] imageIndex in
+//            guard let self = self else { return nil }
+//            guard let btn = self.view.viewWithTag(imageIndex + 1) as? UIButton else { return nil }
+//            return btn.imageView
+//        }
+//        brower.show(with: self, animationType: .hero)
     }
 
 }
