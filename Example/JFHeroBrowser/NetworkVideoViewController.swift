@@ -11,11 +11,11 @@ import JFHeroBrowser
 
 class NetworkVideoViewController: UIViewController {
     
-    lazy var videoView: HeroVideoView = {
-        let videoView = HeroVideoView(frame: .zero)
-        videoView.videoURL = URL(string: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4")
-        return videoView
-    }()
+//    lazy var videoView: HeroVideoView = {
+//        let videoView = HeroVideoView(frame: .zero)
+//        videoView.videoURL = URL(string: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4")
+//        return videoView
+//    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()

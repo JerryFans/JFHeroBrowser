@@ -78,7 +78,7 @@ class NetworkImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "NetworkImage"
+        self.title = "NetworkImage" + (isUseSDWebImage ? "(SDWebImage)" : "(KingFisher)")
         self.view.backgroundColor = .white
         self.view.addSubview(self.collectionView)
         
