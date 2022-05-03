@@ -35,13 +35,26 @@ public class HeroTransitionAnimation: NSObject {
             return
         }
         
-        let moveW = CGSize.jf.screenWidth()
-        let moveH = originImage.size.height * CGSize.jf.screenWidth() / originImage.size.width
-        var moveY: CGFloat = 0.0
-        if moveH < CGSize.jf.screenSize().height {
-            moveY = HalfDiffValue(CGSize.jf.screenHeight(), moveH)
+        let screenSize = CGSize.jf.screenSize()
+        var moveFrame: CGRect = .zero
+        
+        if screenSize.width < screenSize.height {
+            let moveW = CGSize.jf.screenWidth()
+            let moveH = originImage.size.height * CGSize.jf.screenWidth() / originImage.size.width
+            var moveY: CGFloat = 0.0
+            if moveH < CGSize.jf.screenSize().height {
+                moveY = HalfDiffValue(CGSize.jf.screenHeight(), moveH)
+            }
+            moveFrame = CGRect(x: 0.0, y: moveY, width: moveW, height: moveH)
+        } else {
+            let moveH = CGSize.jf.screenHeight()
+            let moveW = originImage.size.width * moveH / originImage.size.height
+            var moveX: CGFloat = 0.0
+            if moveW < CGSize.jf.screenSize().width {
+                moveX = HalfDiffValue(CGSize.jf.screenWidth(), moveW)
+            }
+            moveFrame = CGRect(x: moveX, y: 0, width: moveW, height: moveH)
         }
-        let moveFrame: CGRect = CGRect(x: 0.0, y: moveY, width: moveW, height: moveH)
         heroBrowser.collectionView.isHidden = true
         
         switch animationType {

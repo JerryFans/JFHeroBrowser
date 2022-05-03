@@ -80,13 +80,29 @@ class HeroBrowserBaseImageCell: UICollectionViewCell {
     
     func updateContainerFrame(with image: UIImage) {
         let screenWidth = UIScreen.main.bounds.size.width
-        let height = image.size.height * screenWidth / image.size.width
-        self.container.frame = CGRect.init(x: 0, y: 0, width: screenWidth, height: height)
-        self.scrollView.contentSize = CGSize.init(width: self.container.frame.size.width, height: self.container.frame.size.height)
-        if self.container.frame.size.height < self.scrollView.frame.size.height {
-            var center = self.container.center
-            center.y = self.scrollView.frame.size.height / 2
-            self.container.center = center
+        let screenHeight = UIScreen.main.bounds.size.height
+        if screenWidth < screenHeight {
+            let height = image.size.height * screenWidth / image.size.width
+            self.container.frame = CGRect.init(x: 0, y: 0, width: screenWidth, height: height)
+            self.scrollView.contentSize = CGSize.init(width: self.container.frame.size.width, height: self.container.frame.size.height)
+        } else {
+            let width = image.size.width * screenHeight / image.size.height
+            self.container.frame = CGRect.init(x: 0, y: 0, width: width, height: screenHeight)
+            self.scrollView.contentSize = CGSize.init(width: self.container.frame.size.width, height: self.container.frame.size.height)
+        }
+        
+        if screenWidth < screenHeight {
+            if self.container.frame.size.height < self.scrollView.frame.size.height {
+                var center = self.container.center
+                center.y = self.scrollView.frame.size.height / 2
+                self.container.center = center
+            }
+        } else {
+            if self.container.frame.size.width < self.scrollView.frame.size.width {
+                var center = self.container.center
+                center.x = self.scrollView.frame.size.width / 2
+                self.container.center = center
+            }
         }
     }
     
@@ -97,6 +113,7 @@ class HeroBrowserBaseImageCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
+        NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged(noti:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: UIDevice.current)
     }
     
     func setupView() {
@@ -224,10 +241,28 @@ extension HeroBrowserBaseImageCell {
             frame.origin.y = 0
         }
         self.container.frame = frame;
+        if CGSize.jf.screenWidth() > CGSize.jf.screenHeight() {
+            self.container.jf.centerX = scrollView.jf.centerX
+        }
     }
 }
 
 extension HeroBrowserBaseImageCell:UIGestureRecognizerDelegate {
+    
+    @objc func orientationChanged(noti: Notification) {
+        let screenSize = UIScreen.main.bounds.size
+        //竖屏
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            print("切换到横屏")
+            self.scrollView.frame = UIScreen.main.bounds
+        } else {
+            print("切换到竖屏")
+            if screenSize.width < screenSize.height {
+                self.scrollView.frame = UIScreen.main.bounds
+            }
+        }
+    }
+    
     override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if let pan = gestureRecognizer as? UIPanGestureRecognizer {
             if self.scrollView.contentOffset.y > 0 {

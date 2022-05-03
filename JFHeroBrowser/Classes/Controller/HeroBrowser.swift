@@ -83,7 +83,9 @@ public class HeroBrowser: UIViewController {
     var _scrolling: Bool = false
     var currentIndex: Int {
         get {
-            return Int(self.collectionView.contentOffset.x / self.collectionView.frame.size.width)
+            let index = Int(self.collectionView.contentOffset.x / self.collectionView.frame.size.width)
+            let count = _viewModules?.count ?? 0
+            return index < count ? index : count
         }
     }
     
@@ -101,7 +103,7 @@ public class HeroBrowser: UIViewController {
         pageC.hidesForSinglePage = true
         pageC.jf.height = 8
         pageC.jf.width = 250
-        pageC.jf.left = (CGSize.jf.screenWidth() - 250) / 2
+        pageC.jf.centerX = self.view.jf.centerX
         pageC.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
         return pageC
     }()
@@ -118,6 +120,7 @@ public class HeroBrowser: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged(noti:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: UIDevice.current)
     }
     
     func setupView() {
@@ -278,12 +281,26 @@ extension HeroBrowser: UIGestureRecognizerDelegate {
     }
 }
 
-extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
+extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate,UICollectionViewDelegateFlowLayout {
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize.jf.screenSize()
+    }
+    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return _viewModules?.count ?? 0
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("cellForItemAt index \(indexPath.item)")
         guard let vm = _viewModules?[indexPath.item] else {
             return UICollectionViewCell()
         }
@@ -352,5 +369,36 @@ extension HeroBrowser:UIViewControllerTransitioningDelegate,UIViewControllerAnim
     
     func dismiss(transitonContext: UIViewControllerContextTransitioning) {
         HeroTransitionAnimation.dismiss(transitonContext: transitonContext, animationType: animationType, heroBrowser: self)
+    }
+}
+
+extension HeroBrowser {
+    @objc func orientationChanged(noti: Notification) {
+        let bounds = UIScreen.main.bounds
+        let screenSize = UIScreen.main.bounds.size
+        //竖屏
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            print("切换到横屏")
+            let index = self.pageControl.currentPage
+            self.blurView.frame = bounds
+            self.blurEffectView?.frame = bounds
+            self.collectionView.frame = CGSize.jf.screenBounds()
+            self.pageControl.jf.centerX = self.collectionView.jf.centerX
+            self.pageControl.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
+            self.collectionView.reloadData()
+            self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
+        } else {
+            print("切换到竖屏")
+            if screenSize.width < screenSize.height {
+                let index = self.pageControl.currentPage
+                self.blurView.frame = bounds
+                self.blurEffectView?.frame = bounds
+                self.collectionView.frame = CGSize.jf.screenBounds()
+                self.pageControl.jf.centerX = self.collectionView.jf.centerX
+                self.pageControl.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
+                self.collectionView.reloadData()
+                self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
+            }
+        }
     }
 }
