@@ -77,21 +77,25 @@ var list: [HeroBrowserViewModule] = []
 
 ## Installation
 
+### CocoasPods
+
 JFHeroBrowser is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'JFHeroBrowser', '1.1.0'
+pod 'JFHeroBrowser', '1.2.0'
 
 ```
 
 ## Change Log
 
-- v1,10 support image (data、UIImage、netowrk image) source & video(local file & network url video) source
+- v1.0.0 support image (data、UIImage、netowrk image) source & video(local file & network url video) source
+- v1.1.0 supoort 'Hero' namespace, add twd quick browser func (browserPhoto & browserVideo)
+- v1.2.0 support Horizontal Screen & auto rotate && adapt UI in Horizontal Screen
 
 ## Author
 
-fanjiaorng919, fanjiarong_haohao@163.com
+JerryFans, fanjiarong_haohao@163.com
 
 ## License
 
