@@ -82,7 +82,12 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'JFHeroBrowser', '1.1.0'
+
 ```
+
+## Change Log
+
+- v1,10 support image (data、UIImage、netowrk image) source & video(local file & network url video) source
 
 ## Author
 
