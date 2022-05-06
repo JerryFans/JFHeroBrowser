@@ -168,7 +168,11 @@ extension NetworkImageViewController: UICollectionViewDelegate, UICollectionView
                 .imageDidChangeHandle({ [weak self] imageIndex in
                     guard let self = self else { return nil }
                     guard let cell = self.collectionView.cellForItem(at: IndexPath(item: imageIndex, section: 0)) as? NetworkImageCollectionViewCell else { return nil }
-                    return cell.imageView
+                    let rect = cell.convert(cell.imageView.frame, to: self.view)
+                    if self.view.frame.contains(rect) {
+                        return cell.imageView
+                    }
+                    return nil
                 })
             ]
         }

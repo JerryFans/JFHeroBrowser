@@ -183,9 +183,7 @@ public class HeroBrowser: UIViewController {
     
     func updateHeroView(index: Int) {
         guard index < _viewModules?.count ?? 0  else { return }
-        if let heroV = self.imagePageDidChangeHandle?(index) {
-            self.heroImageView = heroV
-        }
+        self.heroImageView = self.imagePageDidChangeHandle?(index)
     }
     
     @objc func changePage(pageControl: UIPageControl) {
