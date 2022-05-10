@@ -18,14 +18,14 @@ public enum HeroBrowserType {
     case assetImage // Album Asset Image Source
 }
 
-public enum Result<T> {
+public enum HeroBrowserResult<T> {
     case success(_ data: T)
     case progress(_ progress: CGFloat)
     case failed(_ error: Error?)
 }
 
 public protocol NetworkImageProvider: AnyObject {
-    typealias Complete<T> = (Result<T>) -> ()
+    typealias Complete<T> = (HeroBrowserResult<T>) -> ()
     func downloadImage(with imgUrl: String, complete: Complete<UIImage>?)
 }
 
@@ -37,7 +37,7 @@ public protocol HeroBrowserViewModuleBaseProtocol {
 public protocol HeroBrowserViewModuleProtocol: HeroBrowserViewModuleBaseProtocol {
     associatedtype ThumbailData
     associatedtype RawData
-    typealias Complete<T> = (Result<T>) -> ()
+    typealias Complete<T> = (HeroBrowserResult<T>) -> ()
     func asyncLoadThumbailSource(with complete: Complete<ThumbailData>?)
     func asyncLoadRawSource(with complete: Complete<RawData>?)
 }
