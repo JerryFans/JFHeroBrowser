@@ -42,7 +42,7 @@ public protocol HeroBrowserViewModuleProtocol: HeroBrowserViewModuleBaseProtocol
     func asyncLoadRawSource(with complete: Complete<RawData>?)
 }
 
-public class HeroBrowserViewModule: HeroBrowserViewModuleProtocol {
+open class HeroBrowserViewModule: HeroBrowserViewModuleProtocol {
     public typealias ThumbailData = UIImage
     public typealias RawData = UIImage
     public var type: HeroBrowserType
