@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroBrowserNetworkImageCell: HeroBrowserBaseImageCell {
+open class HeroBrowserNetworkImageCell: HeroBrowserBaseImageCell {
     
     lazy var progressView: HeroCircularProgressView = {
         let progressView = HeroCircularProgressView.hero.progressView()
@@ -61,7 +61,7 @@ class HeroBrowserNetworkImageCell: HeroBrowserBaseImageCell {
         self.progressView.center = self.progressContainer.center
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

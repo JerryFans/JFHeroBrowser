@@ -7,12 +7,12 @@
 
 import UIKit
 
-class HeroBrowserBaseImageCell: UICollectionViewCell {
+open class HeroBrowserBaseImageCell: UICollectionViewCell {
     
-    var closeBlock: CloseBlock?
-    var updatedContainerScaleBlock: UpdatedContainerScaleBlock?
-    var beginTouchPoint: CGPoint = .zero
-    var beginFrame: CGRect = .zero
+    public var closeBlock: CloseBlock?
+    public var updatedContainerScaleBlock: UpdatedContainerScaleBlock?
+    public var beginTouchPoint: CGPoint = .zero
+    public var beginFrame: CGRect = .zero
     
     var container: UIImageView = {
         let v = UIImageView()
@@ -39,13 +39,13 @@ class HeroBrowserBaseImageCell: UICollectionViewCell {
         return tempView
     }()
     
-    var videoViewModule: HeroBrowserVideoViewModule? {
+    public var videoViewModule: HeroBrowserVideoViewModule? {
         didSet {
             self.beginLoadSource()
         }
     }
     
-    var viewModule: HeroBrowserViewModule? {
+    public var viewModule: HeroBrowserViewModule? {
         didSet {
             self.beginLoadSource()
         }
@@ -106,7 +106,7 @@ class HeroBrowserBaseImageCell: UICollectionViewCell {
         }
     }
     
-    static func identify() -> String {
+    public static func identify() -> String {
         return NSStringFromClass(Self.self)
     }
     
@@ -126,7 +126,7 @@ class HeroBrowserBaseImageCell: UICollectionViewCell {
         self.scrollView.addGestureRecognizer(panGest)
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -209,15 +209,15 @@ extension HeroBrowserBaseImageCell: UIScrollViewDelegate {
 
 extension HeroBrowserBaseImageCell: HeroBrowserCollectionCellProtocol {
     
-    func getContainer() -> UIView {
+    public func getContainer() -> UIView {
         return self.container
     }
     
-    func resetZoom()  {
+    public func resetZoom()  {
         self.scrollView.setZoomScale(1.0, animated: true)
     }
     
-    func doubleTap(location: CGPoint) {
+    public func doubleTap(location: CGPoint) {
         if self.scrollView.zoomScale <= 1.0 {
             let gesturePointInImageView = self.container.convert(location, to: self)
             self.scrollView.zoom(to: self.zoomRectForScale(scale: 2.0, center: gesturePointInImageView), animated: true)
@@ -263,7 +263,7 @@ extension HeroBrowserBaseImageCell:UIGestureRecognizerDelegate {
         }
     }
     
-    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    open override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if let pan = gestureRecognizer as? UIPanGestureRecognizer {
             if self.scrollView.contentOffset.y > 0 {
                 return false

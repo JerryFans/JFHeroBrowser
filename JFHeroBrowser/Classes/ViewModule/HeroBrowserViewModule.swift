@@ -45,17 +45,17 @@ public protocol HeroBrowserViewModuleProtocol: HeroBrowserViewModuleBaseProtocol
 open class HeroBrowserViewModule: HeroBrowserViewModuleProtocol {
     public typealias ThumbailData = UIImage
     public typealias RawData = UIImage
-    public var type: HeroBrowserType
-    public func asyncLoadThumbailSource(with complete: Complete<UIImage>?) {
+    open var type: HeroBrowserType
+    open func asyncLoadThumbailSource(with complete: Complete<UIImage>?) {
         complete?(.failed(nil))
     }
-    public func asyncLoadRawSource(with complete: Complete<UIImage>?) {
+    open func asyncLoadRawSource(with complete: Complete<UIImage>?) {
         complete?(.failed(nil))
     }
     public init(type: HeroBrowserType) {
         self.type = type
     }
-    public func createCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> HeroBrowserCollectionCellProtocol {
+    open func createCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> HeroBrowserCollectionCellProtocol {
         return collectionView.dequeueReusableCell(withReuseIdentifier: HeroBrowserBaseImageCell.identify(), for: indexPath) as! HeroBrowserBaseImageCell
     }
 }
