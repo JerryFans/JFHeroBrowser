@@ -99,8 +99,8 @@ public class HeroVideoView: HeroPlayerView {
         super.init(frame: frame)
         self.backgroundColor = .black
         
-        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: NSNotification.Name(rawValue: NSNotification.Name.UIApplicationWillResignActive.rawValue), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterPlayGround), name: NSNotification.Name(rawValue: NSNotification.Name.UIApplicationDidBecomeActive.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name:UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterPlayGround), name: UIApplication.didBecomeActiveNotification, object: nil)
         
         self.playerLayer.videoGravity = .resizeAspectFill //resizeAspect
         self.playerLayer.addObserver(self, forKeyPath: "readyForDisplay", options: .new, context: nil)
@@ -223,7 +223,7 @@ public class HeroVideoView: HeroPlayerView {
     
     func resumeBackgroundSound() {
         do {
-            try AVAudioSession.sharedInstance().setActive(false, with: .notifyOthersOnDeactivation)
+            try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
         } catch {
             
         }
@@ -231,8 +231,8 @@ public class HeroVideoView: HeroPlayerView {
     
     func pauseBackgroundSound() {
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.soloAmbient)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             

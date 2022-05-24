@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JFHeroBrowser'
-  s.version          = '1.2.3'
+  s.version          = '1.2.4'
   s.summary          = 'A simplest & base on protocol & swifty way to browse photo or video with hero animation..'
 
 # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'JFHeroBrowser/Classes/**/*'
-  s.swift_version = ['4.0']
+  s.swift_version = ['5.0']
   s.resource_bundles = {
      'JFHeroBrowser' => ['JFHeroBrowser/Assets/*.png']
   }

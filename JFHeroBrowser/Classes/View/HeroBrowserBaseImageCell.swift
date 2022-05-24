@@ -113,7 +113,7 @@ open class HeroBrowserBaseImageCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
-        NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged(noti:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: UIDevice.current)
+        NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged(noti:)), name:UIDevice.orientationDidChangeNotification, object: UIDevice.current)
     }
     
     func setupView() {
@@ -229,11 +229,11 @@ extension HeroBrowserBaseImageCell: HeroBrowserCollectionCellProtocol {
 
 extension HeroBrowserBaseImageCell {
     
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+    public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.container
     }
     
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+    public func scrollViewDidZoom(_ scrollView: UIScrollView) {
         var frame = self.container.frame;
         if self.container.frame.size.height < scrollView.frame.size.height {
             frame.origin.y = (self.scrollView.frame.size.height - self.container.frame.size.height) / 2

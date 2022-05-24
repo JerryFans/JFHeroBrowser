@@ -20,10 +20,10 @@ extension HeroBrowserDelegate {
     func heroBrowser(_ heroBrowser: HeroBrowser, didLongPressHandle viewModule: HeroBrowserViewModuleBaseProtocol) {}
 }
 
-public class HeroBrowser: UIViewController {
+open class HeroBrowser: UIViewController {
     
     public typealias HeroBrowserDidLongPressHandle = (_ heroBrowser: HeroBrowser, _ viewModule: HeroBrowserViewModuleBaseProtocol) -> ()
-    var heroBrowserDidLongPressHandle: HeroBrowserDidLongPressHandle?
+    public var heroBrowserDidLongPressHandle: HeroBrowserDidLongPressHandle?
     
     lazy var effect = { UIBlurEffect(style: .dark) }()
     var blurEffectView: UIVisualEffectView?
@@ -118,9 +118,9 @@ public class HeroBrowser: UIViewController {
         print("HeroBrowser deinit")
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged(noti:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: UIDevice.current)
+        NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged(noti:)), name:UIDevice.orientationDidChangeNotification, object: UIDevice.current)
     }
     
     func setupView() {

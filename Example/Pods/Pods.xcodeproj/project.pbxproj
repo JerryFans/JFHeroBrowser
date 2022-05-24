@@ -2027,38 +2027,6 @@
 			};
 			name = Release;
 		};
-		5CE4FA98A00890030D047BE1614142E0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 789E570FFFDAB3E205E313C2BCFF05C3 /* JFHeroBrowser.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JFHeroBrowser/JFHeroBrowser-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JFHeroBrowser/JFHeroBrowser-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JFHeroBrowser/JFHeroBrowser.modulemap";
-				PRODUCT_MODULE_NAME = JFHeroBrowser;
-				PRODUCT_NAME = JFHeroBrowser;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		600391431FB986893403B404CAEFE300 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B97A4281EA8A859D53F84838AA027544 /* JRBaseKit.debug.xcconfig */;
@@ -2144,6 +2112,37 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6B13417D8067ED0B449657E577F97FE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A4E5A8D2DDF4963847C33485582F58C /* JFHeroBrowser.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JFHeroBrowser/JFHeroBrowser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JFHeroBrowser/JFHeroBrowser-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JFHeroBrowser/JFHeroBrowser.modulemap";
+				PRODUCT_MODULE_NAME = JFHeroBrowser;
+				PRODUCT_NAME = JFHeroBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2360,9 +2359,9 @@
 			};
 			name = Release;
 		};
-		C0208443226B09B9142EE5354F97CAF5 /* Debug */ = {
+		A9BC758A50E702D8432A9B1BDE5D2FBB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A4E5A8D2DDF4963847C33485582F58C /* JFHeroBrowser.debug.xcconfig */;
+			baseConfigurationReference = 789E570FFFDAB3E205E313C2BCFF05C3 /* JFHeroBrowser.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2384,12 +2383,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		C5BD2E1647D5DF97106129666460C5D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2666,8 +2666,8 @@
 		48DDD94BE31A5CA9102CFF6939C1E82D /* Build configuration list for PBXNativeTarget "JFHeroBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0208443226B09B9142EE5354F97CAF5 /* Debug */,
-				5CE4FA98A00890030D047BE1614142E0 /* Release */,
+				6B13417D8067ED0B449657E577F97FE9 /* Debug */,
+				A9BC758A50E702D8432A9B1BDE5D2FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
