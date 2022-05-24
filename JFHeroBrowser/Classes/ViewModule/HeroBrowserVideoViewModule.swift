@@ -53,6 +53,10 @@ open class HeroBrowserVideoViewModule: HeroBrowserViewModuleProtocol {
     open var videoURL: URL?
     open var isAutoPlay = true
     
+    public init(type: HeroBrowserType) {
+        self.type = type
+    }
+    
     public init(thumbailImgUrl: String?, fileUrlPath: String, provider: NetworkImageProvider? = JFHeroBrowserGlobalConfig.default.networkImageProvider, autoPlay: Bool = true) {
         self.thumbailImgUrl = thumbailImgUrl
         self.videoURL = URL(fileURLWithPath: fileUrlPath)
