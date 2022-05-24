@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 /// Video VM, support network video or local file path video
 open class HeroBrowserVideoViewModule: HeroBrowserViewModuleProtocol {
     
     public typealias ThumbailData = UIImage
-    public typealias RawData = URL
+    public typealias RawData = AVPlayerItem
     open var type: HeroBrowserType
     
     open func asyncLoadThumbailSource(with complete: Complete<UIImage>?) {
@@ -34,12 +35,13 @@ open class HeroBrowserVideoViewModule: HeroBrowserViewModuleProtocol {
         })
     }
     
-    open func asyncLoadRawSource(with complete: Complete<URL>?) {
+    open func asyncLoadRawSource(with complete: Complete<AVPlayerItem>?) {
         guard let url = self.videoURL else {
             complete?(.failed(nil))
             return
         }
-        complete?(.success(url))
+        let asset = AVURLAsset(url: url)
+        complete?(.success(AVPlayerItem(asset: asset)))
     }
     
     open func createCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> HeroBrowserCollectionCellProtocol {

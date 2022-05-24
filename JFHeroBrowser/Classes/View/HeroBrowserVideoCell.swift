@@ -92,8 +92,8 @@ class HeroBrowserVideoCell: HeroBrowserBaseImageCell {
         }
         vm.asyncLoadRawSource { result in
             switch result {
-            case let .success(url):
-                self.updateVideoView(with: url)
+            case let .success(playerItem):
+                self.updateVideoView(with: playerItem)
                 break
             case _ :
                 break
@@ -101,9 +101,9 @@ class HeroBrowserVideoCell: HeroBrowserBaseImageCell {
         }
     }
     
-    func updateVideoView(with url: URL) {
+    func updateVideoView(with playerItem: AVPlayerItem) {
         guard let vm = self.videoViewModule else { return }
-        self.videoView.videoURL = url
+        self.videoView.originPlayerItem = playerItem
         if vm.isAutoPlay {
             self.videoView.playVideo()
         } else {
