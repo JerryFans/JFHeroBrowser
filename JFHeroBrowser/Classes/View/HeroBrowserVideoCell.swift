@@ -103,13 +103,12 @@ class HeroBrowserVideoCell: HeroBrowserBaseImageCell {
     
     func updateVideoView(with url: URL) {
         guard let vm = self.videoViewModule else { return }
-        if vm.type == .localVideo {
-            self.container.isHidden = true
-            self.videoView.isHidden = false
+        self.videoView.videoURL = url
+        if vm.isAutoPlay {
+            self.videoView.playVideo()
+        } else {
             self.playButton.isHidden = false
         }
-        self.videoView.videoURL = url
-        self.videoView.playVideo()
     }
     
     override init(frame: CGRect) {

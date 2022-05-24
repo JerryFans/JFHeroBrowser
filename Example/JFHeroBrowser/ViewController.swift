@@ -18,7 +18,7 @@ enum HeroBrowserDemoType: String {
     case dataImage = "data图片"
     case networkImage = "网络图片(Kingfiser)"
     case networkSDWebImage = "网络图片(SDWebImage)"
-    case networkVideo = "网络视频"
+    case networkVideo = "同时网络视频+图片"
 }
 
 let demoTypes: [HeroBrowserDemoType] = [

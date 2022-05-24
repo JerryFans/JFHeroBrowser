@@ -11,11 +11,17 @@ import JFHeroBrowser
 
 class NetworkVideoViewController: UIViewController {
     
-//    lazy var videoView: HeroVideoView = {
-//        let videoView = HeroVideoView(frame: .zero)
-//        videoView.videoURL = URL(string: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4")
-//        return videoView
-//    }()
+    lazy var list: [HeroBrowserViewModuleBaseProtocol] = {
+        var list: [HeroBrowserViewModuleBaseProtocol] = []
+        let vm = HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared, autoPlay: true)
+        list.append(vm)
+        list.append(HeroBrowserLocalImageViewModule(image: UIImage(named: "template-1")!))
+        if let path = Bundle.main.path(forResource: "bf.MOV", ofType: nil) {
+            let vm1 = HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/bf.jpg", fileUrlPath: path, provider: HeroNetworkImageProvider.shared, autoPlay: false)
+            list.append(vm1)
+        }
+        return list
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +30,51 @@ class NetworkVideoViewController: UIViewController {
         let button4 = UIButton(frame: CGRect(x: 50, y: 100, width: 150, height: 150))
         self.view.addSubview(button4)
         button4.kf.setImage(with: URL(string: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg"), for: .normal)
-        button4.tag = 5
+        button4.tag = 0
         button4.imageView?.contentMode = .scaleAspectFill
         button4.addTarget(self, action: #selector(videoBtnClick(button:)), for: .touchUpInside)
+        
+        let button5 = UIButton(frame: CGRect(x: 210, y: 100, width: 150, height: 150))
+        self.view.addSubview(button5)
+        button5.setImage(UIImage(named: "template-1"), for: .normal)
+        button5.tag = 1
+        button5.imageView?.contentMode = .scaleAspectFill
+        button5.addTarget(self, action: #selector(btnClick(button:)), for: .touchUpInside)
+        
+        let button6 = UIButton(frame: CGRect(x: 50, y: 260, width: 150, height: 150))
+        self.view.addSubview(button6)
+        button6.kf.setImage(with: URL(string: "http://image.jerryfans.com/bf.jpg"), for: .normal)
+        button6.tag = 2
+        button6.imageView?.contentMode = .scaleAspectFill
+        button6.addTarget(self, action: #selector(videoBtnClick(button:)), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
     
-    @objc func videoBtnClick(button: UIButton) {
-        let vm = HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared)
-        self.hero.browserVideo(viewModule: vm) {
+    @objc func btnClick(button: UIButton) {
+        self.hero.browserMultiSoures(viewModules: self.list, initIndex: 1) {
             [
                 .enableBlurEffect(false),
-                .heroView(button.imageView)
+                .heroView(button.imageView),
+                .imageDidChangeHandle({ [weak self] imageIndex in
+                    guard let self = self else { return nil }
+                    guard let btn = self.view.viewWithTag(imageIndex) as? UIButton else { return nil }
+                    return btn.imageView
+                })
             ]
         }
-//        let brower = HeroBrowser(viewModules: [HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared)], index: button.tag, heroImageView: button.imageView)
-//        brower.show(with: self, animationType: .hero)
+    }
+    
+    @objc func videoBtnClick(button: UIButton) {
+        self.hero.browserMultiSoures(viewModules: self.list, initIndex: button.tag) {
+            [
+                .enableBlurEffect(false),
+                .heroView(button.imageView),
+                .imageDidChangeHandle({ [weak self] imageIndex in
+                    guard let self = self else { return nil }
+                    guard let btn = self.view.viewWithTag(imageIndex) as? UIButton else { return nil }
+                    return btn.imageView
+                })
+            ]
+        }
     }
 }

@@ -27,6 +27,7 @@ public struct JFHeroBrowserGlobalConfig {
     }
     
     public static var `default` = JFHeroBrowserGlobalConfig(true, networkImageProvider: nil, pageControlType: .pageControl)
+    public static var multiSource = JFHeroBrowserGlobalConfig(false, networkImageProvider: nil, pageControlType: .none)
 }
 
 public enum JFHeroBrowserOption {

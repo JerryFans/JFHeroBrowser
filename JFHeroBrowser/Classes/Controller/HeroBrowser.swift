@@ -11,6 +11,8 @@ class PageControlContainer: UIView {
     
     private var pageControl: UIPageControl?
     private var pageLabel: UILabel?
+    typealias DidChangePageHandle = (UIPageControl) -> ()
+    var didChangePageHandle: DidChangePageHandle?
     
     var currentPage: Int = 0 {
         didSet {
@@ -59,7 +61,7 @@ class PageControlContainer: UIView {
     }
     
     @objc func changePage(pageControl: UIPageControl) {
-        
+        self.didChangePageHandle?(pageControl)
     }
 }
 
@@ -154,6 +156,9 @@ open class HeroBrowser: UIViewController {
     
     private lazy var pageControlContainer: PageControlContainer = {
         var view = PageControlContainer()
+        view.didChangePageHandle = { [weak self] pageControl in
+            self?.changePage(pageControl: pageControl)
+        }
         self.view.addSubview(view)
         view.backgroundColor = .clear
         view.jf.height = 20
@@ -370,12 +375,26 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
             self.blurView.alpha = scale
             self.isHideOther = scale < 1
         }
+        return cell
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        print("willDisplay cell index \(indexPath.item)")
+        guard let vm = _viewModules?[indexPath.item] else {
+            return
+        }
+        guard let cell = cell as? HeroBrowserBaseImageCell else { return }
         if let vm = vm as? HeroBrowserViewModule {
             cell.viewModule = vm
         } else if let vm = vm as? HeroBrowserVideoViewModule {
             cell.videoViewModule = vm
         }
-        return cell
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let videoCell = cell as? HeroBrowserVideoCell {
+            videoCell.videoView.pauseVideo()
+        }
     }
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
