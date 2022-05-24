@@ -138,6 +138,7 @@ extension NetworkImageViewController: UICollectionViewDelegate, UICollectionView
         // quickly hero mode in swift
         self.hero.browserPhoto(viewModules: list, initIndex: indexPath.item) {
             [
+                .pageControlType(.pageControl),
                 .heroView(cell.imageView),
                 .heroBrowserDidLongPressHandle({ heroBrowser,vm  in
                     //保存图片 actionSheet 使用我另一个库 JFPopup 实现，有兴趣欢迎star.

@@ -253,10 +253,8 @@ extension HeroBrowserBaseImageCell:UIGestureRecognizerDelegate {
         let screenSize = UIScreen.main.bounds.size
         //竖屏
         if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-            print("切换到横屏")
             self.scrollView.frame = UIScreen.main.bounds
         } else {
-            print("切换到竖屏")
             if screenSize.width < screenSize.height {
                 self.scrollView.frame = UIScreen.main.bounds
             }

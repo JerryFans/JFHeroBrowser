@@ -9,20 +9,29 @@ import Foundation
 import UIKit
 import JRBaseKit
 
+public enum JFHeroBrowserPageControlType {
+    case none
+    case pageControl
+    case number
+}
+
 public struct JFHeroBrowserGlobalConfig {
+    public var pageControlType: JFHeroBrowserPageControlType
     public var enableBlurEffect: Bool
     public var networkImageProvider: NetworkImageProvider?
     public init(_ enableBlurEffect: Bool,
-         networkImageProvider: NetworkImageProvider? = nil) {
+                networkImageProvider: NetworkImageProvider? = nil, pageControlType: JFHeroBrowserPageControlType = .none) {
         self.enableBlurEffect = enableBlurEffect
         self.networkImageProvider = networkImageProvider
+        self.pageControlType = pageControlType
     }
     
-    public static var `default` = JFHeroBrowserGlobalConfig(true, networkImageProvider: nil)
+    public static var `default` = JFHeroBrowserGlobalConfig(true, networkImageProvider: nil, pageControlType: .pageControl)
 }
 
 public enum JFHeroBrowserOption {
     case enableBlurEffect(Bool)
+    case pageControlType(JFHeroBrowserPageControlType)
     case heroView(UIImageView?)
     case heroBrowserDidLongPressHandle(HeroBrowser.HeroBrowserDidLongPressHandle)
     case imageDidChangeHandle(HeroBrowser.ImagePageDidChangeHandle)

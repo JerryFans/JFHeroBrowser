@@ -16,6 +16,9 @@ public extension Hero where Base: UIViewController {
         var imageDidChangeHandle: HeroBrowser.ImagePageDidChangeHandle?
         var heroBrowserDidLongPressHandle: HeroBrowser.HeroBrowserDidLongPressHandle?
         var enableBlurEffect = JFHeroBrowserGlobalConfig.default.enableBlurEffect
+        
+        var config = JFHeroBrowserGlobalConfig.default
+        config.enableBlurEffect = enableBlurEffect
         if let allOptions = options?() {
             for option in allOptions {
                 switch option {
@@ -31,11 +34,12 @@ public extension Hero where Base: UIViewController {
                 case .imageDidChangeHandle(let heroBrowserImageDidChange):
                     imageDidChangeHandle = heroBrowserImageDidChange
                     break
+                case .pageControlType(let pageControlerType):
+                    config.pageControlType = pageControlerType
+                    break
                 }
             }
         }
-        var config = JFHeroBrowserGlobalConfig.default
-        config.enableBlurEffect = enableBlurEffect
         
         let vc = HeroBrowser(viewModules: [viewModule], index: 0, heroImageView: heroImageView, imagePageDidChangeHandle: imageDidChangeHandle, config: config)
         vc.heroBrowserDidLongPressHandle = heroBrowserDidLongPressHandle
@@ -47,6 +51,9 @@ public extension Hero where Base: UIViewController {
         var imageDidChangeHandle: HeroBrowser.ImagePageDidChangeHandle?
         var heroBrowserDidLongPressHandle: HeroBrowser.HeroBrowserDidLongPressHandle?
         var enableBlurEffect = JFHeroBrowserGlobalConfig.default.enableBlurEffect
+        
+        var config = JFHeroBrowserGlobalConfig.default
+        config.enableBlurEffect = enableBlurEffect
         if let allOptions = options?() {
             for option in allOptions {
                 switch option {
@@ -62,11 +69,12 @@ public extension Hero where Base: UIViewController {
                 case .imageDidChangeHandle(let heroBrowserImageDidChange):
                     imageDidChangeHandle = heroBrowserImageDidChange
                     break
+                case .pageControlType(let pageControlType):
+                    config.pageControlType = pageControlType
+                    break
                 }
             }
         }
-        var config = JFHeroBrowserGlobalConfig.default
-        config.enableBlurEffect = enableBlurEffect
         
         if let vm = viewModules.first as? HeroBrowserNetworkImageViewModule {
             assert(vm.imageProvider != nil, "imageProvider == nil, please setup your custom imageProvider in JFHeroBrowserGlobalConfig.default.networkImageProvider property use Kingfisher or SDWebImage or your custom imag caches to implements")

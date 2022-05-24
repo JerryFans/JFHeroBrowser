@@ -16,7 +16,6 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		76EB6E41E10C0EBCADB37A31 /* Pods_JFHeroBrowser_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B289266CC5BF7F39037F74 /* Pods_JFHeroBrowser_Example.framework */; };
 		B42A690B28194DF9001C433C /* HeroNetworkImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A690A28194DF9001C433C /* HeroNetworkImageProvider.swift */; };
-		B49D16F4283CB06D0002CFF5 /* JFPhotoPreviewBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49D16F3283CB06D0002CFF5 /* JFPhotoPreviewBrowser.swift */; };
 		B4CD9E5D281CEA2500CB3382 /* LocalImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD9E5C281CEA2500CB3382 /* LocalImageViewController.swift */; };
 		B4CD9E5F281D791400CB3382 /* DataImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD9E5E281D791400CB3382 /* DataImageViewController.swift */; };
 		B4CD9E61281D7BD000CB3382 /* NetworkImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD9E60281D7BD000CB3382 /* NetworkImageViewController.swift */; };
@@ -53,7 +52,6 @@
 		6AB87ACB30FBF01205D462A8 /* Pods-JFHeroBrowser_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFHeroBrowser_Example.release.xcconfig"; path = "Target Support Files/Pods-JFHeroBrowser_Example/Pods-JFHeroBrowser_Example.release.xcconfig"; sourceTree = "<group>"; };
 		908B1CA4BAA449B2EC1ACC41 /* JFHeroBrowser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JFHeroBrowser.podspec; path = ../JFHeroBrowser.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B42A690A28194DF9001C433C /* HeroNetworkImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroNetworkImageProvider.swift; sourceTree = "<group>"; };
-		B49D16F3283CB06D0002CFF5 /* JFPhotoPreviewBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFPhotoPreviewBrowser.swift; sourceTree = "<group>"; };
 		B4CD9E5C281CEA2500CB3382 /* LocalImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageViewController.swift; sourceTree = "<group>"; };
 		B4CD9E5E281D791400CB3382 /* DataImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataImageViewController.swift; sourceTree = "<group>"; };
 		B4CD9E60281D7BD000CB3382 /* NetworkImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageViewController.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 			children = (
 				B42A690A28194DF9001C433C /* HeroNetworkImageProvider.swift */,
 				B4CD9E66281EDCAF00CB3382 /* SDWebImageNetworkImageProvider.swift */,
-				B49D16F3283CB06D0002CFF5 /* JFPhotoPreviewBrowser.swift */,
 			);
 			name = NetworkImageProvider;
 			sourceTree = "<group>";
@@ -383,7 +380,6 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				B4CD9E5D281CEA2500CB3382 /* LocalImageViewController.swift in Sources */,
 				B4CD9E61281D7BD000CB3382 /* NetworkImageViewController.swift in Sources */,
-				B49D16F4283CB06D0002CFF5 /* JFPhotoPreviewBrowser.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				B4CD9E67281EDCAF00CB3382 /* SDWebImageNetworkImageProvider.swift in Sources */,
 				B4CD9E6B281EDD3200CB3382 /* OCViewController.m in Sources */,
