@@ -135,7 +135,7 @@ open class HeroBrowser: UIViewController {
         get { _isHideOther }
     }
     weak var transitionContext: UIViewControllerAnimatedTransitioning?
-    private var _viewModules: [HeroBrowserViewModuleBaseProtocol]?
+    public private(set) var _viewModules: [HeroBrowserViewModuleBaseProtocol]?
     private var _index: Int = 0
     var isShow = false
     var _scrolling: Bool = false
@@ -216,6 +216,7 @@ open class HeroBrowser: UIViewController {
         self.setupGestureRecognizer()
         self.switchToPage(index: index)
         self.updatepageControlContainer(index: index)
+        self.indexChangeHandle(index: index)
         self.prefetchImages()
     }
     
@@ -235,6 +236,11 @@ open class HeroBrowser: UIViewController {
     
     func switchToPage(index: Int) {
         self.collectionView.setContentOffset(CGPoint(x: Int(CGSize.jf.screenSize().width * CGFloat(index)), y: 0), animated: false)
+    }
+    
+    //preset to override
+    open func indexChangeHandle(index: Int) {
+        
     }
     
     func updatepageControlContainer(index: Int) {
@@ -406,6 +412,7 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
         let currentIndex: Int = Int((contentOffsetX + 0.5 * self.view.frame.size.width) / self.view.frame.size.width)
         self.updateHeroView(index: currentIndex)
         self.updatepageControlContainer(index: currentIndex)
+        self.indexChangeHandle(index: currentIndex)
     }
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
