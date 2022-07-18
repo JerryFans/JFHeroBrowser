@@ -65,16 +65,18 @@ class NetworkVideoViewController: UIViewController {
     }
     
     @objc func videoBtnClick(button: UIButton) {
-        self.hero.browserMultiSoures(viewModules: self.list, initIndex: button.tag) {
-            [
-                .enableBlurEffect(false),
-                .heroView(button.imageView),
-                .imageDidChangeHandle({ [weak self] imageIndex in
-                    guard let self = self else { return nil }
-                    guard let btn = self.view.viewWithTag(imageIndex) as? UIButton else { return nil }
-                    return btn.imageView
-                })
-            ]
-        }
+        let vm = HeroBrowserVideoViewModule(thumbailImgUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_89fd26217dc299a442363581deb75b90_iOS_0.jpg", videoUrl: "http://image.jerryfans.com/w_720_h_1280_d_41_2508b8aa06a2e30d2857f9bcbdfd1de0_iOS.mp4", provider: HeroNetworkImageProvider.shared, autoPlay: true)
+        self.hero.browserVideo(viewModule: vm)
+//        self.hero.browserMultiSoures(viewModules: self.list, initIndex: button.tag) {
+//            [
+//                .enableBlurEffect(false),
+//                .heroView(button.imageView),
+//                .imageDidChangeHandle({ [weak self] imageIndex in
+//                    guard let self = self else { return nil }
+//                    guard let btn = self.view.viewWithTag(imageIndex) as? UIButton else { return nil }
+//                    return btn.imageView
+//                })
+//            ]
+//        }
     }
 }

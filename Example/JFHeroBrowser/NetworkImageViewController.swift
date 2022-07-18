@@ -140,31 +140,8 @@ extension NetworkImageViewController: UICollectionViewDelegate, UICollectionView
             [
                 .pageControlType(.pageControl),
                 .heroView(cell.imageView),
-                .heroBrowserDidLongPressHandle({ heroBrowser,vm  in
-                    //保存图片 actionSheet 使用我另一个库 JFPopup 实现，有兴趣欢迎star.
-                    JFPopupView.popup.actionSheet {
-                        [
-                            JFPopupAction(with: "保存", subTitle: nil) {
-                                if let imgVM = vm as? HeroBrowserViewModule {
-                                    imgVM.asyncLoadRawSource { result in
-                                        switch result {
-                                        case let .success(image):
-                                            print(image)
-                                            //还需请求权限，这里就不演示了
-//                                            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-                                            JFPopupView.popup.toast(hit: "保存图片成功（只做演示无功能）")
-                                            break
-                                        case _ :
-                                            break
-                                        }
-                                    }
-                                }
-                            },
-                            JFPopupAction(with: "分享", subTitle: nil, clickActionCallBack: {
-                                JFPopupView.popup.toast(hit: "分享成功（只做演示无功能）")
-                            }),
-                        ]
-                    }
+                .heroBrowserDidLongPressHandle({ [weak self] heroBrowser,vm  in
+                    self?.longPressHandle(vm: vm)
                 }),
                 .imageDidChangeHandle({ [weak self] imageIndex in
                     guard let self = self else { return nil }
@@ -177,13 +154,33 @@ extension NetworkImageViewController: UICollectionViewDelegate, UICollectionView
                 })
             ]
         }
-        //init vc mode
-//        let brower = HeroBrowser(viewModules: list, index: indexPath.item, heroImageView: cell.imageView) { [weak self] imageIndex in
-//            guard let self = self else { return nil }
-//            guard let cell = self.collectionView.cellForItem(at: IndexPath(item: imageIndex, section: 0)) as? NetworkImageCollectionViewCell else { return nil }
-//            return cell.imageView
-//        }
-//        brower.show(with: self, animationType: .hero)
+    }
+    
+    func longPressHandle(vm: HeroBrowserViewModuleBaseProtocol) {
+        //保存图片 actionSheet 使用我另一个库 JFPopup 实现，有兴趣欢迎star.
+        JFPopupView.popup.actionSheet {
+            [
+                JFPopupAction(with: "保存", subTitle: nil) {
+                    if let imgVM = vm as? HeroBrowserViewModule {
+                        imgVM.asyncLoadRawSource { result in
+                            switch result {
+                            case let .success(image):
+                                print(image)
+                                //还需请求权限，这里就不演示了
+                                //UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                                JFPopupView.popup.toast(hit: "保存图片成功（只做演示无功能）")
+                                break
+                            case _ :
+                                break
+                            }
+                        }
+                    }
+                },
+                JFPopupAction(with: "分享", subTitle: nil, clickActionCallBack: {
+                    JFPopupView.popup.toast(hit: "分享成功（只做演示无功能）")
+                }),
+            ]
+        }
     }
     
 }
