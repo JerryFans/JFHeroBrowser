@@ -1,0 +1,6 @@
+framework module JFHeroBrowser {
+  umbrella header "JFHeroBrowser-umbrella.h"
+
+  export *
+  module * { export * }
+}
