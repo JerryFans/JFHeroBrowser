@@ -161,7 +161,7 @@
 		8F88549F032EFFEA9C281860520CC879 /* SDWebImageIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = F6862BEDF8255DD9B76F805A64B99C8D /* SDWebImageIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		909CBA577868D6E976AC82340B50343E /* SDImageCachesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D50798E0D2805B9B363752EDBE30A745 /* SDImageCachesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93209671B01B76711F6E2022CADBAC9A /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8186F7F2031E3FDA1180E463FA3A3146 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup-JFPopup in Resources */ = {isa = PBXBuildFile; fileRef = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */; };
+		9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */; };
 		94EFDA9D6F5C49C2BC4CF4A0D46EEEA9 /* JFAlertView+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AC5B07B69DDD110EB20B2455E6823 /* JFAlertView+UIViewController.swift */; };
 		96479C9C76FDC513C03ADD58168F6911 /* SDImageIOAnimatedCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 453F7668E445E9BCBDD72BE15E0B3CC3 /* SDImageIOAnimatedCoder.m */; };
 		971CE56718BB8172DB2971C46C43D4A8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB638BB77DF536F52CA85BC42D5BA6C /* SessionDelegate.swift */; };
@@ -264,7 +264,7 @@
 		F497CD01EF6568475FD363A248D78A4B /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 252F6329C3627B006B104592BD4F613B /* UIImage+ForceDecode.m */; };
 		F7289F163C285103D6CCAB39447153CA /* SDWebImageDownloaderConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EB005DF5542E3EBE77E6288613615D1 /* SDWebImageDownloaderConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB359FC2B8375E01A8A8F84D3C50EE82 /* SDWebImageDownloaderResponseModifier.m in Sources */ = {isa = PBXBuildFile; fileRef = C594DD00CD4F8CB46A7A40D1D024E1D8 /* SDWebImageDownloaderResponseModifier.m */; };
-		FBFF2B26897762DC8255CFC49038B8B5 /* JFHeroBrowser-JFHeroBrowser in Resources */ = {isa = PBXBuildFile; fileRef = A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser-JFHeroBrowser */; };
+		FBFF2B26897762DC8255CFC49038B8B5 /* JFHeroBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser.bundle */; };
 		FC07184FF229E4890E76F265656AAC27 /* WKInterfaceImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8649D462684BBEA8D823FF8F26A96A7C /* WKInterfaceImage+Kingfisher.swift */; };
 		FE0189D2FE038AD82C4CCF5A801A50A3 /* SDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = E28738B87F92608BFEB69C481CBD501E /* SDDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE05A1BF611E69C94BC7A9EADBE10B2F /* SDWebImageDownloaderConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D299BD2F990A25006A666523B1AEB /* SDWebImageDownloaderConfig.m */; };
@@ -548,7 +548,7 @@
 		A1BB2E71A9E431E9879BC0B39F926D7D /* Pods-JFHeroBrowser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFHeroBrowser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A351E2F258388359540687C8CE7A4872 /* NSImage+Compatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Compatibility.m"; path = "SDWebImage/Core/NSImage+Compatibility.m"; sourceTree = "<group>"; };
 		A368EEDE5EF7C6F23726C0731C6B37E0 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/Core/SDImageCache.m; sourceTree = "<group>"; };
-		A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser-JFHeroBrowser */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "JFHeroBrowser-JFHeroBrowser"; path = JFHeroBrowser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFHeroBrowser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F98F6023D0733ADC5F832D0A399E89 /* ImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProvider.swift; path = Sources/General/ImageSource/ImageDataProvider.swift; sourceTree = "<group>"; };
 		A51DCB29CE7C2C17EE645BEB0F549EE6 /* SDAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImage.h; path = SDWebImage/Core/SDAnimatedImage.h; sourceTree = "<group>"; };
 		A67BE6D057B344887CDFF68276C6E29A /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/Core/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
@@ -598,7 +598,7 @@
 		C8AC00C8DC8813FF69A6DEBF9F836C66 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
 		C8BBD5105A2D625DF0C860E431F12857 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/Core/SDImageCache.h; sourceTree = "<group>"; };
 		C96B457BB400ED58D82F09B41BC5B7AF /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/Networking/ImagePrefetcher.swift; sourceTree = "<group>"; };
-		CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "JFPopup-JFPopup"; path = JFPopup.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFPopup.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3A197005868678DA806F51977067AD /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/Core/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		CBEF576DC4AE880329DF84245681C75A /* Kingfisher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.debug.xcconfig; sourceTree = "<group>"; };
 		CDF29CA83D7B1381504E34E5247C6E3C /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
@@ -1253,9 +1253,9 @@
 			isa = PBXGroup;
 			children = (
 				62BFBF0526C9196571957D6A45E3C035 /* JFHeroBrowser */,
-				A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser-JFHeroBrowser */,
+				A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser.bundle */,
 				2F6888A77AD2C30F7AC104B3A3B264DC /* JFPopup */,
-				CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */,
+				CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */,
 				41DECBFD495F1F7A9BFC030FF46AB36A /* JRBaseKit */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
 				56F8CEABF63E8FAD6B8B0B73F16EFF77 /* Pods-JFHeroBrowser_Example */,
@@ -1490,7 +1490,7 @@
 			);
 			name = "JFHeroBrowser-JFHeroBrowser";
 			productName = JFHeroBrowser;
-			productReference = A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser-JFHeroBrowser */;
+			productReference = A4CBE5F942677B3AE6548EDB77003623 /* JFHeroBrowser.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		9BC68FAF785199C1CFFE6E2BCD768E01 /* Pods-JFHeroBrowser_Tests */ = {
@@ -1567,7 +1567,7 @@
 			);
 			name = "JFPopup-JFPopup";
 			productName = JFPopup;
-			productReference = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */;
+			productReference = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -1578,6 +1578,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					8D7D9F01E1687A74058CDBA76158597E = {
+						DevelopmentTeam = 4L75765R87;
+					};
+					EDE1E6FD7401647CC8F2BBB30393A18A = {
+						DevelopmentTeam = 4L75765R87;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1619,7 +1627,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup-JFPopup in Resources */,
+				9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1637,7 +1645,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBFF2B26897762DC8255CFC49038B8B5 /* JFHeroBrowser-JFHeroBrowser in Resources */,
+				FBFF2B26897762DC8255CFC49038B8B5 /* JFHeroBrowser.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2012,6 +2020,7 @@
 			baseConfigurationReference = C2AD0E2467AA2EEC8D87DBDA6CD3E0BC /* JFPopup.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
+				DEVELOPMENT_TEAM = 4L75765R87;
 				IBSC_MODULE = JFPopup;
 				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2184,6 +2193,7 @@
 			baseConfigurationReference = 3A4E5A8D2DDF4963847C33485582F58C /* JFHeroBrowser.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFHeroBrowser";
+				DEVELOPMENT_TEAM = 4L75765R87;
 				IBSC_MODULE = JFHeroBrowser;
 				INFOPLIST_FILE = "Target Support Files/JFHeroBrowser/ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -2521,6 +2531,7 @@
 			baseConfigurationReference = 789E570FFFDAB3E205E313C2BCFF05C3 /* JFHeroBrowser.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFHeroBrowser";
+				DEVELOPMENT_TEAM = 4L75765R87;
 				IBSC_MODULE = JFHeroBrowser;
 				INFOPLIST_FILE = "Target Support Files/JFHeroBrowser/ResourceBundle-JFHeroBrowser-JFHeroBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -2599,6 +2610,7 @@
 			baseConfigurationReference = B85711DB22D1FCF819B02675DC83A9F0 /* JFPopup.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
+				DEVELOPMENT_TEAM = 4L75765R87;
 				IBSC_MODULE = JFPopup;
 				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

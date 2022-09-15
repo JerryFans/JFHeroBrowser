@@ -250,13 +250,15 @@ extension HeroBrowserBaseImageCell {
 extension HeroBrowserBaseImageCell:UIGestureRecognizerDelegate {
     
     @objc func orientationChanged(noti: Notification) {
-        let screenSize = UIScreen.main.bounds.size
-        //竖屏
-        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-            self.scrollView.frame = UIScreen.main.bounds
-        } else {
-            if screenSize.width < screenSize.height {
+        DispatchQueue.main.async {
+            let screenSize = UIScreen.main.bounds.size
+            //竖屏
+            if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
                 self.scrollView.frame = UIScreen.main.bounds
+            } else {
+                if screenSize.width < screenSize.height {
+                    self.scrollView.frame = UIScreen.main.bounds
+                }
             }
         }
     }

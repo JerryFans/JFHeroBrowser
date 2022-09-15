@@ -469,21 +469,11 @@ extension HeroBrowser {
     }
     
     @objc func orientationChanged(noti: Notification) {
-        let bounds = UIScreen.main.bounds
-        let screenSize = UIScreen.main.bounds.size
-        //竖屏
-        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-            let index = self.pageControlContainer.currentPage
-            self.blurView.frame = bounds
-            self.blurEffectView?.frame = bounds
-            self.collectionView.frame = CGSize.jf.screenBounds()
-            self.pageControlContainer.jf.centerX = self.collectionView.jf.centerX
-            self.pageControlContainer.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
-            self.collectionView.reloadData()
-            self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
-            self.updateFooterOrHeaderView()
-        } else {
-            if screenSize.width < screenSize.height {
+        DispatchQueue.main.async {
+            let bounds = UIScreen.main.bounds
+            let screenSize = UIScreen.main.bounds.size
+            //竖屏
+            if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
                 let index = self.pageControlContainer.currentPage
                 self.blurView.frame = bounds
                 self.blurEffectView?.frame = bounds
@@ -493,6 +483,18 @@ extension HeroBrowser {
                 self.collectionView.reloadData()
                 self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
                 self.updateFooterOrHeaderView()
+            } else {
+                if screenSize.width < screenSize.height {
+                    let index = self.pageControlContainer.currentPage
+                    self.blurView.frame = bounds
+                    self.blurEffectView?.frame = bounds
+                    self.collectionView.frame = CGSize.jf.screenBounds()
+                    self.pageControlContainer.jf.centerX = self.collectionView.jf.centerX
+                    self.pageControlContainer.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
+                    self.collectionView.reloadData()
+                    self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
+                    self.updateFooterOrHeaderView()
+                }
             }
         }
     }

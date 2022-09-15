@@ -93,6 +93,8 @@ pod 'JFHeroBrowser', '1.2.0'
 - v1.1.0 supoort 'Hero' namespace, add twd quick browser func (browserPhoto & browserVideo)
 - v1.2.0 support Horizontal Screen & auto rotate && adapt UI in Horizontal Screen
 
+- v1.3.3 fix iOS16 screen rotate update view frame invalid
+
 ## Author
 
 JerryFans, fanjiarong_haohao@163.com
