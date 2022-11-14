@@ -22,7 +22,7 @@ open class HeroBrowserBaseImageCell: UICollectionViewCell {
     }()
     
     lazy var scrollView: UIScrollView = {
-        let tempView = UIScrollView.init(frame: UIScreen.main.bounds)
+        let tempView = UIScrollView(frame: .zero)
         tempView.showsHorizontalScrollIndicator = false
         tempView.showsVerticalScrollIndicator = false
         tempView.alwaysBounceVertical = false
@@ -79,8 +79,8 @@ open class HeroBrowserBaseImageCell: UICollectionViewCell {
     }
     
     func updateContainerFrame(with image: UIImage) {
-        let screenWidth = UIScreen.main.bounds.size.width
-        let screenHeight = UIScreen.main.bounds.size.height
+        guard let screenWidth = self.window?.frame.size.width, let screenHeight = self.window?.frame.size.height else { return }
+        self.scrollView.frame = CGRect(origin: .zero, size: CGSize(width: screenWidth, height: screenHeight))
         if screenWidth < screenHeight {
             let height = image.size.height * screenWidth / image.size.width
             self.container.frame = CGRect.init(x: 0, y: 0, width: screenWidth, height: height)
@@ -234,14 +234,14 @@ extension HeroBrowserBaseImageCell {
     }
     
     public func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        var frame = self.container.frame;
+        var frame = self.container.frame
         if self.container.frame.size.height < scrollView.frame.size.height {
             frame.origin.y = (self.scrollView.frame.size.height - self.container.frame.size.height) / 2
         } else {
             frame.origin.y = 0
         }
-        self.container.frame = frame;
-        if CGSize.jf.screenWidth() > CGSize.jf.screenHeight() {
+        self.container.frame = frame
+        if bounds.width > bounds.height {
             self.container.jf.centerX = scrollView.jf.centerX
         }
     }
@@ -251,15 +251,8 @@ extension HeroBrowserBaseImageCell:UIGestureRecognizerDelegate {
     
     @objc func orientationChanged(noti: Notification) {
         DispatchQueue.main.async {
-            let screenSize = UIScreen.main.bounds.size
-            //竖屏
-            if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-                self.scrollView.frame = UIScreen.main.bounds
-            } else {
-                if screenSize.width < screenSize.height {
-                    self.scrollView.frame = UIScreen.main.bounds
-                }
-            }
+            guard let bounds = self.window?.bounds else { return }
+            self.scrollView.frame = bounds
         }
     }
     

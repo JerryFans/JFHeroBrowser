@@ -18,7 +18,7 @@ class PageControlContainer: UIView {
         didSet {
             DispatchQueue.main.async {
                 self.pageControl?.currentPage = self.currentPage
-                self.pageLabel?.text = "\(self.currentPage)/\(self.numberOfPages)"
+                self.pageLabel?.text = "\(self.currentPage + 1)/\(self.numberOfPages)"
             }
         }
     }
@@ -89,8 +89,7 @@ open class HeroBrowser: UIViewController {
     var config: JFHeroBrowserGlobalConfig = .default
     
     lazy var blurView: UIView = {
-        let view = UIView.init()
-        view.frame = self.view.bounds
+        let view = UIView()
         view.backgroundColor = .black
         return view
     }()
@@ -99,9 +98,8 @@ open class HeroBrowser: UIViewController {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = CGSize.jf.screenSize()
         layout.scrollDirection = .horizontal
-        let view = UICollectionView.init(frame: CGSize.jf.screenBounds(), collectionViewLayout: layout)
+        let view = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
         view.delegate = self
         view.dataSource = self
         view.backgroundColor = .clear
@@ -136,15 +134,20 @@ open class HeroBrowser: UIViewController {
     }
     weak var transitionContext: UIViewControllerAnimatedTransitioning?
     public private(set) var _viewModules: [HeroBrowserViewModuleBaseProtocol]?
-    private var _index: Int = 0
     var isShow = false
     var _scrolling: Bool = false
     var currentIndex: Int {
         get {
-            let index = Int(self.collectionView.contentOffset.x / self.collectionView.frame.size.width)
+            let width = bounds.size.width
+            guard width > 0 else { return 0 }
+            let index = Int(self.collectionView.contentOffset.x / width)
             let count = _viewModules?.count ?? 0
             return index < count ? index : count
         }
+    }
+
+    var bounds: CGRect {
+        self.view.window?.frame ?? .zero // 某些分屏情况下self.view.frame不正确
     }
     
     public typealias ImagePageDidChangeHandle = (_ imageIndex: Int) -> UIImageView?
@@ -155,16 +158,12 @@ open class HeroBrowser: UIViewController {
     var heroContentMode: UIView.ContentMode = .scaleAspectFill
     
     private lazy var pageControlContainer: PageControlContainer = {
-        var view = PageControlContainer()
+        var view = PageControlContainer(frame: CGRect(x: 0, y: 0, width: 250, height: 20))
         view.didChangePageHandle = { [weak self] pageControl in
             self?.changePage(pageControl: pageControl)
         }
         self.view.addSubview(view)
         view.backgroundColor = .clear
-        view.jf.height = 20
-        view.jf.width = 250
-        view.jf.centerX = self.view.jf.centerX
-        view.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
         return view
     }()
     
@@ -172,6 +171,9 @@ open class HeroBrowser: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.setNeedsStatusBarAppearanceUpdate()
+        DispatchQueue.main.async {
+            self.updateSubviewsFrame()
+        }
     }
     
     deinit {
@@ -180,7 +182,6 @@ open class HeroBrowser: UIViewController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged(noti:)), name:UIDevice.orientationDidChangeNotification, object: UIDevice.current)
     }
     
     func setupView() {
@@ -194,7 +195,6 @@ open class HeroBrowser: UIViewController {
         if let v = self.dataSource?.viewForFooter() {
             self.view.addSubview(v)
             self.footerView = v
-            self.footerView?.jf.bottom = CGSize.jf.screenHeight()
         }
         
         let pageCount = _viewModules?.count ?? 0
@@ -210,7 +210,6 @@ open class HeroBrowser: UIViewController {
         self.heroImageView = heroImageView
         self.imagePageDidChangeHandle = imagePageDidChangeHandle
         _viewModules = viewModules
-        _index = index
         self.transitionContext = self
         self.setupView()
         self.setupGestureRecognizer()
@@ -235,7 +234,7 @@ open class HeroBrowser: UIViewController {
     }
     
     func switchToPage(index: Int) {
-        self.collectionView.setContentOffset(CGPoint(x: Int(CGSize.jf.screenSize().width * CGFloat(index)), y: 0), animated: false)
+        self.collectionView.setContentOffset(CGPoint(x: Int(bounds.width * CGFloat(index)), y: 0), animated: false)
     }
     
     //preset to override
@@ -244,12 +243,12 @@ open class HeroBrowser: UIViewController {
     }
     
     func updatepageControlContainer(index: Int) {
-        guard index < self.pageControlContainer.numberOfPages  else { return }
+        guard index < self.pageControlContainer.numberOfPages else { return }
         self.pageControlContainer.currentPage = index
     }
     
     func updateHeroView(index: Int) {
-        guard index < _viewModules?.count ?? 0  else { return }
+        guard index < _viewModules?.count ?? 0 else { return }
         self.heroImageView = self.imagePageDidChangeHandle?(index)
     }
     
@@ -278,7 +277,7 @@ open class HeroBrowser: UIViewController {
     func enableBlurEffet() {
         self.blurView.backgroundColor = .clear
         let blurEffectView = UIVisualEffectView(effect: self.effect)
-        blurEffectView.frame = self.view.bounds
+        blurEffectView.frame = bounds
         self.blurView.addSubview(blurEffectView)
         self.blurEffectView = blurEffectView
     }
@@ -357,7 +356,7 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize.jf.screenSize()
+        collectionView.bounds.size
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -409,7 +408,7 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentOffsetX: CGFloat = scrollView.contentOffset.x
-        let currentIndex: Int = Int((contentOffsetX + 0.5 * self.view.frame.size.width) / self.view.frame.size.width)
+        let currentIndex: Int = Int((contentOffsetX + 0.5 * bounds.width) / bounds.width)
         self.updateHeroView(index: currentIndex)
         self.updatepageControlContainer(index: currentIndex)
         self.indexChangeHandle(index: currentIndex)
@@ -418,6 +417,15 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         _scrolling = false
         self.prefetchImages()
+    }
+
+    open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { [weak self] context in
+            guard let self = self else { return }
+            self.updateSubviewsFrame()
+            self.collectionView.invalidateIntrinsicContentSize()
+        }, completion: nil)
     }
 }
 
@@ -453,49 +461,35 @@ extension HeroBrowser:UIViewControllerTransitioningDelegate,UIViewControllerAnim
 }
 
 extension HeroBrowser {
-    
+
+    func updateSubviewsFrame() {
+        let index = self.pageControlContainer.currentPage
+        self.collectionView.frame = bounds
+        self.blurView.frame = bounds
+        self.blurEffectView?.frame = bounds
+        self.pageControlContainer.jf.centerX = self.collectionView.jf.centerX
+        if #available(iOS 11.0, *) {
+            self.pageControlContainer.jf.bottom = bounds.height - (self.view.window?.safeAreaInsets.bottom ?? 0) - 15
+        } else {
+            self.pageControlContainer.jf.bottom = bounds.height - 15
+        }
+        self.collectionView.reloadData()
+        self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
+        self.updateFooterOrHeaderView()
+    }
+
     func updateFooterOrHeaderView() {
         if var footer = self.footerView {
             let size = footer.jf.size
-            footer.jf.width = CGSize.jf.screenWidth()
+            footer.jf.width = bounds.width
             footer.jf.height = size.height
-            footer.jf.bottom = CGSize.jf.screenHeight()
+            footer.jf.bottom = bounds.height
         }
         if var header = self.headerView {
             let size = header.jf.size
-            header.jf.width = CGSize.jf.screenWidth()
+            header.jf.width = bounds.width
             header.jf.height = size.height
         }
     }
-    
-    @objc func orientationChanged(noti: Notification) {
-        DispatchQueue.main.async {
-            let bounds = UIScreen.main.bounds
-            let screenSize = UIScreen.main.bounds.size
-            //竖屏
-            if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-                let index = self.pageControlContainer.currentPage
-                self.blurView.frame = bounds
-                self.blurEffectView?.frame = bounds
-                self.collectionView.frame = CGSize.jf.screenBounds()
-                self.pageControlContainer.jf.centerX = self.collectionView.jf.centerX
-                self.pageControlContainer.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
-                self.collectionView.reloadData()
-                self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
-                self.updateFooterOrHeaderView()
-            } else {
-                if screenSize.width < screenSize.height {
-                    let index = self.pageControlContainer.currentPage
-                    self.blurView.frame = bounds
-                    self.blurEffectView?.frame = bounds
-                    self.collectionView.frame = CGSize.jf.screenBounds()
-                    self.pageControlContainer.jf.centerX = self.collectionView.jf.centerX
-                    self.pageControlContainer.jf.bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
-                    self.collectionView.reloadData()
-                    self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
-                    self.updateFooterOrHeaderView()
-                }
-            }
-        }
-    }
+
 }
