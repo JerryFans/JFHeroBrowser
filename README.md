@@ -95,6 +95,8 @@ pod 'JFHeroBrowser', '1.2.0'
 
 - v1.3.3 fix iOS16 screen rotate update view frame invalid
 
+- v1.4.0 Support iPad OS
+
 ## Author
 
 JerryFans, fanjiarong_haohao@163.com

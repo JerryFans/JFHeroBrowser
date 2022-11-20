@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JFHeroBrowser'
-  s.version          = '1.3.3'
+  s.version          = '1.4.0'
   s.summary          = 'A simplest & base on protocol & swifty way to browse photo or video with hero animation..'
 
 # This description is used to generate tags and improve search results.

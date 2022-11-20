@@ -13,7 +13,7 @@ DEPENDENCIES:
   - JFHeroBrowser (from `../`)
   - JFPopup (= 1.4.2)
   - Kingfisher (= 6.3.1)
-  - SDWebImage (= 5.12.5)
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
@@ -33,6 +33,6 @@ SPEC CHECKSUMS:
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
 
-PODFILE CHECKSUM: 55c7bd867f2ad396455327fc24d37b07dcfe67b2
+PODFILE CHECKSUM: af7edae5fffe9e1e7c66194d843d4f3f37fb4358
 
 COCOAPODS: 1.11.3
