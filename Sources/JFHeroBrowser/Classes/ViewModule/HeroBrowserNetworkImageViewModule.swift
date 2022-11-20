@@ -5,7 +5,7 @@
 //  Created by 逸风 on 2021/10/29.
 //
 
-import Foundation
+import UIKit
 
 public class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule {
     

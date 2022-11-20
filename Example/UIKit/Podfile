@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '10.0'
 
 target 'JFHeroBrowser_Example' do
-  pod 'JFHeroBrowser', :path => '../'
+  pod 'JFHeroBrowser', :path => '../../'
   pod 'Kingfisher', '6.3.1'
   pod 'JFPopup', '1.4.2'
   pod 'SDWebImage'

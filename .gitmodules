@@ -1,0 +1,3 @@
+[submodule "Sources/JRBaseKit"]
+	path = Sources/JRBaseKit
+	url = https://github.com/JerryFans/JRBaseKit

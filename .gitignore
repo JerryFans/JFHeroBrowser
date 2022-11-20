@@ -19,6 +19,13 @@ DerivedData
 *.hmap
 *.ipa
 
+# SPM
+/Packages
+/*.xcodeproj
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+
 # Bundler
 .bundle
 

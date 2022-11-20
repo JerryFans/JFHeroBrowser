@@ -5,7 +5,7 @@
 //  Created by 逸风 on 2022/5/1.
 //
 
-import Foundation
+import UIKit
 
 extension UIViewController: HeroCompatible {}
 

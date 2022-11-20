@@ -33,10 +33,10 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'JFHeroBrowser/Classes/**/*'
+  s.source_files = 'Sources/JFHeroBrowser/Classes/**/*'
   s.swift_version = ['5.0']
   s.resource_bundles = {
-     'JFHeroBrowser' => ['JFHeroBrowser/Assets/*.png']
+     'JFHeroBrowser' => ['Sources/JFHeroBrowser/Resources/**/*.png']
   }
   s.dependency 'JRBaseKit', '~> 1.0.0'
   # s.dependency 'Kingfisher', '~> 6.3.0'
