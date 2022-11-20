@@ -106,6 +106,7 @@ open class HeroBrowser: UIViewController {
         view.dataSource = self
         view.backgroundColor = .clear
         view.isPagingEnabled = true
+        view.panGestureRecognizer.delaysTouchesBegan = true // 避免视频播放按钮对手势的干扰
         view.showsHorizontalScrollIndicator = false
         view.register(HeroBrowserNetworkImageCell.self, forCellWithReuseIdentifier: HeroBrowserNetworkImageCell.identify())
         view.register(HeroBrowserVideoCell.self, forCellWithReuseIdentifier: HeroBrowserVideoCell.identify())
