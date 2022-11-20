@@ -1,0 +1,27 @@
+PODS:
+  - JFHeroBrowser (1.4.0):
+    - JRBaseKit (~> 1.0.0)
+  - JRBaseKit (1.0.0)
+  - Kingfisher (7.4.1)
+
+DEPENDENCIES:
+  - JFHeroBrowser (from `../../`)
+  - Kingfisher
+
+SPEC REPOS:
+  trunk:
+    - JRBaseKit
+    - Kingfisher
+
+EXTERNAL SOURCES:
+  JFHeroBrowser:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  JFHeroBrowser: 9a7206f0f631c0f21346a32e2786f9546cdf4203
+  JRBaseKit: ed75cfce9e340a3316bee0eaac0fa1c400714287
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+
+PODFILE CHECKSUM: ccc755c39e2bb6822e20a5401f6b914b6b17f645
+
+COCOAPODS: 1.11.3

@@ -19,6 +19,13 @@ DerivedData
 *.hmap
 *.ipa
 
+# SPM
+/Packages
+/*.xcodeproj
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+
 # Bundler
 .bundle
 
@@ -34,4 +41,5 @@ Carthage/Build
 # Note: if you ignore the Pods directory, make sure to uncomment
 # `pod install` in .travis.yml
 #
-# Pods/
+Pods/
+

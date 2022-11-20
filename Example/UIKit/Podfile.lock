@@ -1,0 +1,38 @@
+PODS:
+  - JFHeroBrowser (1.4.0):
+    - JRBaseKit (~> 1.0.0)
+  - JFPopup (1.4.2):
+    - JRBaseKit (~> 1.0.0)
+  - JRBaseKit (1.0.0)
+  - Kingfisher (6.3.1)
+  - SDWebImage (5.14.2):
+    - SDWebImage/Core (= 5.14.2)
+  - SDWebImage/Core (5.14.2)
+
+DEPENDENCIES:
+  - JFHeroBrowser (from `../../`)
+  - JFPopup (= 1.4.2)
+  - Kingfisher (= 6.3.1)
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - JFPopup
+    - JRBaseKit
+    - Kingfisher
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  JFHeroBrowser:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  JFHeroBrowser: 9a7206f0f631c0f21346a32e2786f9546cdf4203
+  JFPopup: 8b92cd5fb8c9629e70490700fa7437da553fc14e
+  JRBaseKit: ed75cfce9e340a3316bee0eaac0fa1c400714287
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
+
+PODFILE CHECKSUM: cacaf30ca979c27f785c2a34dac38c92cd9272ad
+
+COCOAPODS: 1.11.3
