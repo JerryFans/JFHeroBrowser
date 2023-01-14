@@ -97,6 +97,8 @@ pod 'JFHeroBrowser', '1.2.0'
 
 - v1.4.0 Support iPad OS
 
+- v1.4.1 fix image scale issue
+
 ## Author
 
 JerryFans, fanjiarong_haohao@163.com

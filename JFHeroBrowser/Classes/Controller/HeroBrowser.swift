@@ -398,6 +398,9 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
     }
     
     public func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let cell = cell as? HeroBrowserBaseImageCell {
+            cell.resetZoom()
+        }
         if let videoCell = cell as? HeroBrowserVideoCell {
             videoCell.videoView.pauseVideo()
         }
