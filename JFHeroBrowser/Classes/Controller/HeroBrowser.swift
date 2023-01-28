@@ -106,9 +106,6 @@ open class HeroBrowser: UIViewController {
         view.isPagingEnabled = true
         view.panGestureRecognizer.delaysTouchesBegan = true // 避免视频播放按钮对手势的干扰
         view.showsHorizontalScrollIndicator = false
-        view.register(HeroBrowserNetworkImageCell.self, forCellWithReuseIdentifier: HeroBrowserNetworkImageCell.identify())
-        view.register(HeroBrowserVideoCell.self, forCellWithReuseIdentifier: HeroBrowserVideoCell.identify())
-        view.register(HeroBrowserBaseImageCell.self, forCellWithReuseIdentifier: HeroBrowserBaseImageCell.identify())
         if #available(iOS 11.0, *) {
             view.contentInsetAdjustmentBehavior = .never
         }
@@ -218,6 +215,9 @@ open class HeroBrowser: UIViewController {
         self.updatepageControlContainer(index: index)
         self.indexChangeHandle(index: index)
         self.prefetchImages()
+        viewModules.forEach { module in
+            collectionView.register(module.cellClz, forCellWithReuseIdentifier: module.identity)
+        }
     }
     
     public func show(with vc: UIViewController, animationType: HeroTransitionAnimationType = .hero) {

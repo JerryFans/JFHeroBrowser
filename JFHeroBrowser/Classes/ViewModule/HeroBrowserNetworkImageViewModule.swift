@@ -8,6 +8,13 @@
 import Foundation
 
 public class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule {
+    public override var identity: String {
+        return HeroBrowserNetworkImageCell.identify()
+    }
+    
+    public override var cellClz: AnyClass? {
+        return HeroBrowserNetworkImageCell.self
+    }
     
     public override func createCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> HeroBrowserCollectionCellProtocol {
         return collectionView.dequeueReusableCell(withReuseIdentifier: HeroBrowserNetworkImageCell.identify(), for: indexPath) as! HeroBrowserNetworkImageCell

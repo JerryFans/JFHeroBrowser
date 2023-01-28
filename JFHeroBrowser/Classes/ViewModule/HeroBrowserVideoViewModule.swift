@@ -10,6 +10,13 @@ import AVFoundation
 
 /// Video VM, support network video or local file path video
 open class HeroBrowserVideoViewModule: HeroBrowserViewModuleProtocol {
+    public var identity: String {
+        return HeroBrowserVideoCell.identify()
+    }
+    
+    public var cellClz: AnyClass? {
+        return HeroBrowserVideoCell.self
+    }
     
     public typealias ThumbailData = UIImage
     public typealias RawData = AVPlayerItem

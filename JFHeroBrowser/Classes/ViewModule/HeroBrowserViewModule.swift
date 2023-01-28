@@ -32,6 +32,8 @@ public protocol NetworkImageProvider: AnyObject {
 public protocol HeroBrowserViewModuleBaseProtocol {
     var type: HeroBrowserType { get set }
     func createCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> HeroBrowserCollectionCellProtocol
+    var identity : String { get }
+    var cellClz : AnyClass? { get }
 }
 
 public protocol HeroBrowserViewModuleProtocol: HeroBrowserViewModuleBaseProtocol {
@@ -43,6 +45,14 @@ public protocol HeroBrowserViewModuleProtocol: HeroBrowserViewModuleBaseProtocol
 }
 
 open class HeroBrowserViewModule: HeroBrowserViewModuleProtocol {
+    public var identity: String {
+        return ""
+    }
+    
+    public var cellClz: AnyClass? {
+        return nil
+    }
+    
     public typealias ThumbailData = UIImage
     public typealias RawData = UIImage
     open var type: HeroBrowserType
