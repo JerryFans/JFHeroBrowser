@@ -7,12 +7,12 @@
 
 import Foundation
 
-public class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule {
-    public override var identity: String {
+open class HeroBrowserNetworkImageViewModule: HeroBrowserViewModule {
+    open override var identity: String {
         return HeroBrowserNetworkImageCell.identify()
     }
     
-    public override var cellClz: AnyClass? {
+    open override var cellClz: AnyClass? {
         return HeroBrowserNetworkImageCell.self
     }
     

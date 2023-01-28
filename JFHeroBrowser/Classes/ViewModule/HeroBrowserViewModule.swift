@@ -45,11 +45,11 @@ public protocol HeroBrowserViewModuleProtocol: HeroBrowserViewModuleBaseProtocol
 }
 
 open class HeroBrowserViewModule: HeroBrowserViewModuleProtocol {
-    public var identity: String {
+    open var identity: String {
         return ""
     }
     
-    public var cellClz: AnyClass? {
+    open var cellClz: AnyClass? {
         return nil
     }
     

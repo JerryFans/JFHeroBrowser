@@ -7,13 +7,13 @@
 
 import UIKit
 
-public class HeroBrowserDataImageViewModule: HeroBrowserViewModule {
+open class HeroBrowserDataImageViewModule: HeroBrowserViewModule {
     
-    public override var identity: String {
+    open override var identity: String {
         return HeroBrowserBaseImageCell.identify()
     }
     
-    public override var cellClz: AnyClass? {
+    open override var cellClz: AnyClass? {
         return HeroBrowserBaseImageCell.self
     }
     
