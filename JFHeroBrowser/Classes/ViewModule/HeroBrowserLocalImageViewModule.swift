@@ -7,7 +7,14 @@
 
 import Foundation
 
-public class HeroBrowserLocalImageViewModule: HeroBrowserViewModule {
+open class HeroBrowserLocalImageViewModule: HeroBrowserViewModule {
+    open override var identity: String {
+        return HeroBrowserBaseImageCell.identify()
+    }
+    
+    open override var cellClz: AnyClass? {
+        return HeroBrowserBaseImageCell.self
+    }
     
     public override func createCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> HeroBrowserCollectionCellProtocol {
         return collectionView.dequeueReusableCell(withReuseIdentifier: HeroBrowserBaseImageCell.identify(), for: indexPath) as! HeroBrowserBaseImageCell
