@@ -8,6 +8,18 @@
 import UIKit
 import AVKit
 
+extension HeroBrowserVideoCell: HeroBrowserVideoCellProtocol {
+
+    func playVideo() {
+        videoView.pauseVideo()
+    }
+    
+    func pauseVideo() {
+        videoView.pauseVideo()
+    }
+    
+}
+
 extension HeroBrowserVideoCell: HeroVideoViewDelegate {
     func videoViewReadyToPlay(playerItem: AVPlayerItem, view: HeroVideoView) {
         self.loadingImageV.isHidden = true
