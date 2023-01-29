@@ -394,7 +394,7 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
         guard let vm = _viewModules?[indexPath.item] else {
             return
         }
-        guard let cell = cell as? HeroBrowserBaseImageCell else { return }
+        guard var cell = cell as? HeroBrowserHostedCellProtocol else { return }
         if let vm = vm as? HeroBrowserViewModule {
             cell.viewModule = vm
         } else if let vm = vm as? HeroBrowserVideoViewModule {
@@ -403,11 +403,11 @@ extension HeroBrowser: UICollectionViewDelegate,UICollectionViewDataSource,UIScr
     }
     
     public func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if let cell = cell as? HeroBrowserBaseImageCell {
+        if let cell = cell as? HeroBrowserCollectionCellProtocol {
             cell.resetZoom()
         }
-        if let videoCell = cell as? HeroBrowserVideoCell {
-            videoCell.videoView.pauseVideo()
+        if let videoCell = cell as? HeroBrowserVideoCellProtocol {
+            videoCell.pauseVideo()
         }
     }
     

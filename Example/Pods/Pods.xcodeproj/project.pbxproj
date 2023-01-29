@@ -253,6 +253,7 @@
 		E8D519B63C2077979F799769F9A35072 /* SDImageCachesManagerOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F93BF27B343CC653A2A01ED319B23E74 /* SDImageCachesManagerOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E97EBEC1529B1A860BBCD23891913445 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5E010C52EE593D381F229D00E5212 /* UIColor+Extension.swift */; };
 		E9CF46857D61D2A8AF4C3722C27C61C6 /* SDImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D09ECE8DCBB5990C876EB9FC60D39DB9 /* SDImageCoderHelper.m */; };
+		E9D4F5862985F42300AC77FB /* HeroBrowserHostedCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D4F5852985F42300AC77FB /* HeroBrowserHostedCellProtocol.swift */; };
 		E9EE1BCFE7318EFF181D763503311830 /* TVMonogramView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106322E288A4D382A52BF79A88B0FBB /* TVMonogramView+Kingfisher.swift */; };
 		EE1B35BDD9FF7CD62B8BDCDE0F59ACFF /* HeroBrowserNetworkImageViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6955930AF601C758769FC746955D5D2 /* HeroBrowserNetworkImageViewModule.swift */; };
 		EE97D2B2E79237770CE018342B9F86E7 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6734F360F9B4595791A123E1B40D0 /* Resource.swift */; };
@@ -375,7 +376,7 @@
 		0F6804ED7AF980DDA12A722247346BF1 /* SDDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDisplayLink.h; path = SDWebImage/Private/SDDisplayLink.h; sourceTree = "<group>"; };
 		102D62E7461447976890E82F8187BFA3 /* JF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JF.swift; path = Classes/JF.swift; sourceTree = "<group>"; };
 		118E447DFE8986ED9382525042F620AD /* SDWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWeakProxy.m; path = SDWebImage/Private/SDWeakProxy.m; sourceTree = "<group>"; };
-		13DF6584A355E45FF976CEE199A07E78 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		13DF6584A355E45FF976CEE199A07E78 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		145C003762F2E30915432F9C8F494327 /* fail@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "fail@2x.png"; path = "JFPopup/Assets/fail@2x.png"; sourceTree = "<group>"; };
 		14BCDF26C4E1C6C10F2C02BCA6362786 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/Core/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		18158180A085A65F6EC614B58F26EDDC /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
@@ -539,7 +540,7 @@
 		9A36E9B990649075E9D527D8FA5DA871 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
 		9B8B6F1BBAAA23F1D9CB90E9876E513B /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/Cache/CacheSerializer.swift; sourceTree = "<group>"; };
 		9D3E60365799D5EEA9B7D00BBA3755D7 /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/Core/SDWebImageTransition.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E44BC8569BE29A7AD7A8C72CA3F696A /* Pods-JFHeroBrowser_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFHeroBrowser_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9E63DDFF9BCB58682342ABA25CBFD949 /* UIColor+SDHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+SDHexString.h"; path = "SDWebImage/Private/UIColor+SDHexString.h"; sourceTree = "<group>"; };
 		9F4C33C27357EAFD730628ADB23B9930 /* HeroBrowserViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserViewContainer.swift; sourceTree = "<group>"; };
@@ -583,7 +584,7 @@
 		C03E9C4F7C0D978D2F15F51FB4AE521E /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/Core/UIImage+Metadata.m"; sourceTree = "<group>"; };
 		C072DCE8265CCB1A2E5AAA328EA3D132 /* SDWebImageTransitionInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransitionInternal.h; path = SDWebImage/Private/SDWebImageTransitionInternal.h; sourceTree = "<group>"; };
 		C1102C35A81F2FF80E94AFFF512CC1D6 /* UIView+JFRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JFRect.swift"; path = "Classes/UIView+JFRect.swift"; sourceTree = "<group>"; };
-		C27D727E8542B816B4D921B6981719D3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C27D727E8542B816B4D921B6981719D3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C2AD0E2467AA2EEC8D87DBDA6CD3E0BC /* JFPopup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFPopup.release.xcconfig; sourceTree = "<group>"; };
 		C38129F9C0E3B81A8ADB96DBF81A209A /* HeroBrowserLocalImageViewModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeroBrowserLocalImageViewModule.swift; sourceTree = "<group>"; };
 		C3CAE92D248D2E100C53900E057B8F31 /* Pods-JFHeroBrowser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFHeroBrowser_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -631,6 +632,7 @@
 		E5EFB4DA617D1D510E856E786F122822 /* JFToastQueueTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JFToastQueueTask.swift; path = JFPopup/Classes/General/Toast/JFToastQueueTask.swift; sourceTree = "<group>"; };
 		E6D0EF8614D4623CCA0CC186886B2CC8 /* SDImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCodersManager.h; path = SDWebImage/Core/SDImageCodersManager.h; sourceTree = "<group>"; };
 		E7AAAD89C790C6BA2008D2DC517923C8 /* JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JFPopup.swift; path = JFPopup/Classes/Core/JFPopup.swift; sourceTree = "<group>"; };
+		E9D4F5852985F42300AC77FB /* HeroBrowserHostedCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBrowserHostedCellProtocol.swift; sourceTree = "<group>"; };
 		E9E25B97D49D66F2FFDF72D351E39214 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/Core/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		EBFD1164FE3EA77DB06716A0AB93AF6A /* SDAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageView.m; path = SDWebImage/Core/SDAnimatedImageView.m; sourceTree = "<group>"; };
 		EDD75C76A20AAA262AFE2AF69F7C30FB /* SDAssociatedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAssociatedObject.m; path = SDWebImage/Private/SDAssociatedObject.m; sourceTree = "<group>"; };
@@ -650,7 +652,7 @@
 		F813E54F3C918C15F4C921D8FE76DF97 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/Cache/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		F8E095BAE5EDB71B829945D3E1CE75FF /* JFHeroBrowser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFHeroBrowser-prefix.pch"; sourceTree = "<group>"; };
 		F93BF27B343CC653A2A01ED319B23E74 /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
-		F970E07E103F1AAFDF6EA52665F5D5A5 /* JFHeroBrowser.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JFHeroBrowser.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F970E07E103F1AAFDF6EA52665F5D5A5 /* JFHeroBrowser.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JFHeroBrowser.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FB089DA7BBF5E6078765A4AFBD8A5C0C /* Pods-JFHeroBrowser_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFHeroBrowser_Example-dummy.m"; sourceTree = "<group>"; };
 		FB4654D9323B6B40F4ED9EFFA9062223 /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Views/Indicator.swift; sourceTree = "<group>"; };
 		FB598D50ED4E73208D4DEE7AB96EEFA6 /* KFImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImage.swift; path = Sources/SwiftUI/KFImage.swift; sourceTree = "<group>"; };
@@ -860,7 +862,6 @@
 				F16182E67C7D59AE8AC03F254801F909 /* Resources */,
 				9977DE276D2F9BAD86C60556FCE17FBC /* Support Files */,
 			);
-			name = JFPopup;
 			path = JFPopup;
 			sourceTree = "<group>";
 		};
@@ -925,7 +926,6 @@
 				8649D462684BBEA8D823FF8F26A96A7C /* WKInterfaceImage+Kingfisher.swift */,
 				BC4197C9D0F47670974210FA03A97399 /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -960,7 +960,6 @@
 				D1C539CBA36D86515FC6F5050C3F670F /* Core */,
 				A4F63BE29D89D4B91FD423AC7454BACF /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -1209,7 +1208,6 @@
 				C1102C35A81F2FF80E94AFFF512CC1D6 /* UIView+JFRect.swift */,
 				7A72724CDCA39B4156114FD54554BF92 /* Support Files */,
 			);
-			name = JRBaseKit;
 			path = JRBaseKit;
 			sourceTree = "<group>";
 		};
@@ -1221,6 +1219,7 @@
 				D629BE3F2D877993EA74FC97AFAB6BCC /* HeroBrowserVideoCell.swift */,
 				67EA9BFD1093B3891A7CC555ADB1B02B /* HeroCircularProgressView.swift */,
 				2F0F7F80F898D9AA5C1E754F3B212C0A /* HeroVideoView.swift */,
+				E9D4F5852985F42300AC77FB /* HeroBrowserHostedCellProtocol.swift */,
 			);
 			name = View;
 			path = JFHeroBrowser/Classes/View;
@@ -1764,6 +1763,7 @@
 				CB0900CF93558769EBFA947D9BF72271 /* HeroBrowser.swift in Sources */,
 				68DBB22E4D9852DC8F6A0F46894C042C /* HeroBrowserBaseImageCell.swift in Sources */,
 				5F03CD56D9609B617576B44C2CB07394 /* HeroBrowserDataImageViewModule.swift in Sources */,
+				E9D4F5862985F42300AC77FB /* HeroBrowserHostedCellProtocol.swift in Sources */,
 				B04804E468F6562605896B5384F228B9 /* HeroBrowserLocalImageViewModule.swift in Sources */,
 				A6C24EE016B013EF05CA0D68B6988303 /* HeroBrowserNetworkImageCell.swift in Sources */,
 				EE1B35BDD9FF7CD62B8BDCDE0F59ACFF /* HeroBrowserNetworkImageViewModule.swift in Sources */,
@@ -2262,8 +2262,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
