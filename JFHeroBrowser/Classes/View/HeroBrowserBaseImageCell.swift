@@ -207,6 +207,8 @@ extension HeroBrowserBaseImageCell: UIScrollViewDelegate {
     }
 }
 
+extension HeroBrowserBaseImageCell: HeroBrowserHostedCellProtocol {}
+
 extension HeroBrowserBaseImageCell: HeroBrowserCollectionCellProtocol {
     
     public func getContainer() -> UIView {
