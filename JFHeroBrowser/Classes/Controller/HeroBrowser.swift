@@ -215,9 +215,7 @@ open class HeroBrowser: UIViewController {
         self.updatepageControlContainer(index: index)
         self.indexChangeHandle(index: index)
         self.prefetchImages()
-        viewModules.forEach { module in
-            collectionView.register(module.cellClz, forCellWithReuseIdentifier: module.identity)
-        }
+        self.registerCells()
     }
     
     public func show(with vc: UIViewController, animationType: HeroTransitionAnimationType = .hero) {
@@ -256,6 +254,13 @@ open class HeroBrowser: UIViewController {
     @objc func changePage(pageControl: UIPageControl) {
         self.updateHeroView(index: pageControl.currentPage)
         self.switchToPage(index: pageControl.currentPage)
+    }
+    
+    //register collectionView cell
+    private func registerCells() {
+        _viewModules?.forEach { module in
+            self.collectionView.register(module.cellClz, forCellWithReuseIdentifier: module.identity)
+        }
     }
     
     // 预加载左右各一张
